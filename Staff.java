@@ -1,15 +1,43 @@
 import java.util.ArrayList;
 public class Staff {
     
-private ArrayList<String> staff = new ArrayList<String>();
+private static int count = 0; 
+private int ID;
+private String name;
+private double DailyRate;
+private double totalEarned;
+private int totalDaysWorked;
 
 
-public ArrayList<String> getstaff() {
-    return staff;    
+public Staff(double DailyRate)
+{
+    this.ID = count ++;
+    this.name = "Staff" + ID;
+
 }
- 
-public void setstaff(ArrayList<String> newstaff) {
-    this.staff = newstaff;
+
+
 }
 
+
+class Salesperson extends Staff {
+    public Salesperson()
+    {
+        super(100.0);
+    }
+}
+
+
+class Mechanic extends Staff {
+    public Mechanic()
+    {
+        super(80.0);
+    }
+}
+
+class Intern extends Staff {
+    public Intern()
+    {
+        super(20.0);
+    }
 }
