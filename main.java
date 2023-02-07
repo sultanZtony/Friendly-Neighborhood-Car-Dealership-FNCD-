@@ -2,19 +2,18 @@ import java.util.ArrayList;
 public class main {
     public static void main(String[] argc) {
 
-        Staff object1 = new Staff();
-        String[] temp1 =  {"Logan Snow", "Sincere Curry", "Spencer Marshall", "Mylee Fisher", "Caleb Hanna"};
-        ArrayList<String> temp = new ArrayList<String>();
+        Salesperson salesperson = new Salesperson();
+        salesperson.work(5, 100.0);
+        System.out.println("Name: " + salesperson.getName());
+        System.out.println("Total Earned: " + salesperson.getTotalEarned());
+        System.out.println("Total Days Worked: " + salesperson.getTotalDaysWorked());
 
-        for (int i = 0; i < temp1.length; i++) {
-            temp.add(temp1[i]);
-        }
-        
-        object1.setstaff(temp);
-        ArrayList<String> use = object1.getstaff();
 
-        for (int i = 0; i < use.size(); i++) {
-            System.out.println(use.get(i));
-        }
+        Salesperson salesperson1 = new Salesperson();
+        salesperson.work(5, 100.0);
+        System.out.println("Name: " + salesperson.getName());
+        System.out.println("Total Earned: " + salesperson.getTotalEarned());
+        System.out.println("Total Days Worked: " + salesperson.getTotalDaysWorked());
+
     }
 }
