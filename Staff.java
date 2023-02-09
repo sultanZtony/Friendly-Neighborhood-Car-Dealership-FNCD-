@@ -26,7 +26,7 @@ public abstract class Staff {
          return salaryEarned;
     }
 
-    public double bonusEarned() {
+    public double getBonusEarned() {
         return bonusEarned;
     }
 
