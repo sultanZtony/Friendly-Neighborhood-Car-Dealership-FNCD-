@@ -1,19 +1,20 @@
+import java.lang.reflect.GenericDeclaration;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 public class main {
     public static void main(String[] argc) {
+        ArrayList<Staff> staff = new ArrayList<>(Arrays.asList(new Salesperson(), new Intern(), new Intern(), new Mechanic(), new Mechanic(), new Mechanic()));
+        System.out.println(getInterns(staff).get(1).getName());
+    }
 
-        Salesperson salesperson = new Salesperson();
-        salesperson.work(5, 100.0);
-        System.out.println("Name: " + salesperson.getName());
-        System.out.println("Total Earned: " + salesperson.getTotalEarned());
-        System.out.println("Total Days Worked: " + salesperson.getTotalDaysWorked());
-
-
-        Salesperson salesperson1 = new Salesperson();
-        salesperson.work(5, 100.0);
-        System.out.println("Name: " + salesperson.getName());
-        System.out.println("Total Earned: " + salesperson.getTotalEarned());
-        System.out.println("Total Days Worked: " + salesperson.getTotalDaysWorked());
-
+    static ArrayList<Staff> getInterns(ArrayList<Staff> staff) {
+        ArrayList<Staff> interns = new ArrayList<>();
+        for (Staff obj : staff) {
+            if (obj instanceof Intern) {
+                interns.add(obj);
+            }
+        }
+        return interns;
     }
 }
