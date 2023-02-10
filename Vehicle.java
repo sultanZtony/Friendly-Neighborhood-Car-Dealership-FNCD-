@@ -1,5 +1,8 @@
 public abstract class Vehicle {
     private String name;
+    // cost;
+    // Condtion 
+    // condtion discount
     public Vehicle(String vehicleType, int id) {
         name = vehicleType + "_" + id;
     }
