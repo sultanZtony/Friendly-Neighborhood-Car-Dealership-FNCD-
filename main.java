@@ -6,6 +6,7 @@ public class main {
         Dealership dealership = new Dealership();
         Activity activity = new Activity(dealership);
 
+  
         // Run simulation in a 30 day loop
         activity.open();
         activity.wash();
