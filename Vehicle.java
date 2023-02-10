@@ -24,7 +24,6 @@ public abstract class Vehicle {
         else {
             temp =  "New";
             tempDiscount = 0.0;
-
         }
 
         int randomClean = new Random().nextInt(100);
