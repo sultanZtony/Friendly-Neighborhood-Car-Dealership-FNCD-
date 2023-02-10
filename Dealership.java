@@ -60,10 +60,10 @@ public class Dealership {
     public ArrayList<Vehicle> addVehicles(String vehicle) {
 
         if (vehicle == "PerformanceCar") {
-            PerformanceCar newpreformance = new PerformanceCar()
+            //PerformanceCar newpreformance = new PerformanceCar()
             vehicles.add(newpreformance);
-            operatingBudget = operatingBudget -newpreformance.getCost(20000, newpreformance.getCondtionDiscount(newpreformance.getCondtion()));
-        } 2
+            operatingBudget = operatingBudget -newpreformance.getCost(20000);
+        } 
         else if (vehicle == "Car") {
             vehicles.add(new Car());
             operatingBudget = operatingBudget - 10000;
