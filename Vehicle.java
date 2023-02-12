@@ -34,6 +34,9 @@ public abstract class Vehicle {
         return this.cost;
     }
 
+    public void setCondtion(String condtion1){
+        this.condition = condtion1;
+    }
     public String getCondition() {
         return this.condition;
     }
