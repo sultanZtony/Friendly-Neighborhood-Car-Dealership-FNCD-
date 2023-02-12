@@ -33,7 +33,9 @@ public abstract class Staff {
     public double getBonusEarned() {
         return bonusEarned;
     }
-
+    public void setBouns(double bonus){
+        this.bonusEarned += bonus;
+    }
     public int getTotalDaysWorked() {
         return totalDaysWorked;
     }

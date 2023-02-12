@@ -20,7 +20,7 @@ public abstract class Vehicle {
         this.cost = initialCost;
         this.cleanliness = genRandCleanliness();
         this.condition = genRandCondition();
-
+        this.salesPrice = 2 * getCost();
         if (this.condition == "Used") {
             this.cost *= .80;
         } else if (this.condition == "Broken") {
@@ -40,9 +40,19 @@ public abstract class Vehicle {
     public String getCondition() {
         return this.condition;
     }
-
+    public void setCleanliness(String clean1){
+        this.cleanliness = clean1;
+    }
     public String getCleanliness() {
         return this.cleanliness;
+    }
+
+    public double getsalesPrice(){
+        return this.salesPrice;
+    }
+
+    public void setsalesPrice(double sales){
+        this.salesPrice = sales;
     }
 
     private static String genRandCleanliness() {
