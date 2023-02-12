@@ -1,16 +1,20 @@
 public abstract class Staff {
+    private String name;
     private double dailyRate;
     private double salaryEarned;
     private double bonusEarned;
     private int totalDaysWorked;
-    private String name;
 
     public Staff(String staffType, int id, double dailyRate) {
-        this.dailyRate = dailyRate;
         name = staffType + "_" + id;
+        this.dailyRate = dailyRate;
         salaryEarned = 0;
         bonusEarned = 0;
         totalDaysWorked = 0;
+    }
+
+    public void setDailyRate(double dailyRate) {
+        this.dailyRate = dailyRate;
     }
 
     public String getName() {
@@ -22,8 +26,8 @@ public abstract class Staff {
     }
 
     public double getSalaryEarned() {
-         salaryEarned = dailyRate * totalDaysWorked;
-         return salaryEarned;
+        salaryEarned = dailyRate * totalDaysWorked;
+        return salaryEarned;
     }
 
     public double getBonusEarned() {
@@ -40,8 +44,7 @@ class Salesperson extends Staff {
     private static int id = 1;
 
     public Salesperson() {
-        super("Salesperson", id++, 100.0);
-
+        super("Salesperson", id++, 100);
     }
 }
 
@@ -49,7 +52,7 @@ class Mechanic extends Staff {
     private static int id = 1;
 
     public Mechanic() {
-        super("Mechanic", id++, 50.0);
+        super("Mechanic", id++, 50);
     }
 }
 
@@ -57,6 +60,6 @@ class Intern extends Staff {
     private static int id = 1;
 
     public Intern() {
-        super("Intern", id++, 20.0);
+        super("Intern", id++, 25);
     }
 }

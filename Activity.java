@@ -1,88 +1,23 @@
-import java.util.ArrayList;
+abstract class Activity {
+    abstract void run();
+}
 
-public class Activity {
+class Opening extends Activity {
     private Dealership dealership;
-    // Close in Sunday
-    public Activity(Dealership dealership) {
+
+    public Opening(Dealership dealership) {
         this.dealership = dealership;
-        dealership.addstaff("Intern");
-        dealership.addstaff("Intern");
-        dealership.addstaff("Intern");
-    
-        dealership.addstaff("Sales");
-        dealership.addstaff("Sales");
-        dealership.addstaff("Sales");
-    
-        dealership.addstaff("Mechanic");
-        dealership.addstaff("Mechanic");
-        dealership.addstaff("Mechanic");
-
-
-
-        // dealership.addVehicles("PerformanceCar");
-        // dealership.addVehicles("PerformanceCar");
-        // dealership.addVehicles("PerformanceCar");
-        // dealership.addVehicles("PerformanceCar");
-
-        // dealership.addVehicles("Car");
-        // dealership.addVehicles("Car");
-        // dealership.addVehicles("Car");
-        // dealership.addVehicles("Car");
-
-
-        // dealership.addVehicles("Pickup");
-        // dealership.addVehicles("Pickup");
-        // dealership.addVehicles("Pickup");
-        // dealership.addVehicles("Pickup");
-
     }
-    public void open() {
-    
-        ArrayList<Staff> interns = dealership.getInterns();
-        ArrayList<Staff> sales = dealership.getSalespeople();
-        ArrayList<Staff> mechanic = dealership.getMechanics();
 
+    @Override
+    void run() {
+        System.out.println("Running Open activity...");
 
-        ArrayList<Vehicle> PerformanceCar = dealership.getPerformanceCar();
-        ArrayList<Vehicle> Car = dealership.getCar();
-        ArrayList<Vehicle> Pickup = dealership.getPickup();
-        while (interns.size() < 3) {
-            dealership.addstaff("Intern");
+        // If there are less than 3 interns on opening, hire until intern count is reached.
+        while (dealership.getStaff(StaffType.INTERN).size() < 3) {
+            dealership.addStaff(StaffType.INTERN);
         }
 
-        while(true){
-
-            if(PerformanceCar.size() == 4 && Car.size() == 4  && Pickup.size() == 4){
-                break;
-            }
-            else if (PerformanceCar.size() < 4) {
-                dealership.addVehicles("PerformanceCar");
-            }
-            else if (Car.size() < 4) {
-                dealership.addVehicles("Car");
-            }
-            else if (Pickup.size() < 4) {
-                dealership.addVehicles("Pickup");
-            }
-
-        }
-
-
-    }
-
-    public void wash() {
-
-    }
-
-    public void repair() {
-
-    }
-
-    public void sell() {
-
-    }
-
-    public void end() {
-
+        // Check if there are less than 4 of each type of vehicle in the inventory. If so, add them.
     }
 }

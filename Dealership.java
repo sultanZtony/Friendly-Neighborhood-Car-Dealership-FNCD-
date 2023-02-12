@@ -2,114 +2,106 @@ import java.util.ArrayList;
 
 public class Dealership {
     private double operatingBudget;
-    private ArrayList<Staff> staff;
+
+    private ArrayList<Staff> salespeople;
+    private ArrayList<Staff> mechanics;
+    private ArrayList<Staff> interns;
+
     private ArrayList<Vehicle> vehicles;
-    // if ran out of money add 25,000 and announce the evant and keep track of added money
-    public Dealership() {
-        operatingBudget = 500000;
-        staff = new ArrayList<>();
-        vehicles = new ArrayList<>();
+
+    public Dealership () {
+        salespeople = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            salespeople.add(new Salesperson());
+        }
+
+        mechanics = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            mechanics.add(new Mechanic());
+        }
+
+        interns = new ArrayList<>();
+        for(int i = 0; i < 3; i++) {
+            interns.add(new Intern());
+        }
     }
 
-    public ArrayList<Staff> getInterns() {
-        ArrayList<Staff> interns = new ArrayList<>();
-        for (Staff obj : staff) {
-            if (obj instanceof Intern) {
-                interns.add(obj);
-            }
+    public ArrayList<Staff> getStaff(StaffType type) {
+        switch (type) {
+            case SALESPERSON:
+                return salespeople;
+            case MECHANIC:
+                return mechanics;
+            case INTERN:
+                return interns;
+            default:
+                throw new IllegalArgumentException("Invalid staff type: " + type);
         }
-        return interns;
     }
 
-    public ArrayList<Staff> getMechanics() {
-        ArrayList<Staff> mechanics = new ArrayList<>();
-        for (Staff obj : staff) {
-            if (obj instanceof Mechanic) {
-                mechanics.add(obj);
-            }
+    public void addStaff(StaffType type) {
+        switch (type) {
+            case SALESPERSON:
+                if (salespeople.size() < 3) {
+                    interns.add(new Salesperson());
+                } else {
+                    System.out.println("Cannot hire more than 3 salespeople");
+                }
+                break;
+            case MECHANIC:
+                if (mechanics.size() < 3) {
+                    mechanics.add(new Mechanic());
+                } else {
+                    System.out.println("Cannot hire more than 3 mechanics");
+                }
+                break;
+            case INTERN:
+                if (interns.size() < 3) {
+                    interns.add(new Intern());
+                } else {
+                    System.out.println("Cannot hire more than 3 interns");
+                }
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid staff type: " + type);
         }
-        return mechanics;
     }
 
-    public ArrayList<Staff> getSalespeople() {
-        ArrayList<Staff> salespeople = new ArrayList<>();
-        for (Staff obj : staff) {
-            if (obj instanceof Salesperson) {
-                salespeople.add(obj);
-            }
-        }
-        return salespeople;
-    }
+    // public void checkVehicles(VehicleType type) {
+    //     switch (type) {
+    //         case PERFORMANCE_CAR:
+    //         default:
+    //         throw new IllegalArgumentException("Invalid staff type: " + type);
+    //     }
+    //     int count = 0;
 
-    public ArrayList<Staff> addstaff(String StaffType) {
+    //     // Count number of vehicles of `type` currently in the vehicles inventory
+    //     for (Vehicle vehicle : vehicles) {
+    //         if (vehicle. == type) {     // Unfinished
+    //             count++;
+    //         }
+    //     }
 
-        if (StaffType == "Intern") {
-            staff.add(new Intern());
-        }
-        else if (StaffType == "Sales") {
-            staff.add(new Salesperson());
-        }
-        else {
-            staff.add(new Mechanic());
-        }
-
-
-        return staff;
-    }
-
-    public ArrayList<Vehicle> addVehicles(String vehicle) {
-
-        if (vehicle == "PerformanceCar") {
-            //PerformanceCar newpreformance = new PerformanceCar()
-            vehicles.add(newpreformance);
-            operatingBudget = operatingBudget -newpreformance.getCost(20000);
-        } 
-        else if (vehicle == "Car") {
-            vehicles.add(new Car());
-            operatingBudget = operatingBudget - 10000;
-
-        }
-        else {
-            vehicles.add(new Pickup());
-            operatingBudget = operatingBudget - 10000;
-
-        }
-
-
-        return vehicles;
-    }
-
-
-
-    public ArrayList<Vehicle> getPerformanceCar() {
-        ArrayList<Vehicle> PerformanceCar = new ArrayList<>();
-        for (Vehicle obj : vehicles) {
-            if (obj instanceof PerformanceCar) {
-                PerformanceCar.add(obj);
-            }
-        }
-        return PerformanceCar;
-    }
-
-    public ArrayList<Vehicle> getCar() {
-        ArrayList<Vehicle> Car = new ArrayList<>();
-        for (Vehicle obj : vehicles) {
-            if (obj instanceof PerformanceCar) {
-                Car.add(obj);
-            }
-        }
-        return Car;
-    }
-
-    public ArrayList<Vehicle> getPickup() {
-        ArrayList<Vehicle> Pickup = new ArrayList<>();
-        for (Vehicle obj : vehicles) {
-            if (obj instanceof Pickup) {
-                Pickup.add(obj);
-            }
-        }
-        return Pickup;
-    }
-
-    // getOperatingBudget()
+    //     // Bring the count of vehicles `type` to 4 in the vehicles inventory
+    //     while (count < 4) {
+    //         Vehicle vehicle;
+    //         switch (type) {
+    //             case CAR:
+    //                 vehicle = new Car();
+    //                 break;
+    //             case PERFORMANCE_CAR:
+    //                 vehicle = new PerformanceCar();
+    //                 break;
+    //             case PICKUP:
+    //                 vehicle = new Pickup();
+    //                 break;
+    //             default:
+    //                 throw new IllegalArgumentException("Invalid vehicle type: " + type);
+    //         }
+    //         this.vehicles.add(vehicle);
+    //         this.operatingBudget -= vehicle.getCost();
+    //         count++;
+    //     }
+    // }
 }
+

@@ -4,14 +4,9 @@ import java.util.Arrays;
 public class main {
     public static void main(String[] argc) {
         Dealership dealership = new Dealership();
-        Activity activity = new Activity(dealership);
+        Activity openActivity = new Opening(dealership);
 
-  
-        // Run simulation in a 30 day loop
-        activity.open();
-        activity.wash();
-        activity.repair();
-        activity.sell();
-        activity.end();
+        // Run simulation for 30 calender days skipping sundays
+        openActivity.run();
     }
 }
