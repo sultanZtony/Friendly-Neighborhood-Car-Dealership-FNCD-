@@ -18,6 +18,11 @@ class Opening extends Activity {
             dealership.addStaff(StaffType.INTERN);
         }
 
+        dealership.checkVehicles(VehicleType.CAR);
+        dealership.checkVehicles(VehicleType.PERFORMANCE_CAR);
+        dealership.checkVehicles(VehicleType.PICKUP);
+
+        System.out.print(dealership.getBudget());
         // Check if there are less than 4 of each type of vehicle in the inventory. If so, add them.
     }
 }
