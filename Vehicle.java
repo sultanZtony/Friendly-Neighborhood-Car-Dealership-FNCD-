@@ -30,6 +30,14 @@ public abstract class Vehicle {
         this.salesPrice = this.cost*2;
     }
 
+    public double getSalesPrice() {
+        return this.salesPrice;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
     public double getCost() {
         return this.cost;
     }
@@ -59,11 +67,11 @@ public abstract class Vehicle {
         int randClean = rand.nextInt(100);
 
         if (randClean < 5) {
-            return "sparkling";
+            return "Sparkling";
         } else if (randClean < 40) {
-            return "clean";
+            return "Clean";
         } else {
-            return "dirty";
+            return "Dirty";
         }
     }
 
