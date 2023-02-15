@@ -7,6 +7,7 @@ public class Dealership {
     private ArrayList<Salesperson> salespeople = new ArrayList<Salesperson>();
     private ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
     private ArrayList<Intern> interns = new ArrayList<Intern>();
+    private ArrayList<DepartedStaff> departedStaff = new ArrayList<DepartedStaff>();
 
     private ArrayList<PerformanceCar> performanceCars = new ArrayList<PerformanceCar>();
     private ArrayList<Car> cars = new ArrayList<Car>();
@@ -82,7 +83,9 @@ public class Dealership {
 
        return vehicles;
     }
-    
+    public ArrayList<DepartedStaff> getDepartedStaff() {
+        return departedStaff;
+    }
     public ArrayList<Intern> getInterns() {
         return interns;
     }
@@ -111,6 +114,32 @@ public class Dealership {
         this.operatingBudget -= expense;
     }
 
+    public void quit(ArrayList<Salesperson> sales,ArrayList<Mechanic> mechanics, ArrayList<Intern> interns ){
+        double random1 = Math.random();
+        double random2 = Math.random();
+        double random3 = Math.random();
+
+        if (random1 <= 0.1) {
+            sales.remove(0);
+            if (interns.size() > 0) {
+                interns.remove(0);
+                addStaff(StaffType.SALESPERSON);
+            }
+            addStaff(StaffType.DEPARTEDSTAFF);
+        }
+        if (random2 <= 0.1) {
+            mechanics.remove(0);
+            if (interns.size() > 0) {
+                interns.remove(0);
+                addStaff(StaffType.MECHANIC);
+            }
+            addStaff(StaffType.DEPARTEDSTAFF);
+
+        }
+        if (random3 <= 0.1) {
+            interns.remove(0);
+        }
+    }
     public ArrayList<Vehicle> getDirtyVehicles() {
         ArrayList<Vehicle> dirtyVehicles = new ArrayList<Vehicle>();
         for (Vehicle perfCar : performanceCars) {
@@ -151,6 +180,67 @@ public class Dealership {
         return cleanVehicles;
     }
 
+
+    public ArrayList<Vehicle> getBrokenVehicles() {
+        ArrayList<Vehicle> BrokenVehicles = new ArrayList<Vehicle>();
+        for (Vehicle perfCar : performanceCars) {
+            if (perfCar.getCondition() == "Broken") {
+                BrokenVehicles.add(perfCar);
+            }
+        }
+        for (Vehicle car : cars) {
+            if (car.getCondition() == "Broken") {
+                BrokenVehicles.add(car);
+            }
+        }
+        for (Vehicle pickup : pickups) {
+            if (pickup.getCondition() == "Broken") {
+                BrokenVehicles.add(pickup);
+            }
+        }
+        return BrokenVehicles;
+    }
+
+    public ArrayList<Vehicle> getUsedVehicles() {
+        ArrayList<Vehicle> UsedVehicles = new ArrayList<Vehicle>();
+        for (Vehicle perfCar : performanceCars) {
+            if (perfCar.getCondition() == "Used") {
+                UsedVehicles.add(perfCar);
+            }
+        }
+        for (Vehicle car : cars) {
+            if (car.getCondition() == "Used") {
+                UsedVehicles.add(car);
+            }
+        }
+        for (Vehicle pickup : pickups) {
+            if (pickup.getCondition() == "Used") {
+                UsedVehicles.add(pickup);
+            }
+        }
+        return UsedVehicles;
+    }
+
+    public ArrayList<Vehicle> getNewVehicles() {
+        ArrayList<Vehicle> newVehicles = new ArrayList<Vehicle>();
+        for (Vehicle perfCar : performanceCars) {
+            if (perfCar.getCondition() == "Like new") {
+                newVehicles.add(perfCar);
+            }
+        }
+        for (Vehicle car : cars) {
+            if (car.getCondition() == "Like new") {
+                newVehicles.add(car);
+            }
+        }
+        for (Vehicle pickup : pickups) {
+            if (pickup.getCondition() == "Like new") {
+                newVehicles.add(pickup);
+            }
+        }
+        return newVehicles;
+    }
+
     public double getBudget() {
         return this.operatingBudget;
     }
@@ -173,6 +263,8 @@ public class Dealership {
 
     public void addStaff(StaffType type) {
         switch (type) {
+            case DEPARTEDSTAFF:
+            departedStaff.add(new DepartedStaff());
             case SALESPERSON:
                 if (salespeople.size() < 3) {
                     salespeople.add(new Salesperson());

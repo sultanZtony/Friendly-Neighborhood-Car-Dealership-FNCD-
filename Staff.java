@@ -1,5 +1,6 @@
 public abstract class Staff {
     private String name;
+    private String status;
     private double dailyRate;
     private double salaryEarned;
     private double bonusEarned;
@@ -39,7 +40,12 @@ public abstract class Staff {
     public int getTotalDaysWorked() {
         return totalDaysWorked;
     }
-
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public String getStatus() {
+        return status;
+    }
 }
 
 class Salesperson extends Staff {
@@ -142,6 +148,32 @@ class Mechanic extends Staff {
     public Mechanic() {
         super("Mechanic", id++, 50);
     }
+    
+    public double repair(Vehicle vehicle) {
+ 
+            double random = Math.random();
+            double repairBonus = 0;
+
+            // Each Mechanic has an 80% chance of fixing any Vehicle worked on
+            if (random < 0.8) {
+                if (vehicle.getCondition() == "Broken") {
+                    vehicle.setCondtion("Used");
+                    // A Vehicle that becomes Used has its sales price increased 50%.
+                    vehicle.setsalesPrice(vehicle.getsalesPrice() * 1.5);
+                }
+                if (vehicle.getCondition() == "Used") {
+                    vehicle.setCondtion("Like New");
+                    // A Vehicle that becomes Like New has its sales price increased 25%
+                    vehicle.setsalesPrice(vehicle.getsalesPrice() * 1.25);
+                }
+                repairBonus = vehicle.repairBonus();
+            }
+            // Whether fixed or not, any Vehicle worked on will go down one class of
+            // cleanliness
+
+
+    return repairBonus;
+}
 }
 
 class Intern extends Staff {
@@ -177,4 +209,12 @@ class Intern extends Staff {
 
         return washBonus;
     }
+}
+class DepartedStaff extends Staff {
+    private static int id = 1;
+
+    public DepartedStaff() {
+        super("Departed", id++, 0);
+    }
+
 }

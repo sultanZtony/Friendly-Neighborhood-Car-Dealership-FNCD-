@@ -83,7 +83,7 @@ class Wash extends Activity {
     }
 
     void run() {
-        // System.out.println("Running Washing activity...");
+         System.out.println("Running Washing activity...");
 
         washVehicles(dealership.getDirtyVehicles(), dealership.getCleanVehicles(), dealership.getInterns());
     }
@@ -96,60 +96,49 @@ class Repairing extends Activity {
         this.dealership = dealership;
     }
 
-    private void repairVehicles(ArrayList<Mechanic> Mechanics, ArrayList<Vehicle> vehicles, int count) {
-        for (Vehicle obj : vehicles) {
-            double random = Math.random();
+    public void repairVehicles(ArrayList<Vehicle> brokenVehicles, ArrayList<Vehicle> usedVehicles,ArrayList<Mechanic> Mechanics) {
+        Random rand = new Random();
 
-            // Each Mechanic has an 80% chance of fixing any Vehicle worked on
-            if (count > 0 && random < 0.8) {
-                if (obj.getCondition() == "Broken") {
-                    obj.setCondtion("Used");
-                    // A Vehicle that becomes Used has its sales price increased 50%.
-                    obj.setsalesPrice(obj.getsalesPrice() * 1.5);
-                    count--;
-                }
-                if (obj.getCondition() == "Used") {
-                    obj.setCondtion("Like New");
-                    // A Vehicle that becomes Like New has its sales price increased 25%
-                    obj.setsalesPrice(obj.getsalesPrice() * 1.25);
-                    count--;
-                }
+        // Each Mechanic can wash up to two vehicles per day
+        for (Mechanic mechanic : Mechanics) {
+            int repairedVehicles = 0;
 
-            }
-            // Whether fixed or not, any Vehicle worked on will go down one class of
-            // cleanliness
+            // Start w/ randomly selected Broken Vehicles to fix
+            while (repairedVehicles < 2) {
+                int randIndex = rand.nextInt(brokenVehicles.size());
+                Vehicle vehicle = brokenVehicles.get(randIndex);
+                double repairBonus = mechanic.repair(vehicle);
+                mechanic.addBonus(repairBonus);
+                dealership.subtractBudget(repairBonus);
 
-            else {
-                if (obj.getCondition() == "Clean") {
-                    obj.setCleanliness("Sparkling");
+                if (vehicle.getCondition() == "Used") {
+                    usedVehicles.add(vehicle);
+                } else if (vehicle.getCondition() == "Like New") {
+                    brokenVehicles.remove(randIndex);
                 }
 
-                if (obj.getCondition() == "Sparkling") {
-                    obj.setCleanliness("Dirty");
+                if (vehicle.getCondition() == "Clean") {
+                    vehicle.setCleanliness("Sparkling");
                 }
+
+                if (vehicle.getCondition() == "Sparkling") {
+                    vehicle.setCleanliness("Dirty");
+                }
+                repairedVehicles++;
             }
 
-            // NEED TO DO THIS: Mechanics receive a bonus from each successful repair by
-            // Vehicle type.
-            // for(Staff mm: Mechanics) {
 
-            // }
         }
     }
 
     void run() {
-        // System.out.println("Running Repair activity...");
+     System.out.println("Running Repair activity...");
 
-        ArrayList<Mechanic> Allmechanic = dealership.getMechanics();
-        int sizeMechanic = Allmechanic.size();
-        int count = 2 * sizeMechanic;
-        for (Staff obj : Allmechanic) {
+    repairVehicles(dealership.getBrokenVehicles(), dealership.getUsedVehicles(), dealership.getMechanics());
 
-        }
-        repairVehicles(Allmechanic, dealership.getVehicles(), count);
-
-    }
 }
+}
+
 
 class Sell extends Activity {
     private static Random rand = new Random();
@@ -194,4 +183,61 @@ class Sell extends Activity {
             }
         }
     }
+}
+
+class End extends Activity {
+    private Dealership dealership;
+
+    public End(Dealership dealership) {
+        this.dealership = dealership;
+    }
+
+    public void repairVehicles(ArrayList<Vehicle> brokenVehicles, ArrayList<Vehicle> usedVehicles,ArrayList<Mechanic> Mechanics) {
+
+    }
+
+    void run() {
+     System.out.println("Running Ending activity...");
+
+     ArrayList<Salesperson> salespeople = dealership.getSalespeople();
+     ArrayList<Mechanic> mechanics = dealership.getMechanics();
+     ArrayList<Intern> interns = dealership.getInterns();
+
+
+     ArrayList<PerformanceCar> performanceCars = dealership.getPerformanceCars();
+     ArrayList<Car> cars = dealership.getCars();
+     ArrayList<Pickup> pickups = dealership.getPickups();
+
+
+    dealership.quit(salespeople, mechanics, interns);
+   // Produce a readable, tabular report of Staff members – with total days worked, total normal pay, total bonus pay, working or quit the FNCD
+
+           // NEED to check whether the staff is working or has quit.
+        for(Salesperson obj1: salespeople){
+            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
+        }
+        for(Mechanic obj1: mechanics){
+            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
+        }
+        for(Intern obj1: interns){
+            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
+        }
+
+
+    // Produce a readable, tabular report of Inventory – List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
+
+        // NEED to check whether it has been sold or not
+        for (PerformanceCar obj : performanceCars) {
+            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
+        }
+        for (Car obj : cars) {
+            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
+        }
+        for (Pickup obj : pickups) {
+            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
+        }
+
+                // NEED to implement function to calculate sales per day
+        System.out.print("Operating budget" + dealership.getBudget() + " total sales $ for day" );
+}
 }

@@ -37,7 +37,9 @@ public abstract class Vehicle {
     public String getType() {
         return this.type;
     }
-
+    public String getName() {
+        return this.name;
+    }
     public double getCost() {
         return this.cost;
     }
