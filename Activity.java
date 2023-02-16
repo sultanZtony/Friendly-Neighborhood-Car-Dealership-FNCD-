@@ -2,6 +2,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
+import java.util.concurrent.DelayQueue;
 
 abstract class Activity {
 }
@@ -22,6 +23,9 @@ class Open extends Activity {
             dealership.addStaff(StaffType.INTERN);
         }
 
+        if(dealership.getBudget() < 0){
+            dealership.addBudget(250000);
+        }
         // Check if there are less than 4 of each type of vehicle in the inventory. If
         // so, add them.
         dealership.checkVehicles(VehicleType.CAR);
@@ -202,42 +206,32 @@ class End extends Activity {
      ArrayList<Salesperson> salespeople = dealership.getSalespeople();
      ArrayList<Mechanic> mechanics = dealership.getMechanics();
      ArrayList<Intern> interns = dealership.getInterns();
+     ArrayList<Staff> staff = dealership.getStaff(); 
 
 
-     ArrayList<PerformanceCar> performanceCars = dealership.getPerformanceCars();
-     ArrayList<Car> cars = dealership.getCars();
-     ArrayList<Pickup> pickups = dealership.getPickups();
-
-
-    dealership.quit(salespeople, mechanics, interns);
+     ArrayList<Vehicle> vehicles = dealership.getVehicles();
+     ArrayList<Vehicle> sold = dealership.getSoldVehicles();
+    dealership.quit(staff,salespeople, mechanics, interns);
    // Produce a readable, tabular report of Staff members – with total days worked, total normal pay, total bonus pay, working or quit the FNCD
 
            // NEED to check whether the staff is working or has quit.
-        for(Salesperson obj1: salespeople){
-            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
+        for(Staff obj1: staff){
+            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: " +obj1.getStatus());
         }
-        for(Mechanic obj1: mechanics){
-            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
-        }
-        for(Intern obj1: interns){
-            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: ");
-        }
+
 
 
     // Produce a readable, tabular report of Inventory – List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
 
         // NEED to check whether it has been sold or not
-        for (PerformanceCar obj : performanceCars) {
-            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
+        for (Vehicle obj : vehicles) {
+            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Stock" );
         }
-        for (Car obj : cars) {
-            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
-        }
-        for (Pickup obj : pickups) {
-            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: " );
+        for (Vehicle obj : sold) {
+            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Sold" );
         }
 
                 // NEED to implement function to calculate sales per day
-        System.out.print("Operating budget" + dealership.getBudget() + " total sales $ for day" );
+        System.out.print("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
 }
 }

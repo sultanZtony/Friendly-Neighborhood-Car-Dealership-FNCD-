@@ -6,12 +6,13 @@ public abstract class Staff {
     private double bonusEarned;
     private int totalDaysWorked;
 
-    public Staff(String staffType, int id, double dailyRate) {
+    public Staff(String staffType, int id, double dailyRate, String status) {
         name = staffType + "_" + id;
         this.dailyRate = dailyRate;
         salaryEarned = 0;
         bonusEarned = 0;
         totalDaysWorked = 0;
+        this.status = "Working";
     }
 
     public void setDailyRate(double dailyRate) {
@@ -52,7 +53,7 @@ class Salesperson extends Staff {
     private static int id = 1;
 
     public Salesperson() {
-        super("Salesperson", id++, 100);
+        super("Salesperson", id++, 100, "Working");
     }
 
     public Vehicle findVehicle(Buyer buyer, Dealership dealership) {
@@ -146,7 +147,7 @@ class Mechanic extends Staff {
     private static int id = 1;
 
     public Mechanic() {
-        super("Mechanic", id++, 50);
+        super("Mechanic", id++, 50, "Working");
     }
     
     public double repair(Vehicle vehicle) {
@@ -180,7 +181,7 @@ class Intern extends Staff {
     private static int id = 1;
 
     public Intern() {
-        super("Intern", id++, 25);
+        super("Intern", id++, 25, "Working");
     }
 
     public double wash(Vehicle vehicle) {
@@ -214,7 +215,7 @@ class DepartedStaff extends Staff {
     private static int id = 1;
 
     public DepartedStaff() {
-        super("Departed", id++, 0);
+        super("Departed", id++, 0, "Departed");
     }
 
 }
