@@ -4,9 +4,10 @@ import java.util.Calendar;
 import java.io.PrintStream;
 import java.io.PipedOutputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class main {
-    public static void main(String[] argc) {
+    public static void main(String[] argc) throws IOException {
         Dealership dealership = new Dealership();
         Open open = new Open(dealership);
         Wash wash = new Wash(dealership);
@@ -14,7 +15,7 @@ public class main {
         Sell sell = new Sell(dealership);
         End end = new End(dealership);
         
-
+FileWriter output = new FileWriter("Test.txt");
 
     
          // Run simulation for 30 calender days skipping sundays
@@ -34,8 +35,14 @@ public class main {
             wash.run();
             repair.run();
             sell.run(dayOfWeek);            
-            end.run(i);
+            end.run(output,i);
+
+
+
+            
         }
+        output.close();
+
         // System.out.println(dealership.getSoldVehicles());
     }
 }

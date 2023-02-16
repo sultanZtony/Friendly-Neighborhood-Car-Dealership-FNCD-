@@ -191,7 +191,7 @@ class End extends Activity {
 
     }
 
-    void run(int dayOfWeek) {
+    void run(FileWriter output,int dayOfWeek) {
      System.out.println("Running Ending activity...");
 
      ArrayList<Salesperson> salespeople = dealership.getSalespeople();
@@ -212,12 +212,10 @@ class End extends Activity {
 
            try {
             // Creates a FileWriter
-            FileWriter output
-                = new FileWriter("Test.txt");
-  
+
             // Writes the string to the file
-            System.out.println("Day " + dayOfWeek);
-            System.out.println("Staff: " + "\n");
+            output.write("Day " + dayOfWeek + "\n");
+            output.write("Staff: " + "\n");
 
 
             // Staff Report
@@ -225,7 +223,7 @@ class End extends Activity {
                 obj1.addDayWorked();
                 output.write("Name: " + obj1.getName() + " Total days worked: " + obj1.getTotalDaysWorked() + " Total salay earned: " +obj1.getSalaryEarned() + " Total bonus earned: " + obj1.getBonusEarned() + " Status: " +obj1.getStatus() + "\n");
             }
-            System.out.println("Cars: " + "\n");
+            output.write("Cars: " + "\n");
 
 
             // Vehicles Report
@@ -236,10 +234,9 @@ class End extends Activity {
                 output.write("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Sold" + "\n");
             }
             // Budget Report
-            output.write("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
+            output.write("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay() + "\n");
   
             // Closes the writer
-            output.close();
         }
   
         catch (Exception e) {
