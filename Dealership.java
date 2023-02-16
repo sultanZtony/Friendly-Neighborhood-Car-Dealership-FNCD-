@@ -8,6 +8,8 @@ public class Dealership {
     private ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
     private ArrayList<Intern> interns = new ArrayList<Intern>();
     private ArrayList<DepartedStaff> departedStaff = new ArrayList<DepartedStaff>();
+    private ArrayList<Staff> staff = new ArrayList<Staff>();
+
 
     private ArrayList<PerformanceCar> performanceCars = new ArrayList<PerformanceCar>();
     private ArrayList<Car> cars = new ArrayList<Car>();
@@ -33,7 +35,13 @@ public class Dealership {
     public ArrayList<Vehicle> getSoldVehicles() {
         return soldVehicles;
     }
-
+    public Double getTotalSalesDay() {
+        double salesToday = 0;
+        for (Vehicle sold : soldVehicles) {
+            salesToday += sold.getSalesPrice();
+        }
+        return salesToday;
+    }
     public void removeVehicle(Vehicle vehicle) {
         if (vehicle instanceof PerformanceCar) {
             performanceCars.remove(vehicle);
@@ -79,9 +87,20 @@ public class Dealership {
     public ArrayList<Vehicle> getVehicles() {
         ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
         vehicles.addAll(performanceCars);
-        vehicles.addAll(cars);vehicles.addAll(pickups);
+        vehicles.addAll(cars);
+        vehicles.addAll(pickups);
 
        return vehicles;
+    }
+
+    public ArrayList<Staff> getStaff() {
+        ArrayList<Staff> staff = new ArrayList<Staff>();
+        staff.addAll(salespeople);
+        staff.addAll(mechanics);
+        staff.addAll(interns);
+        staff.addAll(departedStaff);
+
+       return staff;
     }
     public ArrayList<DepartedStaff> getDepartedStaff() {
         return departedStaff;
@@ -114,7 +133,7 @@ public class Dealership {
         this.operatingBudget -= expense;
     }
 
-    public void quit(ArrayList<Salesperson> sales,ArrayList<Mechanic> mechanics, ArrayList<Intern> interns ){
+    public void quit(ArrayList<Staff> staff ,ArrayList<Salesperson> sales,ArrayList<Mechanic> mechanics, ArrayList<Intern> interns ){
         double random1 = Math.random();
         double random2 = Math.random();
         double random3 = Math.random();
