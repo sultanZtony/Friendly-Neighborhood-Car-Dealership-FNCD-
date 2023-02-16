@@ -198,7 +198,7 @@ class End extends Activity {
 
            // NEED to check whether the staff is working or has quit.
         for(Staff obj1: staff){
-            System.out.print("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: " +obj1.getStatus());
+            System.out.println("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: " +obj1.getStatus());
         }
 
 
@@ -207,13 +207,13 @@ class End extends Activity {
 
         // NEED to check whether it has been sold or not
         for (Vehicle obj : vehicles) {
-            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Stock" );
+            System.out.println("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Stock" );
         }
         for (Vehicle obj : sold) {
-            System.out.print("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Sold" );
+            System.out.println("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Sold" );
         }
 
                 // NEED to implement function to calculate sales per day
-        System.out.print("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
+        System.out.println("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
 }
 }

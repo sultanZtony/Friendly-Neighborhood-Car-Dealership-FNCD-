@@ -9,6 +9,7 @@ public class main {
         Wash wash = new Wash(dealership);
         Repairing repair = new Repairing(dealership);
         Sell sell = new Sell(dealership);
+        End end = new End(dealership);
         
 
         // Run simulation for 30 calender days skipping sundays
@@ -23,10 +24,11 @@ public class main {
                 continue;
             }
 
-            // open.run();
-            // wash.run();
+            open.run();
+            wash.run();
             repair.run();
             // sell.run(dayOfWeek);
+            end.run();
         }
         // System.out.println(dealership.getSoldVehicles());
     }
