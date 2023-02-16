@@ -191,7 +191,7 @@ class End extends Activity {
 
     }
 
-    void run() {
+    void run(int dayOfWeek) {
      System.out.println("Running Ending activity...");
 
      ArrayList<Salesperson> salespeople = dealership.getSalespeople();
@@ -216,10 +216,27 @@ class End extends Activity {
                 = new FileWriter("Test.txt");
   
             // Writes the string to the file
+            System.out.println("Day " + dayOfWeek);
+            System.out.println("Staff: " + "\n");
+
+
+            // Staff Report
             for(Staff obj1: staff){
                 obj1.addDayWorked();
                 output.write("Name: " + obj1.getName() + " Total days worked: " + obj1.getTotalDaysWorked() + " Total salay earned: " +obj1.getSalaryEarned() + " Total bonus earned: " + obj1.getBonusEarned() + " Status: " +obj1.getStatus() + "\n");
             }
+            System.out.println("Cars: " + "\n");
+
+
+            // Vehicles Report
+            for (Vehicle obj : vehicles) {
+                output.write("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Stock" + "\n");
+            }
+            for (Vehicle obj : sold) {
+                output.write("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Sold" + "\n");
+            }
+            // Budget Report
+            output.write("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
   
             // Closes the writer
             output.close();
@@ -229,20 +246,5 @@ class End extends Activity {
             e.getStackTrace();
         }   
 
-
-
-
-    // Produce a readable, tabular report of Inventory – List of all Vehicles with Name, Cost, Sale Price, Condition, Cleanliness, Sold or In Stock
-
-        // NEED to check whether it has been sold or not
-        for (Vehicle obj : vehicles) {
-            System.out.println("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Stock" );
-        }
-        for (Vehicle obj : sold) {
-            System.out.println("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Sold" );
-        }
-
-                // NEED to implement function to calculate sales per day
-        System.out.println("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay());
 }
 }

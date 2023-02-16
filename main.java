@@ -29,12 +29,12 @@ public class main {
                 continue;
             }
 
-
+            
             open.run();
             wash.run();
             repair.run();
             sell.run(dayOfWeek);            
-            end.run();
+            end.run(i);
         }
         // System.out.println(dealership.getSoldVehicles());
     }
