@@ -15,7 +15,8 @@ public class main {
         Sell sell = new Sell(dealership);
         End end = new End(dealership);
         
-FileWriter output = new FileWriter("Test.txt");
+        // Creates a FileWriter
+        FileWriter output = new FileWriter("Test.txt");
 
     
          // Run simulation for 30 calender days skipping sundays
@@ -41,8 +42,8 @@ FileWriter output = new FileWriter("Test.txt");
 
             
         }
+        // Closes the writer
         output.close();
 
-        // System.out.println(dealership.getSoldVehicles());
     }
 }

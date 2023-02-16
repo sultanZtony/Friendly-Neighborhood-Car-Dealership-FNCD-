@@ -16,7 +16,7 @@ class Open extends Activity {
     }
 
     void run() {
-        // System.out.println("Running Open activity...");
+         System.out.println("Running Open activity...");
 
         // If there are less than 3 interns on opening, hire until intern count is
         // reached.
@@ -24,6 +24,7 @@ class Open extends Activity {
             dealership.addStaff(StaffType.INTERN);
         }
 
+        // If Dealership ran out of money add 250000
         if(dealership.getBudget() < 0){
             dealership.addBudget(250000);
         }
@@ -104,7 +105,7 @@ class Repairing extends Activity {
     public void repairVehicles(ArrayList<Vehicle> vehicles, ArrayList<Mechanic> Mechanics) {
         Random rand = new Random();
 
-        // Each Mechanic can wash up to two vehicles per day
+        // Each Mechanic can wash up to two vehicles per day and bonus is added
         for (Mechanic mechanic : Mechanics) {
             int repairedVehicles = 0;
             for (Vehicle vehicle : vehicles) {
@@ -135,6 +136,7 @@ class Sell extends Activity {
         this.dealership = dealership;
     }
 
+    
     public ArrayList<Buyer> genBuyers(int dayOfWeek) {
         ArrayList<Buyer> newBuyers = new ArrayList<>();
         if (dayOfWeek == Calendar.FRIDAY || dayOfWeek == Calendar.SATURDAY) {
@@ -163,13 +165,15 @@ class Sell extends Activity {
             Salesperson salesperson = salespeople.get(randIndex);
 
             double randDouble = rand.nextDouble();
+
+            // If there is no vehicles to sell break
             if (salesperson.findVehicle(buyer, dealership) == null) {
-                System.out.println("No Vehicles in inventory4");
+                System.out.println("No Vehicles in inventory");
                 break;
             }
             else {
             Vehicle vehicleToSell = salesperson.findVehicle(buyer, dealership);
-
+            // If buyer decide to buy then remove the vehicle and add bonus to sales person
             if (buyer.getBuyingChances() >= randDouble) {
                 dealership.addBudget(vehicleToSell.getSalesPrice());
                 salesperson.addBonus(vehicleToSell.salesBonus());
@@ -205,13 +209,7 @@ class End extends Activity {
     dealership.quit(staff,salespeople, mechanics, interns);
    // Produce a readable, tabular report of Staff members – with total days worked, total normal pay, total bonus pay, working or quit the FNCD
 
-           // NEED to check whether the staff is working or has quit.
-
-
-
-
            try {
-            // Creates a FileWriter
 
             // Writes the string to the file
             output.write("Day " + dayOfWeek + "\n");
@@ -236,7 +234,6 @@ class End extends Activity {
             // Budget Report
             output.write("Operating budget" + dealership.getBudget() + " total sales $ for day"  + dealership.getTotalSalesDay() + "\n");
   
-            // Closes the writer
         }
   
         catch (Exception e) {

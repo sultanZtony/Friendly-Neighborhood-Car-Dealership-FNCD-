@@ -59,6 +59,8 @@ class Salesperson extends Staff {
         super("Salesperson", id++, 100, "Working");
     }
 
+
+    // Function to find the suitable car
     public Vehicle findVehicle(Buyer buyer, Dealership dealership) {
         Vehicle mostExpensive = null;
         double maxPrice = 0;
@@ -134,18 +136,6 @@ class Salesperson extends Staff {
     }
 }
 
-// public PerformanceCar getMostExpensivePerformance() {
-//     PerformanceCar mostExpensive = null;
-//     double maxPrice = 0;
-//     for (PerformanceCar perfCar : performanceCars) {
-//         if (perfCar.getCondition() != "Broken" && perfCar.getCost() > maxPrice) {
-//             if (perfCar.getCost() > maxPrice) {
-//                 mostExpensive = perfCar;
-//             }
-//         }
-//     }
-//     return mostExpensive;
-// }
 
 class Mechanic extends Staff {
     private static int id = 1;
@@ -154,6 +144,8 @@ class Mechanic extends Staff {
         super("Mechanic", id++, 50, "Working");
     }
     
+
+    // Repair methode to use in the activity of repairing
     public double repair(Vehicle vehicle) {
  
             double random = Math.random();
@@ -173,10 +165,16 @@ class Mechanic extends Staff {
                 }
                 repairBonus = vehicle.repairBonus();
             }
+
             // Whether fixed or not, any Vehicle worked on will go down one class of
             // cleanliness
 
-
+            if (vehicle.getCleanliness() == "Clean") {
+                vehicle.setCleanliness("Dirty");
+            }
+            if (vehicle.getCleanliness() == "Sparkling") {
+                vehicle.setCleanliness("Clean");
+            }
     return repairBonus;
 }
 }
@@ -215,11 +213,3 @@ class Intern extends Staff {
         return washBonus;
     }
 }
-// class DepartedStaff extends Staff {
-//     private static int id = 1;
-
-//     public DepartedStaff() {
-//         super("Departed", id++, 0, "Departed");
-//     }
-
-// }
