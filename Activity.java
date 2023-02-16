@@ -96,45 +96,27 @@ class Repairing extends Activity {
         this.dealership = dealership;
     }
 
-    public void repairVehicles(ArrayList<Vehicle> brokenVehicles, ArrayList<Vehicle> usedVehicles,ArrayList<Mechanic> Mechanics) {
+    public void repairVehicles(ArrayList<Vehicle> vehicles, ArrayList<Mechanic> Mechanics) {
         Random rand = new Random();
 
         // Each Mechanic can wash up to two vehicles per day
         for (Mechanic mechanic : Mechanics) {
             int repairedVehicles = 0;
-
-            // Start w/ randomly selected Broken Vehicles to fix
-            while (repairedVehicles < 2) {
-                int randIndex = rand.nextInt(brokenVehicles.size());
-                Vehicle vehicle = brokenVehicles.get(randIndex);
-                double repairBonus = mechanic.repair(vehicle);
-                mechanic.addBonus(repairBonus);
-                dealership.subtractBudget(repairBonus);
-
-                if (vehicle.getCondition() == "Used") {
-                    usedVehicles.add(vehicle);
-                } else if (vehicle.getCondition() == "Like New") {
-                    brokenVehicles.remove(randIndex);
-                }
-
-                if (vehicle.getCondition() == "Clean") {
-                    vehicle.setCleanliness("Sparkling");
-                }
-
-                if (vehicle.getCondition() == "Sparkling") {
-                    vehicle.setCleanliness("Dirty");
-                }
-                repairedVehicles++;
+            for (Vehicle vehicle : vehicles) {
+                if (repairedVehicles <= 2) {
+                    double repairBonus = mechanic.repair(vehicle);
+                    mechanic.addBonus(repairBonus);
+                    dealership.subtractBudget(repairBonus);
+                    repairedVehicles++;
+                }   
             }
-
-
         }
     }
 
     void run() {
      System.out.println("Running Repair activity...");
 
-    repairVehicles(dealership.getBrokenVehicles(), dealership.getUsedVehicles(), dealership.getMechanics());
+    repairVehicles(dealership.getVehicles(), dealership.getMechanics());
 
 }
 }

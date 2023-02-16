@@ -23,11 +23,11 @@ public class main {
                 continue;
             }
 
-            open.run();
-            wash.run();
+            // open.run();
+            // wash.run();
             repair.run();
-            sell.run(dayOfWeek);
+            // sell.run(dayOfWeek);
         }
-        System.out.println(dealership.getSoldVehicles());
+        // System.out.println(dealership.getSoldVehicles());
     }
 }
