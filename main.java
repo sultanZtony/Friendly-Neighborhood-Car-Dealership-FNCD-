@@ -27,7 +27,7 @@ public class main {
             open.run();
             wash.run();
             repair.run();
-            // sell.run(dayOfWeek);
+            sell.run(dayOfWeek);
             end.run();
         }
         // System.out.println(dealership.getSoldVehicles());

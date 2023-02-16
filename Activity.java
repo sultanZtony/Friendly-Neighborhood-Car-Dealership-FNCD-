@@ -160,8 +160,18 @@ class Sell extends Activity {
         for (Buyer buyer : buyers) {
             int randIndex = rand.nextInt(salespeople.size());
             Salesperson salesperson = salespeople.get(randIndex);
+
+            if (dealership.getVehicles().size() == 0) {
+                break;
+            }
+
             Vehicle vehicleToSell = salesperson.findVehicle(buyer, dealership);
+
             double randDouble = rand.nextDouble();
+            if (vehicleToSell == null) {
+                System.out.println("No Vehicles in inventory4");
+                break;
+            }
             if (buyer.getBuyingChances() >= randDouble) {
                 dealership.addBudget(vehicleToSell.getSalesPrice());
                 salesperson.addBonus(vehicleToSell.salesBonus());
@@ -198,7 +208,8 @@ class End extends Activity {
 
            // NEED to check whether the staff is working or has quit.
         for(Staff obj1: staff){
-            System.out.println("Name: " + obj1.getName() + "Total days worked: " + obj1.getTotalDaysWorked() + "Total salay earned: " +obj1.getSalaryEarned() + "Total bonus earned: " + obj1.getBonusEarned() + "Status: " +obj1.getStatus());
+            obj1.addDayWorked();
+            System.out.println("Name: " + obj1.getName() + " Total days worked: " + obj1.getTotalDaysWorked() + " Total salay earned: " +obj1.getSalaryEarned() + " Total bonus earned: " + obj1.getBonusEarned() + " Status: " +obj1.getStatus());
         }
 
 
@@ -207,10 +218,10 @@ class End extends Activity {
 
         // NEED to check whether it has been sold or not
         for (Vehicle obj : vehicles) {
-            System.out.println("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Stock" );
+            System.out.println("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Stock" );
         }
         for (Vehicle obj : sold) {
-            System.out.println("Name: " + obj.getName() + "Cost: " + obj.getCost() + "Sale Price: " + obj.getSalesPrice() + "Condition: " + obj.getCondition() + "Cleanliness " + obj.getCleanliness() + "Status: Sold" );
+            System.out.println("Name: " + obj.getName() + " Cost: " + obj.getCost() + " Sale Price: " + obj.getSalesPrice() + " Condition: " + obj.getCondition() + " Cleanliness " + obj.getCleanliness() + " Status: Sold" );
         }
 
                 // NEED to implement function to calculate sales per day

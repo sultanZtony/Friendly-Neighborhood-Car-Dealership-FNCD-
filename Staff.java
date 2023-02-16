@@ -41,6 +41,9 @@ public abstract class Staff {
     public int getTotalDaysWorked() {
         return totalDaysWorked;
     }
+    public void addDayWorked(){
+        this.totalDaysWorked++;
+    }
     public void setStatus(String status) {
         this.status = status;
     }
@@ -59,6 +62,7 @@ class Salesperson extends Staff {
     public Vehicle findVehicle(Buyer buyer, Dealership dealership) {
         Vehicle mostExpensive = null;
         double maxPrice = 0;
+
         switch (buyer.getDesiredVehicleType()) {
             case PERFORMANCE_CAR:
             for (Vehicle perfCar : dealership.getPerformanceCars()) {
