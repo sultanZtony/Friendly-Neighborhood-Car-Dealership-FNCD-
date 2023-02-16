@@ -12,7 +12,7 @@ public abstract class Staff {
         salaryEarned = 0;
         bonusEarned = 0;
         totalDaysWorked = 0;
-        this.status = "Working";
+        this.status = status;
     }
 
     public void setDailyRate(double dailyRate) {
@@ -215,11 +215,11 @@ class Intern extends Staff {
         return washBonus;
     }
 }
-class DepartedStaff extends Staff {
-    private static int id = 1;
+// class DepartedStaff extends Staff {
+//     private static int id = 1;
 
-    public DepartedStaff() {
-        super("Departed", id++, 0, "Departed");
-    }
+//     public DepartedStaff() {
+//         super("Departed", id++, 0, "Departed");
+//     }
 
-}
+// }

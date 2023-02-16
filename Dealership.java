@@ -7,7 +7,7 @@ public class Dealership {
     private ArrayList<Salesperson> salespeople = new ArrayList<Salesperson>();
     private ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
     private ArrayList<Intern> interns = new ArrayList<Intern>();
-    private ArrayList<DepartedStaff> departedStaff = new ArrayList<DepartedStaff>();
+    private ArrayList<Staff> departedStaff = new ArrayList<Staff>();
     private ArrayList<Staff> staff = new ArrayList<Staff>();
 
 
@@ -102,7 +102,8 @@ public class Dealership {
 
        return staff;
     }
-    public ArrayList<DepartedStaff> getDepartedStaff() {
+    public ArrayList<Staff> getDepartedStaff() {
+  
         return departedStaff;
     }
     public ArrayList<Intern> getInterns() {
@@ -133,30 +134,52 @@ public class Dealership {
         this.operatingBudget -= expense;
     }
 
+    public void departStaff(String Staff)
+    {
+        switch (Staff) {
+            case "sales":
+            salespeople.get(0).setStatus("Departed");
+            departedStaff.add(salespeople.get(0));
+            salespeople.remove(0);
+                
+                break;
+            case "mechanic":
+            mechanics.get(0).setStatus("Departed");
+            departedStaff.add(mechanics.get(0));
+            mechanics.remove(0);
+                break;
+
+            case "intern":
+            interns.get(0).setStatus("Departed");
+            departedStaff.add(interns.get(0));
+            interns.remove(0);
+                break;
+            default:
+                break;
+        }
+    }
     public void quit(ArrayList<Staff> staff ,ArrayList<Salesperson> sales,ArrayList<Mechanic> mechanics, ArrayList<Intern> interns ){
         double random1 = Math.random();
         double random2 = Math.random();
         double random3 = Math.random();
 
         if (random1 <= 0.1) {
-            sales.remove(0);
+            departStaff("sales");
             if (interns.size() > 0) {
-                interns.remove(0);
+                departStaff("intern");
                 addStaff(StaffType.SALESPERSON);
             }
-            addStaff(StaffType.DEPARTEDSTAFF);
         }
         if (random2 <= 0.1) {
-            mechanics.remove(0);
+            departStaff("mechanic");
             if (interns.size() > 0) {
-                interns.remove(0);
+                departStaff("intern");
                 addStaff(StaffType.MECHANIC);
             }
-            addStaff(StaffType.DEPARTEDSTAFF);
 
         }
         if (random3 <= 0.1) {
-            interns.remove(0);
+            departStaff("intern");
         }
     }
     public ArrayList<Vehicle> getDirtyVehicles() {
@@ -282,8 +305,6 @@ public class Dealership {
 
     public void addStaff(StaffType type) {
         switch (type) {
-            case DEPARTEDSTAFF:
-            departedStaff.add(new DepartedStaff());
             case SALESPERSON:
                 if (salespeople.size() < 3) {
                     salespeople.add(new Salesperson());

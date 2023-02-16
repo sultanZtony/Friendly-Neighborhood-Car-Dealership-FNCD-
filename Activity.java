@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Random;
 import java.util.concurrent.DelayQueue;
+import java.io.FileWriter;
 
 abstract class Activity {
 }
@@ -161,22 +162,20 @@ class Sell extends Activity {
             int randIndex = rand.nextInt(salespeople.size());
             Salesperson salesperson = salespeople.get(randIndex);
 
-            if (dealership.getVehicles().size() == 0) {
-                break;
-            }
-
-            Vehicle vehicleToSell = salesperson.findVehicle(buyer, dealership);
-
             double randDouble = rand.nextDouble();
-            if (vehicleToSell == null) {
+            if (salesperson.findVehicle(buyer, dealership) == null) {
                 System.out.println("No Vehicles in inventory4");
                 break;
             }
+            else {
+            Vehicle vehicleToSell = salesperson.findVehicle(buyer, dealership);
+
             if (buyer.getBuyingChances() >= randDouble) {
                 dealership.addBudget(vehicleToSell.getSalesPrice());
                 salesperson.addBonus(vehicleToSell.salesBonus());
                 dealership.removeVehicle(vehicleToSell);
             }
+        }
         }
     }
 }
@@ -199,7 +198,7 @@ class End extends Activity {
      ArrayList<Mechanic> mechanics = dealership.getMechanics();
      ArrayList<Intern> interns = dealership.getInterns();
      ArrayList<Staff> staff = dealership.getStaff(); 
-
+     
 
      ArrayList<Vehicle> vehicles = dealership.getVehicles();
      ArrayList<Vehicle> sold = dealership.getSoldVehicles();
@@ -207,10 +206,29 @@ class End extends Activity {
    // Produce a readable, tabular report of Staff members – with total days worked, total normal pay, total bonus pay, working or quit the FNCD
 
            // NEED to check whether the staff is working or has quit.
-        for(Staff obj1: staff){
-            obj1.addDayWorked();
-            System.out.println("Name: " + obj1.getName() + " Total days worked: " + obj1.getTotalDaysWorked() + " Total salay earned: " +obj1.getSalaryEarned() + " Total bonus earned: " + obj1.getBonusEarned() + " Status: " +obj1.getStatus());
+
+
+
+
+           try {
+            // Creates a FileWriter
+            FileWriter output
+                = new FileWriter("Test.txt");
+  
+            // Writes the string to the file
+            for(Staff obj1: staff){
+                obj1.addDayWorked();
+                output.write("Name: " + obj1.getName() + " Total days worked: " + obj1.getTotalDaysWorked() + " Total salay earned: " +obj1.getSalaryEarned() + " Total bonus earned: " + obj1.getBonusEarned() + " Status: " +obj1.getStatus() + "\n");
+            }
+  
+            // Closes the writer
+            output.close();
         }
+  
+        catch (Exception e) {
+            e.getStackTrace();
+        }   
+
 
 
 

@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.io.PrintStream;
+import java.io.PipedOutputStream;
+import java.io.FileWriter;
 
 public class main {
     public static void main(String[] argc) {
@@ -12,7 +15,9 @@ public class main {
         End end = new End(dealership);
         
 
-        // Run simulation for 30 calender days skipping sundays
+
+    
+         // Run simulation for 30 calender days skipping sundays
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_MONTH, 1);
 
@@ -24,10 +29,11 @@ public class main {
                 continue;
             }
 
+
             open.run();
             wash.run();
             repair.run();
-            sell.run(dayOfWeek);
+            sell.run(dayOfWeek);            
             end.run();
         }
         // System.out.println(dealership.getSoldVehicles());
