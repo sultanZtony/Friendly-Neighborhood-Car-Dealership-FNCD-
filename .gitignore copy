@@ -2,9 +2,6 @@
 # Compiled class file
 *.class
 
-# text file added by Jonathan
-*.txt
-
 # Log file
 *.log
 
