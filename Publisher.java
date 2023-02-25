@@ -1,3 +1,4 @@
+// Concrete class implementation of the Subject in the Observer OO design pattern
 import java.util.ArrayList;
 
 public class Publisher implements Subject {

@@ -1,3 +1,7 @@
+import java.io.FileWriter;
+import java.io.File;
+import java.io.IOException;
+
 // Simulator to cycle for select number of days
 public class Simulator implements SysOut {
     final int numDays;
@@ -20,27 +24,35 @@ public class Simulator implements SysOut {
     }
 
     void run() {
-        FNCD fncd = new FNCD();
+        File file = new File("SimResults.txt");
+        boolean fileExists = file.exists();
 
+        // If file exists, overwrite it.
+        try {
+            FileWriter fileWriter = new FileWriter(file, !fileExists);
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        FNCD fncd = new FNCD();
         Publisher publisher = Publisher.getInstance();
 
-        Tracker tracker = new Tracker();
-        publisher.registerObserver(tracker);
+        Tracker tracker = new Tracker(publisher);
 
         for (int day = 1; day <= numDays; ++day) {
             // Loggers are instantiated at the beginning of each simulated day and close at the end of each day.
-            Logger logger = new Logger(day);
-            publisher.registerObserver(logger);
+            Logger logger = new Logger(day, publisher);
 
             out(">>> Start Simulation Day "+day+" "+dayOfWeek);
             if (dayOfWeek == Enums.DayOfWeek.Sun) fncd.closedDay(dayOfWeek);  // no work on Sunday
             else fncd.normalDay(dayOfWeek);  // normal stuff on other days
             out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
             dayOfWeek = getNextDay(dayOfWeek);  // increment to the next day
-
+            
             tracker.printSummary(day);
             logger.close();
-            publisher.removeObserver(logger);
         }
+        tracker.close();
     }
 }

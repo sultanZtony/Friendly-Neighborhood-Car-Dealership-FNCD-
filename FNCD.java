@@ -43,6 +43,7 @@ public class FNCD implements SysOut {
 
         // opening
         out("The FNCD is opening...");
+        out("Money in the budget " + Utility.asDollar(budget));
         hireNewStaff();    // hire up to 3 of each staff type
         updateInventory();  // buy up to 4 of each type
 
@@ -158,6 +159,7 @@ public class FNCD implements SysOut {
     void payStaff() {
         for (Staff s: staff) {
             s.salaryEarned += s.salary;  // they get paid
+            out(s.type + " " + s.name + " received " + Utility.asDollar(s.salary) + ", Total-salary: " + Utility.asDollar(s.salaryEarned) + " Total-bonus: " + Utility.asDollar(s.bonusEarned));
             moneyOut(s.salary);
             Publisher.getInstance().financialEvent(s.salary, -s.salary);
             s.daysWorked += 1; // they worked another day
