@@ -188,7 +188,7 @@ class Salesperson extends Staff {
                 out("Buyer "+b.name+" is buying! Salesperson "+name+" gets a bonus of "+Utility.asDollar(v.sale_bonus)+"!");
                 // Bonus payed out by FNCD
                 fncd.moneyOut(salesBonus);
-                Publisher.getInstance().financialEvent(salesBonus, -salesBonus);
+                publisher.financialEvent(salesBonus, -salesBonus);
                 out("Buyer "+b.name+" bought "+v.cleanliness+" "+v.condition+" "+v.name+" for "+Utility.asDollar(v.price));
                 return v;
             }

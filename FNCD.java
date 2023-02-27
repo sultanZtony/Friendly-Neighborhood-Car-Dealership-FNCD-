@@ -79,10 +79,42 @@ public class FNCD implements SysOut {
             Vehicle vSold = seller.sellVehicle(b, inventory, this);
             // What the FNCD needs to do if a car is sold - change budget and inventory
             if (vSold != null) {
+                // Buyers will be offered 4 add-on purchases after deciding to buy Vehicle
+                double chance = Utility.rnd();
+                
+                Vehicle vSoldDecorated = vSold;
+                
+                // Extended Warranty = 20% of Vehicle sale price, 25% chance of Buyer adding 
+                if (chance <= 0.25) {
+                    vSoldDecorated = new ExtendedWarranty(vSoldDecorated, vSold.getPrice());
+                    out("Extended Warranty added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Undercoating = 5% of price, 10% chance of adding
+                if (chance <= 0.10) {
+                    vSoldDecorated = new Undercoating(vSoldDecorated, vSold.getPrice());
+                    out("Undercoating added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Road Rescue Coverage = 2% of price, 5% chance of adding
+                if (chance <= 0.05) {
+                    vSoldDecorated = new RoadRescue(vSoldDecorated, vSold.getPrice());
+                    out("Road Rescue Coverage added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Satellite Radio = 5% of price, 40% chance of adding
+                if (chance <= 0.40) {
+                    vSoldDecorated = new SatRadio(vSoldDecorated, vSold.getPrice());
+                    out("Satellite Radio added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
                 soldVehicles.add(vSold);
-                moneyIn(vSold.price);
-                Publisher.getInstance().financialEvent(0, vSold.price);
-                inventory.removeIf ( n -> n.name == vSold.name);
+                moneyIn(vSoldDecorated.getPrice());
+                Publisher.getInstance().financialEvent(0, vSoldDecorated.getPrice());
+
+                // inventory.removeIf ( n -> n.name == vSold.name);
+                // Replaced removeIf with remove because vSold had to be final.
+                inventory.remove(vSold);
             }
         }
 

@@ -49,6 +49,9 @@ public abstract class Vehicle {
         }
         return n;
     }
+
+    // Define a price function to be used in Decorator.
+    public abstract double getPrice();
 }
 
 class Car extends Vehicle {
@@ -65,6 +68,11 @@ class Car extends Vehicle {
         wash_bonus = 20;
         sale_bonus = 500;
     }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
 }
 
 class PerfCar extends Vehicle {
@@ -80,6 +88,11 @@ class PerfCar extends Vehicle {
         wash_bonus = 100;
         sale_bonus = 1000;
     }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
 }
 
 class Pickup extends Vehicle {
@@ -94,5 +107,10 @@ class Pickup extends Vehicle {
         repair_bonus = 200;
         wash_bonus = 75;
         sale_bonus = 750;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
     }
 }
