@@ -13,4 +13,6 @@ Logger-n.txt files have been .gitignore(d). This program must me executed by the
 
 For a UML class diagram update, follow the link below. The page is public for anyone who has the link. Please contact us if there are any problems with access. 
 
-UML class diagram update: https://app.diagrams.net/#G1rY5RrPBjgLfuvFG_8AAndh7k1dU8KAtq
+UML class diagram update: https://drive.google.com/file/d/1rY5RrPBjgLfuvFG_8AAndh7k1dU8KAtq/view?usp=sharing
+
+
