@@ -189,6 +189,8 @@ public class FNCD implements SysOut {
         if (t == Enums.VehicleType.PerfCar) v = new PerfCar();
         if (t == Enums.VehicleType.Pickup) v = new Pickup();
         if (t == Enums.VehicleType.ElectricCar) v = new ElectricCar();
+        if (t == Enums.VehicleType.MonsterTruck) v = new MonsterTruck();
+
         moneyOut(v.cost);
         Publisher.getInstance().financialEvent(0, -v.cost);
         out ("Bought "+v.name+", a "+v.cleanliness+" "+v.condition+" "+v.type+" for "+Utility.asDollar(v.cost));
