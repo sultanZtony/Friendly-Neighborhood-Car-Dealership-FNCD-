@@ -166,6 +166,8 @@ public class FNCD implements SysOut {
         if (t == Enums.StaffType.Intern) newStaff = new Intern();
         if (t == Enums.StaffType.Mechanic) newStaff = new Mechanic();
         if (t == Enums.StaffType.Salesperson) newStaff = new Salesperson();
+        if (t == Enums.StaffType.Driver) newStaff = new Driver();
+
         out("Hired a new "+newStaff.type+" named "+ newStaff.name);
         staff.add(newStaff);
     }
@@ -187,6 +189,8 @@ public class FNCD implements SysOut {
         if (t == Enums.VehicleType.Car) v = new Car();
         if (t == Enums.VehicleType.PerfCar) v = new PerfCar();
         if (t == Enums.VehicleType.Pickup) v = new Pickup();
+        if (t == Enums.VehicleType.MonsterTruck) v = new MonsterTruck();
+
         moneyOut(v.cost);
         Publisher.getInstance().financialEvent(0, -v.cost);
         out ("Bought "+v.name+", a "+v.cleanliness+" "+v.condition+" "+v.type+" for "+Utility.asDollar(v.cost));

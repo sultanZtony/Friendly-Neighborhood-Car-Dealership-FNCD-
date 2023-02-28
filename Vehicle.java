@@ -116,3 +116,24 @@ class Pickup extends Vehicle {
         return price;
     }
 }
+
+
+class MonsterTruck extends Vehicle {
+    static List<String> names = Arrays.asList("Avenger","Bigfoot","Madusa","Zombie");
+    static Namer namer = new Namer(names);
+    MonsterTruck() {
+        super();
+        type = Enums.VehicleType.Pickup;
+        name = namer.getNext();  // every new truck gets a unique new name
+        cost = getCost(10000,40000);
+        price = cost * 2;
+        repair_bonus = 200;
+        wash_bonus = 75;
+        sale_bonus = 750;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}

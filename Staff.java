@@ -306,6 +306,7 @@ class Driver extends Staff {
         super();
         type = Enums.StaffType.Driver;
         name = namer.getNext();  // every new Driver gets a new name
+        
     }
 
     Vehicle startRace(ArrayList<Vehicle> vList, FNCD fncd) {
