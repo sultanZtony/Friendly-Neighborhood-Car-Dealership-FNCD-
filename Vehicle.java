@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.List;
 
 public abstract class Vehicle {
@@ -49,6 +50,7 @@ public abstract class Vehicle {
         }
         return n;
     }
+
 
     // Define a price function to be used in Decorator.
     public abstract double getPrice();

@@ -118,6 +118,12 @@ public class FNCD implements SysOut {
             }
         }
 
+        // Racing
+        out("The FNCD are racing...");
+
+
+
+
         // ending
         // pay all the staff their salaries
         payStaff();

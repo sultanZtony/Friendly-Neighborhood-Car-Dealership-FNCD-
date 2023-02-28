@@ -1,4 +1,9 @@
 import javax.lang.model.util.Types;
+
+import org.jcp.xml.dsig.internal.dom.Utils;
+
+import Enums.Condition;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -10,6 +15,7 @@ public abstract class Staff implements SysOut {
     double bonusEarned;
     Enums.StaffType type;
     int daysWorked;
+    Enums.WashMethods washingMethods;
     Staff() {
         salaryEarned = 0;
         bonusEarned = 0;
@@ -45,27 +51,71 @@ class Intern extends Staff {
         type = Enums.StaffType.Intern;
         name = namer.getNext();  // every new intern gets a new name
         salary = 60; // daily salary
+        washingMethods= getWashingMethod();
     }
 
     // How an intern washes cars
     // TODO: There's some duplication in this - it's a little clumsy - refactor me!
+    Enums.WashMethods getWashingMethod() {
+        int rand = Utility.rndFromRange(1, 3);
+        switch (rand) {
+            case 1:
+                return Enums.WashMethods.Chemical;
+            case 2:
+                return Enums.WashMethods.Detailed;
+            default:
+                return Enums.WashMethods.ElbowGrease;
+        }
+    }
+
     double washVehicles(ArrayList<Vehicle> vList) {
         Publisher publisher = Publisher.getInstance();
         double washBonus = 0;
         int washCount = 0;
         Enums.Cleanliness startAs;
+        Enums.WashMethods washMethod = this.washingMethods;
+        //  Announce what Washing Method is in use. 
+        out("Intern "+name+" is using "+washMethod+" washing method.");
+
         for (Vehicle v:vList) {
             // wash the first dirty car I see
             if (v.cleanliness == Enums.Cleanliness.Dirty) {
                 washCount += 1;
                 startAs = Enums.Cleanliness.Dirty;
                 double chance = Utility.rnd();
-                if (chance <= .8) v.cleanliness = Enums.Cleanliness.Clean;
-                if (chance >.8 && chance <=.9) {
-                    v.cleanliness = Enums.Cleanliness.Sparkling;
-                    bonusEarned += v.wash_bonus;
-                    washBonus += v.wash_bonus;
-                    out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                switch (washMethod) {
+                    case Chemical:
+                    // 80% chance of Clean, 10% chance of Sparkling, and a 10% chance of Vehicle becoming Broken (if not already) 
+                        if (chance <= .8) v.cleanliness = Enums.Cleanliness.Clean;
+                        if (chance >.8 && chance <=.9) {
+                            v.cleanliness = Enums.Cleanliness.Sparkling;
+                            bonusEarned += v.wash_bonus;
+                            washBonus += v.wash_bonus;
+                            out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                        }
+                        if (chance >.9) v.condition = Enums.Condition.Broken;
+                        break;
+                        // 70% chance of Clean, 5% chance of Sparkling, and 10% chance of Vehicle becoming Like New (if not already) 
+                    case ElbowGrease:
+                        if (chance <= .7) v.cleanliness = Enums.Cleanliness.Clean;
+                        if (chance >.7 && chance <=.75) {
+                            v.cleanliness = Enums.Cleanliness.Sparkling;
+                            bonusEarned += v.wash_bonus;
+                            washBonus += v.wash_bonus;
+                            out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                        }
+                        if (chance >.9) v.condition = Enums.Condition.LikeNew;
+                        break;
+                        // 60% chance of Clean, 20% chance of Sparkling, No special effects as above methods 
+                    case Detailed:
+                        if (chance <= .6) v.cleanliness = Enums.Cleanliness.Clean;
+                        if (chance >.6 && chance <=.8) {
+                            v.cleanliness = Enums.Cleanliness.Sparkling;
+                            bonusEarned += v.wash_bonus;
+                            washBonus += v.wash_bonus;
+                            out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                        }
+                        break;
                 }
                 out("Intern "+name+" washed "+v.name+" "+startAs+" to "+v.cleanliness);
                 if (washCount == 2) break;
@@ -78,12 +128,41 @@ class Intern extends Staff {
                     washCount += 1;
                     startAs = Enums.Cleanliness.Clean;
                     double chance = Utility.rnd();
-                    if (chance <= .05) v.cleanliness = Enums.Cleanliness.Dirty;
-                    if (chance >.05 && chance <=.35) {
-                        v.cleanliness = Enums.Cleanliness.Sparkling;
-                        bonusEarned += v.wash_bonus;
-                        washBonus += v.wash_bonus;
-                        out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                    switch (washMethod) {
+                        // 10% chance of Dirty, 20% chance of Sparkling, and 10% chance of Vehicle becoming Like New (if not already) 
+                        case Chemical:
+                            if (chance <= .1) v.cleanliness = Enums.Cleanliness.Dirty;
+                            if (chance >.1 && chance <=.3) {
+                                v.cleanliness = Enums.Cleanliness.Sparkling;
+                                bonusEarned += v.wash_bonus;
+                                washBonus += v.wash_bonus;
+                                out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                            }
+                            if (chance >.9) v.condition = Enums.Condition.Broken;
+                            break;
+
+                            // 15% chance of Dirty, 15% chance of Sparkling, and 10% chance of Vehicle becoming Like New (if not already) 
+                            case ElbowGrease:
+                            if (chance <= .15) v.cleanliness = Enums.Cleanliness.Dirty;
+                            if (chance >.15 && chance <=.3) {
+                                v.cleanliness = Enums.Cleanliness.Sparkling;
+                                bonusEarned += v.wash_bonus;
+                                washBonus += v.wash_bonus;
+                                out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                            }
+                            if (chance >.9) v.condition = Enums.Condition.LikeNew;
+                            break;
+
+                            // 5% chance of Dirty, 40% chance of Sparkling 
+                            case Detailed:
+                            if (chance <= .05) v.cleanliness = Enums.Cleanliness.Dirty;
+                            if (chance >.05 && chance <=.45) {
+                                v.cleanliness = Enums.Cleanliness.Sparkling;
+                                bonusEarned += v.wash_bonus;
+                                washBonus += v.wash_bonus;
+                                out("Intern "+name+" got a bonus of "+Utility.asDollar(v.wash_bonus)+"!");
+                            }
+                            break;
                     }
                     out("Intern "+name+" washed "+v.name+" "+startAs+" to "+v.cleanliness);
                     if (washCount == 2) break;
@@ -216,4 +295,23 @@ class Salesperson extends Staff {
         if (selected == -1) return null;
         else return vList.get(selected);
     }
+}
+
+
+
+class Driver extends Staff {
+    static List<String> names = Arrays.asList("Jon","Harry","Salah","Mark","Tylor","Sara");
+    static Namer namer = new Namer(names);
+    Driver() {
+        super();
+        type = Enums.StaffType.Driver;
+        name = namer.getNext();  // every new Driver gets a new name
+    }
+
+    Vehicle startRace(ArrayList<Vehicle> vList, FNCD fncd) {
+
+        return vList.get(0);
+
+    }
+
 }
