@@ -10,3 +10,7 @@ OpenJDK 64-Bit Server VM Temurin-17.0.6+10 (build 17.0.6+10, mixed mode, sharing
 Project 3.2 is an extension of Professor Bruce Montgomery's code from Project 2.2.
 
 Logger-n.txt files have been .gitignore(d). This program must me executed by the grader's local machine to produce those files.
+
+For a UML class diagram update, follow the link below. The page is public for anyone who has the link. Please contact us if there are any problems with access. 
+
+UML class diagram update: https://app.diagrams.net/#G1rY5RrPBjgLfuvFG_8AAndh7k1dU8KAtq
