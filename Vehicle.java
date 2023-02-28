@@ -116,3 +116,39 @@ class Pickup extends Vehicle {
         return price;
     }
 }
+
+class ElectricCar extends Vehicle {
+    static List<String> names = Arrays.asList("Tesla", "Mercedes", "BMW", "Leaf");
+    static Namer namer = new Namer(names);
+    private double initialRange;
+    private double range;
+
+    ElectricCar() {
+        super();
+        type = Enums.VehicleType.ElectricCar;
+        name = namer.getNext();
+        cost = getCost(20000, 40000);
+        price = cost * 2;
+        repair_bonus = 300;
+        wash_bonus = 100;
+        sale_bonus = 1000;
+        // Electric Cars have a unique Range attribute, initially set randomly from 60
+        // to 400 miles
+        initialRange = Utility.rndFromRange(60, 400);
+        setRange();
+    }
+
+    public void setRange() {
+        if (condition == Enums.Condition.LikeNew) {
+            range = initialRange + 100;
+        } else {
+            range = initialRange;
+        }
+
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}
