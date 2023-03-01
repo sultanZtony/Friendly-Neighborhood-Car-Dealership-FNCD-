@@ -48,7 +48,7 @@ public class FNCD implements SysOut {
         ArrayList<Staff> drivers = Staff.getStaffByType(staff, Enums.StaffType.Driver);
 
         Driver driver = new Driver();
-        driver.startRace(raceVehicles, drivers);
+        driver.startRace(raceVehicles, drivers, this);
 
         // for (Vehicle v : raceVehicles) {
         //     int randomIndex = (int) (Math.random() *drivers.size());

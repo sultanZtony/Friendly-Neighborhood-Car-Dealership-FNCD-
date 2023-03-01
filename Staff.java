@@ -315,23 +315,25 @@ class Driver extends Staff {
         Enums.Health health  = Enums.Health.Healthy;
     }
 
-     double startRace(ArrayList<Vehicle> vList, ArrayList<Staff> drivers) {
+     double startRace(ArrayList<Vehicle> vList, ArrayList<Staff> drivers, FNCD fncd) {
         Random random = new Random();
 
+        ArrayList<Staff> currentDrivers = drivers;
 
         for (Vehicle v : vList) {
             int randomIndex = (int) (Math.random() *drivers.size());
-            Staff driver = drivers.get(randomIndex);
+            Staff driver = currentDrivers.get(randomIndex);
+            currentDrivers.remove(randomIndex);
             v.setDriver((Driver) driver);
             v.setRacePosition(random.nextInt(20) + 1);
             if (v.getRacePosition() <= 3) {
                 v.setWinCount(v.getWinCount() + 1);
                 v.setPrice(v.getPrice() * 1.1);
                 bonusEarned += winBonus;
+                fncd.moneyOut(winBonus);
                 this.winCount +=1;
                 out("Driver: " + driver.name + " will be racing in the " + v.name);
                 out("Driver: " + driver.name + " Poistion: " + v.getRacePosition() + " Won the race on the "+ v.name);
-
 
             }
             if (v.getRacePosition() >=16) {
@@ -344,6 +346,10 @@ class Driver extends Staff {
                     out("Driver: " + driver.name + " Injured" );
 
                 }
+            }
+            else{
+                out("Driver: " + driver.name + " will be racing in the " + v.name);
+                out("Driver: " + driver.name + " Poistion: " + v.getRacePosition() + " on the "+ v.name);
             }
         }
         return bonusEarned;
