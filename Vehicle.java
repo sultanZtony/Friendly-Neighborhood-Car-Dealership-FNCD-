@@ -200,15 +200,31 @@ class MonsterTruck extends Vehicle {
 class Motorcycle extends Vehicle {
     static List<String> names = Arrays.asList("Harley","Honda","Yamaha","Ducati");
     static Namer namer = new Namer(names);
+    private int engineSize;
     Motorcycle() {
         super();
         type = Enums.VehicleType.Motorcycle;
-        name = namer.getNext();  // every new truck gets a unique new name
+        name = namer.getNext();
         cost = getCost(10000,40000);
         price = cost * 2;
         repair_bonus = 200;
         wash_bonus = 75;
         sale_bonus = 750;
+        engineSize = randomEngineSize();
+    }
+
+    public int randomEngineSize() {
+        Random rand = new Random();
+        double std = 300;
+        double mean = 700;
+        double minVal = 50;
+
+        int engineSize;
+        do {
+            engineSize = (int) Math.round(rand.nextGaussian() * std + mean);
+
+        } while (engineSize < minVal);
+        return engineSize;
     }
 
     @Override
