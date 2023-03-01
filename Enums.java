@@ -8,7 +8,7 @@ public class Enums {
     public enum Condition {Broken, Used, LikeNew}
     public enum Cleanliness {Dirty,Clean,Sparkling}
     public enum BuyerType {JustLooking,WantsOne,NeedsOne}
-    public enum VehicleType {Car, PerfCar, Pickup, MonsterTruck, ElectricCar}
+    public enum VehicleType {Car, PerfCar, Pickup, MonsterTruck, ElectricCar, Motorcycle}
     public enum StaffType {Intern, Mechanic, Salesperson,Driver}
     public enum DayOfWeek {Mon,Tue,Wed,Thur,Fri,Sat,Sun}
     public enum WashMethods {Chemical, ElbowGrease, Detailed}

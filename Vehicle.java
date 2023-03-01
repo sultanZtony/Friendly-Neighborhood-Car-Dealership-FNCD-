@@ -3,6 +3,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
+import javax.xml.catalog.GroupEntry.PreferType;
+
 public abstract class Vehicle {
     String name;
     Enums.VehicleType type;
@@ -41,6 +43,16 @@ public abstract class Vehicle {
         }
         return subclassInstances;
     }
+
+
+    static ArrayList<Vehicle> getRaceVehicles(ArrayList<Vehicle> vehicleList) {
+        ArrayList<Vehicle> subclassInstances = new ArrayList<>();
+        for (Vehicle v : vehicleList) {
+            if (v.type == Enums.VehicleType.PerfCar || v.type == Enums.VehicleType.Pickup || v.type == Enums.VehicleType.MonsterTruck || v.type == Enums.VehicleType.Motorcycle) subclassInstances.add(v);
+        }
+        return subclassInstances;
+    }
+
 
     // Utility for finding out how many of a Vehicle there are
     static int howManyVehiclesByType(ArrayList<Vehicle> vehicleList, Enums.VehicleType t) {
@@ -158,7 +170,7 @@ class MonsterTruck extends Vehicle {
     static Namer namer = new Namer(names);
     MonsterTruck() {
         super();
-        type = Enums.VehicleType.Pickup;
+        type = Enums.VehicleType.MonsterTruck;
         name = namer.getNext();  // every new truck gets a unique new name
         cost = getCost(10000,40000);
         price = cost * 2;

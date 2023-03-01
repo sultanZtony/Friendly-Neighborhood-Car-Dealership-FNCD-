@@ -37,6 +37,18 @@ public class FNCD implements SysOut {
 
     void closedDay(Enums.DayOfWeek day) {   // Nothing really special about closed days
         out("Sorry, FNCD is closed on "+day);
+
+
+        // Racing
+        out("The FNCD are racing...");
+
+        // selected vehicle 
+        Vehicle.getRaceVehicles(soldVehicles);
+        
+        // get race postion if top 3 winner. if last 5 damaged
+
+        //  If the Vehicle is in the Damaged category, the Vehicle’s condition goes to Broken, and the Driver of the Vehicle has a 30% chance of being Injured. 
+ 
     }
 
     void normalDay(Enums.DayOfWeek day) {  // On a normal day, we do all the activities
@@ -118,8 +130,6 @@ public class FNCD implements SysOut {
             }
         }
 
-        // Racing
-        out("The FNCD are racing...");
 
 
 
