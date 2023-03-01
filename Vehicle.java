@@ -19,6 +19,7 @@ public abstract class Vehicle {
     double repair_bonus;
     double wash_bonus;
     double sale_bonus;
+    Driver driver;
     Vehicle () {
         // all vehicles have the same cleanliness arrival chance
         double chance = Utility.rnd();
@@ -72,6 +73,11 @@ public abstract class Vehicle {
             if (v.type == t) n++;
         }
         return n;
+    }
+
+    // Connect driver to vehicle
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 
 
