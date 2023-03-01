@@ -2,10 +2,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Random;
+
+import Enums.VehicleType;
 
 // import javax.xml.catalog.GroupEntry.PreferType;
 
 public abstract class Vehicle {
+    private static final String VehicleType = null;
     String name;
     Enums.VehicleType type;
     Enums.Condition condition;
@@ -44,14 +48,21 @@ public abstract class Vehicle {
         return subclassInstances;
     }
 
-
-    // static ArrayList<Vehicle> getRaceVehicles(ArrayList<Vehicle> vehicleList) {
-    //     ArrayList<Vehicle> subclassInstances = new ArrayList<>();
-    //     for (Vehicle v : vehicleList) {
-    //         if (v.type == Enums.VehicleType.PerfCar || v.type == Enums.VehicleType.Pickup || v.type == Enums.VehicleType.MonsterTruck || v.type == Enums.VehicleType.Motorcycle) subclassInstances.add(v);
-    //     }
-    //     return subclassInstances;
-    // }
+    // utility for returning a set of vehicles of a random type that's eligible for racing.
+    static ArrayList<Vehicle> getRaceVehicles(ArrayList<Vehicle> vehicleList) {
+        ArrayList<Vehicle> selectedVehicles = new ArrayList<>();
+        Random rand = new Random();
+        Enums.VehicleType[] types = {Enums.VehicleType.Pickup, Enums.VehicleType.PerfCar, Enums.VehicleType.Motorcycle, Enums.VehicleType.MonsterTruck};
+        Enums.VehicleType selectedType = types[rand.nextInt(types.length)];
+        int vehicleCount = 0;
+        for (Vehicle v : vehicleList) {
+            if (v.type == selectedType && v.condition != Enums.Condition.Broken && vehicleCount < 3) {
+                selectedVehicles.add(v);
+                vehicleCount += 1;
+            }
+        }
+        return selectedVehicles;
+    }
 
 
     // Utility for finding out how many of a Vehicle there are
@@ -185,7 +196,7 @@ class MonsterTruck extends Vehicle {
     }
 }
 
-// Unfinished, add engine size
+// Unfinished, add engine size and logic
 class Motorcycle extends Vehicle {
     static List<String> names = Arrays.asList("Harley","Honda","Yamaha","Ducati");
     static Namer namer = new Namer(names);

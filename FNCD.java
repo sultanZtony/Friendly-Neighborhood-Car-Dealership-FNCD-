@@ -35,16 +35,14 @@ public class FNCD implements SysOut {
     // I debated about moving the individual activities out to an Activity class
     // It would make the normal day less of a monster maybe, eh...
 
-    void closedDay(Enums.DayOfWeek day) {   // Nothing really special about closed days
-        out("Sorry, FNCD is closed on "+day);
+    void raceDay(Enums.DayOfWeek day) {   // Nothing really special about closed days
+        out("The FNCD might run a Race Event today for "+day);
 
+        // Select Vehicles of a random type to the race that aren't regular Cars or Electric Cars
+        ArrayList<Vehicle> raceVehicles = Vehicle.getRaceVehicles(inventory);
+        out("Number of raceVehicles " + raceVehicles.size());
+        out("Type of raceVehicles " + raceVehicles.size());
 
-        // Racing
-        // out("The FNCD are racing...");
-
-        // selected vehicle 
-        // Vehicle.getRaceVehicles(soldVehicles);
-        
         // get race postion if top 3 winner. if last 5 damaged
 
         //  If the Vehicle is in the Damaged category, the Vehicle’s condition goes to Broken, and the Driver of the Vehicle has a 30% chance of being Injured. 

@@ -45,7 +45,7 @@ public class Simulator implements SysOut {
             Logger logger = new Logger(day, publisher);
 
             out(">>> Start Simulation Day "+day+" "+dayOfWeek);
-            if (dayOfWeek == Enums.DayOfWeek.Sun) fncd.closedDay(dayOfWeek);  // no work on Sunday
+            if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) fncd.raceDay(dayOfWeek);  // no work on Sunday
             else fncd.normalDay(dayOfWeek);  // normal stuff on other days
             out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
             dayOfWeek = getNextDay(dayOfWeek);  // increment to the next day
