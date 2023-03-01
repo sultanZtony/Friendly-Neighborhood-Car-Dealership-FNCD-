@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
-import javax.xml.catalog.GroupEntry.PreferType;
+// import javax.xml.catalog.GroupEntry.PreferType;
 
 public abstract class Vehicle {
     String name;
@@ -45,13 +45,13 @@ public abstract class Vehicle {
     }
 
 
-    static ArrayList<Vehicle> getRaceVehicles(ArrayList<Vehicle> vehicleList) {
-        ArrayList<Vehicle> subclassInstances = new ArrayList<>();
-        for (Vehicle v : vehicleList) {
-            if (v.type == Enums.VehicleType.PerfCar || v.type == Enums.VehicleType.Pickup || v.type == Enums.VehicleType.MonsterTruck || v.type == Enums.VehicleType.Motorcycle) subclassInstances.add(v);
-        }
-        return subclassInstances;
-    }
+    // static ArrayList<Vehicle> getRaceVehicles(ArrayList<Vehicle> vehicleList) {
+    //     ArrayList<Vehicle> subclassInstances = new ArrayList<>();
+    //     for (Vehicle v : vehicleList) {
+    //         if (v.type == Enums.VehicleType.PerfCar || v.type == Enums.VehicleType.Pickup || v.type == Enums.VehicleType.MonsterTruck || v.type == Enums.VehicleType.Motorcycle) subclassInstances.add(v);
+    //     }
+    //     return subclassInstances;
+    // }
 
 
     // Utility for finding out how many of a Vehicle there are
@@ -171,6 +171,27 @@ class MonsterTruck extends Vehicle {
     MonsterTruck() {
         super();
         type = Enums.VehicleType.MonsterTruck;
+        name = namer.getNext();  // every new truck gets a unique new name
+        cost = getCost(10000,40000);
+        price = cost * 2;
+        repair_bonus = 200;
+        wash_bonus = 75;
+        sale_bonus = 750;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}
+
+// Unfinished, add engine size
+class Motorcycle extends Vehicle {
+    static List<String> names = Arrays.asList("Harley","Honda","Yamaha","Ducati");
+    static Namer namer = new Namer(names);
+    Motorcycle() {
+        super();
+        type = Enums.VehicleType.Motorcycle;
         name = namer.getNext();  // every new truck gets a unique new name
         cost = getCost(10000,40000);
         price = cost * 2;

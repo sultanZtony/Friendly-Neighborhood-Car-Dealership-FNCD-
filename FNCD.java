@@ -40,10 +40,10 @@ public class FNCD implements SysOut {
 
 
         // Racing
-        out("The FNCD are racing...");
+        // out("The FNCD are racing...");
 
         // selected vehicle 
-        Vehicle.getRaceVehicles(soldVehicles);
+        // Vehicle.getRaceVehicles(soldVehicles);
         
         // get race postion if top 3 winner. if last 5 damaged
 
@@ -200,6 +200,7 @@ public class FNCD implements SysOut {
         if (t == Enums.VehicleType.Pickup) v = new Pickup();
         if (t == Enums.VehicleType.ElectricCar) v = new ElectricCar();
         if (t == Enums.VehicleType.MonsterTruck) v = new MonsterTruck();
+        if (t == Enums.VehicleType.Motorcycle) v = new Motorcycle();
 
         moneyOut(v.cost);
         Publisher.getInstance().financialEvent(0, -v.cost);
