@@ -1,3 +1,4 @@
+// Staff is an abstract class to be inherited by the following classes: Intern, Salesperson, and Mechanic.
 public abstract class Staff {
     private String name;
     private String status;

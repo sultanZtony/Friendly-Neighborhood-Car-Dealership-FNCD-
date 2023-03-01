@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.concurrent.DelayQueue;
 import java.io.FileWriter;
 
+// Activity is a base abstract class to be inherited by the following classes: Open, Wash, Repair, and End.
 abstract class Activity {
 }
 
