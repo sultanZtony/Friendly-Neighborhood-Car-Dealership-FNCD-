@@ -20,6 +20,8 @@ public abstract class Vehicle {
     double wash_bonus;
     double sale_bonus;
     Driver driver;
+    int racePosition;
+    int winCount;
     Vehicle () {
         // all vehicles have the same cleanliness arrival chance
         double chance = Utility.rnd();
@@ -28,8 +30,10 @@ public abstract class Vehicle {
         else cleanliness = Enums.Cleanliness.Dirty;
         // all vehicles have the same condition arrival chance (even chance of any)
         condition = Utility.randomEnum(Enums.Condition.class);
+        winCount = 0;
     }
 
+    
     // utility for getting adjusted cost by condition
     double getCost(int low,int high) {
         double cost = Utility.rndFromRange(low, high);
@@ -65,6 +69,25 @@ public abstract class Vehicle {
         return selectedVehicles;
     }
 
+    // setter method for race win count
+
+    public void setWinCount(int count) {
+        winCount = count;
+    }
+
+  // getter method for race win count
+    public int getWinCount() {
+        return winCount;
+    }
+  // getter method for race position
+     int getRacePosition() {
+    return racePosition;
+    }
+
+    // setter method for race position
+     void setRacePosition(int position) {
+    this.racePosition = position;
+    }
 
     // Utility for finding out how many of a Vehicle there are
     static int howManyVehiclesByType(ArrayList<Vehicle> vehicleList, Enums.VehicleType t) {
@@ -81,6 +104,9 @@ public abstract class Vehicle {
     }
 
 
+    void setPrice(double newPrice){
+        this.price = price;
+    }
     // Define a price function to be used in Decorator.
     public abstract double getPrice();
 }

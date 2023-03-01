@@ -12,5 +12,6 @@ public class Enums {
     public enum StaffType {Intern, Mechanic, Salesperson,Driver}
     public enum DayOfWeek {Mon,Tue,Wed,Thur,Fri,Sat,Sun}
     public enum WashMethods {Chemical, ElbowGrease, Detailed}
+    public enum Health {Injured,Healthy}
 
 }

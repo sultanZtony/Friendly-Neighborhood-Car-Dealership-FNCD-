@@ -44,17 +44,19 @@ public class FNCD implements SysOut {
         if (raceVehicles.size() == 0) {
             out("Sorry, there are no eligible vehicles in the FNCD to race today.");
         }
-
         // Assign each driver at random to an eligible vehicle to race
         ArrayList<Staff> drivers = Staff.getStaffByType(staff, Enums.StaffType.Driver);
 
-        for (Vehicle v : raceVehicles) {
-            int randomIndex = (int) (Math.random() *drivers.size());
-            Staff driver = drivers.get(randomIndex);
-            v.setDriver((Driver) driver);
-            drivers.remove(driver);
-            out(driver.name + " will be racing in the " + v.name);
-        }
+        Driver driver = new Driver();
+        driver.startRace(raceVehicles, drivers);
+
+        // for (Vehicle v : raceVehicles) {
+        //     int randomIndex = (int) (Math.random() *drivers.size());
+        //     Staff driver = drivers.get(randomIndex);
+        //     v.setDriver((Driver) driver);
+        //     drivers.remove(driver);
+        //     out(driver.name + " will be racing in the " + v.name);
+        // }
 
         // get race postion if top 3 winner. if last 5 damaged
 

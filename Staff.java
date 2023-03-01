@@ -6,6 +6,7 @@ import javax.lang.model.util.Types;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Arrays;
 
 public abstract class Staff implements SysOut {
@@ -16,6 +17,9 @@ public abstract class Staff implements SysOut {
     Enums.StaffType type;
     int daysWorked;
     Enums.WashMethods washingMethods;
+    int winCount;
+    double winBonus;
+    Enums.Health health;
     Staff() {
         salaryEarned = 0;
         bonusEarned = 0;
@@ -306,12 +310,43 @@ class Driver extends Staff {
         super();
         type = Enums.StaffType.Driver;
         name = namer.getNext();  // every new Driver gets a new name
+        winCount = 0;
+        winBonus = 250.0;
+        Enums.Health health  = Enums.Health.Healthy;
     }
 
-    Vehicle startRace(ArrayList<Vehicle> vList, FNCD fncd) {
+     double startRace(ArrayList<Vehicle> vList, ArrayList<Staff> drivers) {
+        Random random = new Random();
 
-        return vList.get(0);
 
+        for (Vehicle v : vList) {
+            int randomIndex = (int) (Math.random() *drivers.size());
+            Staff driver = drivers.get(randomIndex);
+            v.setDriver((Driver) driver);
+            v.setRacePosition(random.nextInt(20) + 1);
+            if (v.getRacePosition() <= 3) {
+                v.setWinCount(v.getWinCount() + 1);
+                v.setPrice(v.getPrice() * 1.1);
+                bonusEarned += winBonus;
+                this.winCount +=1;
+                out("Driver: " + driver.name + " will be racing in the " + v.name);
+                out("Driver: " + driver.name + " Poistion: " + v.getRacePosition() + " Won the race on the "+ v.name);
+
+
+            }
+            if (v.getRacePosition() >=16) {
+                v.condition = v.condition.Broken;
+                out("Driver: " + driver.name + " will be racing in the " + v.name);
+                out("Driver: " + driver.name + " Poistion: " + v.getRacePosition() + " Lost the race on the "+ v.name);
+                if (Utility.rndFromRange(0, 100) < 30) {
+                    this.health = Enums.Health.Injured;
+                    drivers.remove(driver);
+                    out("Driver: " + driver.name + " Injured" );
+
+                }
+            }
+        }
+        return bonusEarned;
     }
 
 }
