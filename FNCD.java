@@ -40,8 +40,10 @@ public class FNCD implements SysOut {
 
         // Select Vehicles of a random type to the race that aren't regular Cars or Electric Cars
         ArrayList<Vehicle> raceVehicles = Vehicle.getRaceVehicles(inventory);
-        out("Number of raceVehicles " + raceVehicles.size());
-        out("Type of raceVehicles " + raceVehicles.size());
+        
+        if (raceVehicles.size() == 0) {
+            out("Sorry, there are no eligible vehicles in the FNCD to race today.")
+        }
 
         // get race postion if top 3 winner. if last 5 damaged
 
