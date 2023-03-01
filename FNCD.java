@@ -42,7 +42,7 @@ public class FNCD implements SysOut {
         ArrayList<Vehicle> raceVehicles = Vehicle.getRaceVehicles(inventory);
         
         if (raceVehicles.size() == 0) {
-            out("Sorry, there are no eligible vehicles in the FNCD to race today.")
+            out("Sorry, there are no eligible vehicles in the FNCD to race today.");
         }
 
         // get race postion if top 3 winner. if last 5 damaged
