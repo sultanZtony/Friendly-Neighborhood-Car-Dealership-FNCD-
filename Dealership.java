@@ -1,6 +1,8 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+// Dealership is composed of an aggregation relationship to the following classes: Salesperson, Mechanic, and Intern which inherits
+// its member and methods from the class Staff.
 public class Dealership {
     private double operatingBudget = 500000;
 
@@ -8,6 +10,10 @@ public class Dealership {
     private ArrayList<Mechanic> mechanics = new ArrayList<Mechanic>();
     private ArrayList<Intern> interns = new ArrayList<Intern>();
     private ArrayList<Staff> departedStaff = new ArrayList<Staff>();
+    
+    // This ArrayList will hold all the staffmembers in our dealership simulation.
+    // It exhibits polymorphism by acting as a container for all the children objects
+    // that inherit from the Staff class.
     private ArrayList<Staff> staff = new ArrayList<Staff>();
 
 
