@@ -58,6 +58,10 @@ class Intern extends Staff {
         washingMethods= getWashingMethod();
     }
 
+    // The following code below implements the Strategy Pattern for getting a Washing Method.
+    // Details of the Strategy Pattern can be found in our UML Class diagram by following this link below: 
+    // https://drive.google.com/file/d/1rY5RrPBjgLfuvFG_8AAndh7k1dU8KAtq/view?usp=sharing
+    
     // How an intern washes cars
     // TODO: There's some duplication in this - it's a little clumsy - refactor me!
     Enums.WashMethods getWashingMethod() {
