@@ -19,8 +19,8 @@ public class Tracker implements Observer, SysOut {
 
     public void printSummary(int day) {
         out("Tracker: Day" + " " + day);
-        out("Total money earned by all Staff: " + Utility.asDollar(this.staffMoneyIn));
-        out("Total money earned by the FNCD: " + Utility.asDollar(this.dealerMoneyInOut) + "\n");
+        out("Total money earned by all Staff between North and South FNCD: " + Utility.asDollar(this.staffMoneyIn));
+        out("Total money earned by the North and South FNCD combined: " + Utility.asDollar(this.dealerMoneyInOut) + "\n");
     }
 
     public void close() {

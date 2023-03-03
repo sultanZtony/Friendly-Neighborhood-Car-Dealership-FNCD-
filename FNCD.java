@@ -2,12 +2,14 @@ import java.util.ArrayList;
 
 // This represents the FNCD business and things they would control
 public class FNCD implements SysOut {
+    String name;
     ArrayList<Staff> staff;  // folks working
     ArrayList<Staff> departedStaff;   // folks that left
     ArrayList<Vehicle> inventory;   // vehicles at the FNCD
     ArrayList<Vehicle> soldVehicles;   // vehicles the buyers bought;
     private double budget;   // big money pile
-    FNCD() {
+    FNCD(String name) {
+        this.name = name;
         staff = new ArrayList<>();
         departedStaff = new ArrayList<>();
         inventory = new ArrayList<>();
@@ -29,6 +31,125 @@ public class FNCD implements SysOut {
             Publisher.getInstance().financialEvent(0, -250000);
         }
         return cash;
+    }
+
+    // Refactor code into different activities
+
+    void open() {
+        // opening
+        out("The "+this.name+ " FNCD is opening...");
+        out("Money in the budget " + Utility.asDollar(budget));
+        hireNewStaff();    // hire up to 3 of each staff type
+        updateInventory();  // buy up to 4 of each type
+        out("End opening activity for "+this.name+" FNCD...\n");
+    }
+
+    void wash() {
+        // washing - tell the interns to do the washing up
+        out("The "+this.name+ " FNCD interns are washing...");
+        ArrayList<Staff> interns = Staff.getStaffByType(staff, Enums.StaffType.Intern);
+        for (Staff s:interns) {
+            Intern i = (Intern) s;
+            // Earned bonus get payed out by FNCD
+            moneyOut(i.washVehicles(inventory));
+        }
+        out("End washing activity for "+this.name+" FNCD...\n");
+    }
+
+    void repair() {
+        // repairing - tell the mechanics to do their repairing
+        out("The "+this.name+ " FNCD mechanics are repairing...");
+        ArrayList<Staff> mechanics = Staff.getStaffByType(staff, Enums.StaffType.Mechanic);
+        for (Staff s:mechanics) {
+            Mechanic m = (Mechanic) s;
+            // Earned bonus get payed out by FNCD
+            moneyOut(m.repairVehicles(inventory));
+        }
+        out("End repairing activity for "+this.name+" FNCD...\n");
+    }
+
+    void sell(Enums.DayOfWeek day) {
+        // selling
+        out("The "+this.name+ " FNCD salespeople are selling...");
+        ArrayList<Buyer> buyers = getBuyers(day);
+        ArrayList<Staff> salespeople = Staff.getStaffByType(staff, Enums.StaffType.Salesperson);
+        // tell a random salesperson to sell each buyer a car - may get bonus
+        for(Buyer b: buyers) {
+            out("Buyer "+b.name+" wants a "+b.preference+" ("+b.type+")");
+            int randomSeller = Utility.rndFromRange(0,salespeople.size()-1);
+            Salesperson seller = (Salesperson) salespeople.get(randomSeller);
+            // Need to pass in FNCD instance to vehicle selling process to pay out Salesperson bonus.
+            // Not good practice, but it works as a temp solution.
+            Vehicle vSold = seller.sellVehicle(b, inventory, this);
+            // What the FNCD needs to do if a car is sold - change budget and inventory
+            if (vSold != null) {
+                // Buyers will be offered 4 add-on purchases after deciding to buy Vehicle
+                double chance = Utility.rnd();
+                
+                Vehicle vSoldDecorated = vSold;
+                
+                // Extended Warranty = 20% of Vehicle sale price, 25% chance of Buyer adding 
+                if (chance <= 0.25) {
+                    vSoldDecorated = new ExtendedWarranty(vSoldDecorated, vSold.getPrice());
+                    out("Extended Warranty added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Undercoating = 5% of price, 10% chance of adding
+                if (chance <= 0.10) {
+                    vSoldDecorated = new Undercoating(vSoldDecorated, vSold.getPrice());
+                    out("Undercoating added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Road Rescue Coverage = 2% of price, 5% chance of adding
+                if (chance <= 0.05) {
+                    vSoldDecorated = new RoadRescue(vSoldDecorated, vSold.getPrice());
+                    out("Road Rescue Coverage added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                // Satellite Radio = 5% of price, 40% chance of adding
+                if (chance <= 0.40) {
+                    vSoldDecorated = new SatRadio(vSoldDecorated, vSold.getPrice());
+                    out("Satellite Radio added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));
+                }
+
+                soldVehicles.add(vSold);
+                moneyIn(vSoldDecorated.getPrice());
+                Publisher.getInstance().financialEvent(0, vSoldDecorated.getPrice());
+
+                // inventory.removeIf ( n -> n.name == vSold.name);
+                // Replaced removeIf with remove because vSold had to be final.
+                inventory.remove(vSold);
+            }
+        }
+        out("End selling activity for "+this.name+" FNCD...\n");
+    }
+
+    void race(Enums.DayOfWeek day) {
+        out("The "+this.name+ " FNCD might run a Race Event today for "+day);
+
+        // Select Vehicles of a random type to the race that aren't regular Cars or Electric Cars
+        ArrayList<Vehicle> raceVehicles = Vehicle.getRaceVehicles(inventory);
+        
+        if (raceVehicles.size() == 0) {
+            out("Sorry, there are no eligible vehicles in the FNCD to race today.");
+        }
+        // Assign each driver at random to an eligible vehicle to race
+        ArrayList<Staff> drivers = Staff.getStaffByType(staff, Enums.StaffType.Driver);
+
+        Driver driver = new Driver();
+        driver.startRace(raceVehicles, drivers, this);
+        out("End race activity for "+this.name+" FNCD\n");
+    }
+
+    void end() {
+        out("End of day activity for "+this.name+" FNCD...");
+        // ending
+        // pay all the staff their salaries
+        payStaff();
+        // anyone quitting? replace with an intern (if not an intern)
+        checkForQuitters();
+        // daily report
+        reportOut();
     }
 
     // Here's where I process daily activities
@@ -143,10 +264,6 @@ public class FNCD implements SysOut {
             }
         }
 
-
-
-
-
         // ending
         // pay all the staff their salaries
         payStaff();
@@ -252,6 +369,6 @@ public class FNCD implements SysOut {
         out("Vehicles in inventory "+inventory.size());
         out("Vehicles sold count "+soldVehicles.size());
         out("Money in the budget "+ Utility.asDollar(getBudget()));
-        out("That's it for the day.");
+        out("That's it for the day.\n");
     }
 }

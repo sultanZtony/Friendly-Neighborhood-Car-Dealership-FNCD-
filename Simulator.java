@@ -35,7 +35,10 @@ public class Simulator implements SysOut {
             e.printStackTrace();
         }
 
-        FNCD fncd = new FNCD();
+        // Adding one additional FNCD
+        FNCD northFNCD = new FNCD("North");
+        FNCD southFNCD = new FNCD("South");
+
         Publisher publisher = Publisher.getInstance();
 
         Tracker tracker = new Tracker(publisher);
@@ -45,9 +48,47 @@ public class Simulator implements SysOut {
             Logger logger = new Logger(day, publisher);
 
             out(">>> Start Simulation Day "+day+" "+dayOfWeek);
-            if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) fncd.raceDay(dayOfWeek);  // no work on Sunday
-            else fncd.normalDay(dayOfWeek);  // normal stuff on other days
+
+            // if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) northFNCD.raceDay(dayOfWeek); 
+            // else northFNCD.normalDay(dayOfWeek);  // normal stuff on other days
+
+            if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) { // race day
+                northFNCD.open();
+                southFNCD.open();
+
+                northFNCD.wash();
+                southFNCD.wash();
+
+                northFNCD.repair();
+                southFNCD.repair();
+
+                northFNCD.sell(dayOfWeek);
+                southFNCD.sell(dayOfWeek);
+
+                northFNCD.race(dayOfWeek);
+                southFNCD.race(dayOfWeek);
+
+                northFNCD.end();
+                southFNCD.end();
+            } else {    // normal day
+                northFNCD.open();
+                southFNCD.open();
+
+                northFNCD.wash();
+                southFNCD.wash();
+
+                northFNCD.repair();
+                southFNCD.repair();
+
+                northFNCD.sell(dayOfWeek);
+                southFNCD.sell(dayOfWeek);
+
+                northFNCD.end();
+                southFNCD.end();
+            } 
+
             out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
+
             dayOfWeek = getNextDay(dayOfWeek);  // increment to the next day
             
             tracker.printSummary(day);
