@@ -1,3 +1,4 @@
+// The code below implements the Factory Pattern for the creation of Vehicles.
 public abstract class VehicleFactory {
     public abstract Vehicle createVehicle();
 }
