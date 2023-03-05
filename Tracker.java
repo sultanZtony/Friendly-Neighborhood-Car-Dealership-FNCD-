@@ -1,14 +1,22 @@
+// Tracker follows the Singleton pattern using eager instantiation.
 // Concrete class implementation of the Observer in the Observer  OO design pattern
 public class Tracker implements Observer, SysOut {
+    private static Tracker instance = new Tracker(Publisher.getInstance());
+
     private double staffMoneyIn;
     private double dealerMoneyInOut;
+
     private Publisher publisher;
 
-    public Tracker(Publisher publisher) {
+    private Tracker(Publisher publisher) {
         this.publisher = publisher;
         this.staffMoneyIn = 0;
         this.dealerMoneyInOut = 0;
         publisher.registerObserver(this);
+    }
+
+    public static Tracker getInstance() {
+        return instance;
     }
     
     @Override

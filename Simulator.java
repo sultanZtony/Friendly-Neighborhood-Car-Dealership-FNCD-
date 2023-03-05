@@ -40,12 +40,11 @@ public class Simulator implements SysOut {
         FNCD southFNCD = new FNCD("South");
 
         Publisher publisher = Publisher.getInstance();
-
-        Tracker tracker = new Tracker(publisher);
+        Tracker tracker = Tracker.getInstance();
+        Logger logger = Logger.getInstance();
 
         for (int day = 1; day <= numDays; ++day) {
-            // Loggers are instantiated at the beginning of each simulated day and close at the end of each day.
-            Logger logger = new Logger(day, publisher);
+            logger.setLogger(day, publisher);
 
             out(">>> Start Simulation Day "+day+" "+dayOfWeek);
 

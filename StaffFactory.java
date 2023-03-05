@@ -1,4 +1,4 @@
-// The code below represents the Factory pattern for the creation of Staff.
+// The code below implements the Factory pattern for the creation of Staff.
 public abstract class StaffFactory {
     public abstract Staff createStaff();
 }
