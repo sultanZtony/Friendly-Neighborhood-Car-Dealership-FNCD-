@@ -1,0 +1,14 @@
+>>> Start Simulation Day 12 Sun
+The FNCD might run a Race Event today for Sun
+Driver: Mark will be racing in the Cayman
+Driver: Mark Poistion: 10 on the Cayman
+Driver: Salah will be racing in the Corvette
+Driver: Salah Poistion: 17 Lost the race on the Corvette
+Driver: Harry will be racing in the Mustang
+Driver: Harry Poistion: 14 on the Mustang
+>>> End Simulation Day 12 Sun
+
+Tracker: Day 12
+Total money earned by all Staff: $21,150.00
+Total money earned by the FNCD: -$596,895.52
+

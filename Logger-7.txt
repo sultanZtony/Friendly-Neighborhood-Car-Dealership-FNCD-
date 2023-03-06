@@ -1,0 +1,51 @@
+>>> Start Simulation Day 7 Tue
+The FNCD is opening...
+Money in the budget $403,644.50
+Bought Escort-2, a Clean LikeNew Car for $16,138.00
+Bought Ranger-2, a Dirty Used Pickup for $13,966.40
+The FNCD interns are washing...
+Intern Fred is using Detailed washing method.
+Intern Fred washed Avenger Dirty to Clean
+Intern Fred washed Madusa Dirty to Clean
+Intern Ethel is using Detailed washing method.
+Intern Ethel washed Zombie Dirty to Dirty
+Intern Ethel washed Honda Dirty to Dirty
+Intern Lucy is using Detailed washing method.
+Intern Lucy washed Zombie Dirty to Clean
+Intern Lucy washed Honda Dirty to Clean
+The FNCD mechanics are repairing...
+Mechanic James did not fix the Used BMW
+Mechanic James got a bonus of $300.00!
+Mechanic James fixed Leaf Used to LikeNew
+Mechanic Scotty did not fix the Used BMW
+Mechanic Scotty got a bonus of $200.00!
+Mechanic Scotty fixed Honda Broken to Used
+Mechanic Spock got a bonus of $300.00!
+Mechanic Spock fixed BMW Used to LikeNew
+Mechanic Spock got a bonus of $200.00!
+Mechanic Spock fixed Honda Used to LikeNew
+The FNCD salespeople are selling...
+The FNCD has 0 buyers today...
+Intern Fred received $60.00, Total-salary: $300.00 Total-bonus: $0.00
+Intern Ethel received $60.00, Total-salary: $300.00 Total-bonus: $100.00
+Intern Lucy received $60.00, Total-salary: $300.00 Total-bonus: $250.00
+Mechanic James received $120.00, Total-salary: $600.00 Total-bonus: $1,000.00
+Mechanic Scotty received $120.00, Total-salary: $600.00 Total-bonus: $1,300.00
+Mechanic Spock received $120.00, Total-salary: $600.00 Total-bonus: $2,300.00
+Salesperson Rachel received $90.00, Total-salary: $450.00 Total-bonus: $2,000.00
+Salesperson Monica received $90.00, Total-salary: $450.00 Total-bonus: $1,500.00
+Salesperson Phoebe received $90.00, Total-salary: $450.00 Total-bonus: $750.00
+Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+No-one on the staff is leaving!
+Vehicles in inventory 24
+Vehicles sold count 6
+Money in the budget $371,730.10
+That's it for the day.
+>>> End Simulation Day 7 Tue
+
+Tracker: Day 7
+Total money earned by all Staff: $13,250.00
+Total money earned by the FNCD: -$728,269.90
+

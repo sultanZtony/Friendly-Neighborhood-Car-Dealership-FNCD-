@@ -1,0 +1,14 @@
+>>> Start Simulation Day 22 Wed
+The FNCD might run a Race Event today for Wed
+Driver: Salah will be racing in the Avenger
+Driver: Salah Poistion: 19 Lost the race on the Avenger
+Driver: Harry will be racing in the Zombie
+Driver: Harry Poistion: 5 on the Zombie
+Driver: Mark will be racing in the Bigfoot-2
+Driver: Mark Poistion: 15 on the Bigfoot-2
+>>> End Simulation Day 22 Wed
+
+Tracker: Day 22
+Total money earned by all Staff: $40,955.00
+Total money earned by the FNCD: -$57,389.47
+

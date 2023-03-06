@@ -1,0 +1,89 @@
+>>> Start Simulation Day 2 Thur
+The FNCD is opening...
+Money in the budget $100,000.00
+Hired a new Intern named Fred
+Hired a new Intern named Ethel
+Hired a new Intern named Lucy
+Hired a new Mechanic named James
+Hired a new Mechanic named Scotty
+Hired a new Mechanic named Spock
+Hired a new Salesperson named Rachel
+Hired a new Salesperson named Monica
+Hired a new Salesperson named Phoebe
+Hired a new Driver named Harry
+Hired a new Driver named Salah
+Hired a new Driver named Mark
+Bought Probe, a Sparkling Used Car for $14,776.00
+Bought Escort, a Dirty LikeNew Car for $17,363.00
+Bought Taurus, a Dirty Broken Car for $9,370.00
+Bought Fiesta, a Dirty Broken Car for $7,772.50
+Bought Europa, a Sparkling Broken PerfCar for $18,334.50
+Bought Cayman, a Clean Used PerfCar for $16,657.60
+***Budget overrun*** Added $250K, budget now: $241,589.60
+Bought Corvette, a Clean Used PerfCar for $24,136.80
+Bought Mustang, a Dirty LikeNew PerfCar for $25,191.00
+Bought Ranger, a Dirty Broken Pickup for $12,376.00
+Bought F-250, a Clean Broken Pickup for $12,041.00
+Bought Colorado, a Clean LikeNew Pickup for $27,897.00
+Bought Tundra, a Dirty LikeNew Pickup for $33,205.00
+Bought Avenger, a Clean Broken MonsterTruck for $5,764.00
+Bought Bigfoot, a Dirty LikeNew MonsterTruck for $16,609.00
+Bought Madusa, a Clean Used MonsterTruck for $19,329.60
+Bought Zombie, a Clean Used MonsterTruck for $9,087.20
+Bought Tesla, a Clean LikeNew ElectricCar for $36,220.00
+Bought Mercedes, a Dirty Used ElectricCar for $31,831.20
+***Budget overrun*** Added $250K, budget now: $238,429.80
+Bought BMW, a Dirty Used ElectricCar for $23,608.80
+Bought Leaf, a Clean Used ElectricCar for $21,639.20
+Bought Harley, a Clean LikeNew Motorcycle for $13,285.00
+Bought Honda, a Dirty Broken Motorcycle for $14,568.00
+Bought Yamaha, a Dirty Broken Motorcycle for $6,365.50
+Bought Ducati, a Dirty Used Motorcycle for $29,053.60
+The FNCD interns are washing...
+Intern Fred is using Detailed washing method.
+Intern Fred washed Escort Dirty to Dirty
+Intern Fred washed Taurus Dirty to Dirty
+Intern Ethel is using Detailed washing method.
+Intern Ethel washed Escort Dirty to Clean
+Intern Ethel washed Taurus Dirty to Dirty
+Intern Lucy is using Detailed washing method.
+Intern Lucy washed Taurus Dirty to Dirty
+Intern Lucy washed Fiesta Dirty to Dirty
+The FNCD mechanics are repairing...
+Mechanic James got a bonus of $100.00!
+Mechanic James fixed Probe Used to LikeNew
+Mechanic James got a bonus of $100.00!
+Mechanic James fixed Taurus Broken to Used
+Mechanic Scotty got a bonus of $100.00!
+Mechanic Scotty fixed Taurus Used to LikeNew
+Mechanic Scotty did not fix the Broken Fiesta
+Mechanic Spock did not fix the Broken Fiesta
+Mechanic Spock got a bonus of $300.00!
+Mechanic Spock fixed Europa Broken to Used
+The FNCD salespeople are selling...
+The FNCD has 1 buyers today...
+Buyer Luke wants a ElectricCar (JustLooking)
+Buyer Luke decided not to buy.
+Intern Fred received $60.00, Total-salary: $60.00 Total-bonus: $0.00
+Intern Ethel received $60.00, Total-salary: $60.00 Total-bonus: $0.00
+Intern Lucy received $60.00, Total-salary: $60.00 Total-bonus: $0.00
+Mechanic James received $120.00, Total-salary: $120.00 Total-bonus: $200.00
+Mechanic Scotty received $120.00, Total-salary: $120.00 Total-bonus: $100.00
+Mechanic Spock received $120.00, Total-salary: $120.00 Total-bonus: $300.00
+Salesperson Rachel received $90.00, Total-salary: $90.00 Total-bonus: $0.00
+Salesperson Monica received $90.00, Total-salary: $90.00 Total-bonus: $0.00
+Salesperson Phoebe received $90.00, Total-salary: $90.00 Total-bonus: $0.00
+Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+No-one on the staff is leaving!
+Vehicles in inventory 24
+Vehicles sold count 0
+Money in the budget $152,108.50
+That's it for the day.
+>>> End Simulation Day 2 Thur
+
+Tracker: Day 2
+Total money earned by all Staff: $1,410.00
+Total money earned by the FNCD: -$947,891.50
+

@@ -1,0 +1,9 @@
+>>> Start Simulation Day 5 Sun
+The FNCD might run a Race Event today for Sun
+Sorry, there are no eligible vehicles in the FNCD to race today.
+>>> End Simulation Day 5 Sun
+
+Tracker: Day 5
+Total money earned by all Staff: $8,380.00
+Total money earned by the FNCD: -$790,018.30
+

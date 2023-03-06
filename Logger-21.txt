@@ -1,0 +1,64 @@
+>>> Start Simulation Day 21 Tue
+The FNCD is opening...
+Money in the budget $930,295.15
+Bought Colorado-2, a Dirty Broken Pickup for $19,565.50
+Bought Ducati-2, a Clean Broken Motorcycle for $11,698.50
+The FNCD interns are washing...
+Intern Fred is using Detailed washing method.
+Intern Fred washed Zombie-2 Dirty to Clean
+Intern Fred washed Colorado-2 Dirty to Clean
+Intern Ethel is using Detailed washing method.
+Intern Ethel got a bonus of $75.00!
+Intern Ethel washed Yamaha Clean to Sparkling
+Intern Ethel got a bonus of $75.00!
+Intern Ethel washed Harley-2 Clean to Sparkling
+Intern Lucy is using Detailed washing method.
+Intern Lucy washed Probe-2 Clean to Clean
+Intern Lucy washed Ranger-2 Clean to Clean
+The FNCD mechanics are repairing...
+Mechanic James did not fix the Broken Colorado-2
+Mechanic James did not fix the Broken Ducati-2
+Mechanic Scotty got a bonus of $200.00!
+Mechanic Scotty fixed Colorado-2 Broken to Used
+Mechanic Scotty got a bonus of $200.00!
+Mechanic Scotty fixed Ducati-2 Broken to Used
+Mechanic Spock got a bonus of $200.00!
+Mechanic Spock fixed Colorado-2 Used to LikeNew
+Mechanic Spock got a bonus of $200.00!
+Mechanic Spock fixed Ducati-2 Used to LikeNew
+The FNCD salespeople are selling...
+The FNCD has 4 buyers today...
+Buyer Chewy-11 wants a Car (NeedsOne)
+Buyer Chewy-11 is buying! Salesperson Monica gets a bonus of $500.00!
+Buyer Chewy-11 bought Sparkling LikeNew Fiesta for $29,146.88
+Buyer Luke-12 wants a Motorcycle (JustLooking)
+Buyer Luke-12 is buying! Salesperson Monica gets a bonus of $750.00!
+Buyer Luke-12 bought Dirty LikeNew Ducati-2 for $43,869.38
+Buyer Leia-12 wants a PerfCar (JustLooking)
+Buyer Leia-12 is buying! Salesperson Rachel gets a bonus of $1,000.00!
+Buyer Leia-12 bought Clean LikeNew Europa-2 for $74,323.12
+Buyer Han-12 wants a MonsterTruck (WantsOne)
+Buyer Han-12 decided not to buy.
+Intern Fred received $60.00, Total-salary: $900.00 Total-bonus: $575.00
+Intern Ethel received $60.00, Total-salary: $900.00 Total-bonus: $715.00
+Intern Lucy received $60.00, Total-salary: $900.00 Total-bonus: $615.00
+Mechanic James received $120.00, Total-salary: $1,800.00 Total-bonus: $3,300.00
+Mechanic Scotty received $120.00, Total-salary: $1,800.00 Total-bonus: $3,400.00
+Mechanic Spock received $120.00, Total-salary: $1,800.00 Total-bonus: $3,700.00
+Salesperson Rachel received $90.00, Total-salary: $1,350.00 Total-bonus: $6,500.00
+Salesperson Monica received $90.00, Total-salary: $1,350.00 Total-bonus: $6,250.00
+Salesperson Phoebe received $90.00, Total-salary: $1,350.00 Total-bonus: $3,750.00
+Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+No-one on the staff is leaving!
+Vehicles in inventory 21
+Vehicles sold count 22
+Money in the budget $1,042,360.52
+That's it for the day.
+>>> End Simulation Day 21 Tue
+
+Tracker: Day 21
+Total money earned by all Staff: $40,955.00
+Total money earned by the FNCD: -$57,389.47
+

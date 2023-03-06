@@ -1,0 +1,9 @@
+>>> Start Simulation Day 1 Wed
+The FNCD might run a Race Event today for Wed
+Sorry, there are no eligible vehicles in the FNCD to race today.
+>>> End Simulation Day 1 Wed
+
+Tracker: Day 1
+Total money earned by all Staff: $0.00
+Total money earned by the FNCD: $0.00
+

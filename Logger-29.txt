@@ -1,0 +1,15 @@
+>>> Start Simulation Day 29 Wed
+The FNCD might run a Race Event today for Wed
+Driver: Salah will be racing in the Ranger
+Driver: Salah Poistion: 5 on the Ranger
+Driver: Harry will be racing in the F-250
+Driver: Harry Poistion: 5 on the F-250
+Driver: Mark will be racing in the Ranger-2
+Driver: Mark Poistion: 19 Lost the race on the Ranger-2
+Driver: Mark Injured
+>>> End Simulation Day 29 Wed
+
+Tracker: Day 29
+Total money earned by all Staff: $53,420.00
+Total money earned by the FNCD: $139,439.60
+

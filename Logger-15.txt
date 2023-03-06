@@ -1,0 +1,14 @@
+>>> Start Simulation Day 15 Wed
+The FNCD might run a Race Event today for Wed
+Driver: Harry will be racing in the Cayman
+Driver: Harry Poistion: 5 on the Cayman
+Driver: Salah will be racing in the Mustang
+Driver: Salah Poistion: 9 on the Mustang
+Driver: Mark will be racing in the Europa-2
+Driver: Mark Poistion: 8 on the Europa-2
+>>> End Simulation Day 15 Wed
+
+Tracker: Day 15
+Total money earned by all Staff: $26,460.00
+Total money earned by the FNCD: -$410,544.27
+

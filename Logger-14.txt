@@ -1,0 +1,51 @@
+>>> Start Simulation Day 14 Tue
+The FNCD is opening...
+Money in the budget $631,351.47
+Bought Bigfoot-2, a Clean LikeNew MonsterTruck for $14,308.00
+Bought Mercedes-2, a Dirty LikeNew ElectricCar for $38,869.00
+The FNCD interns are washing...
+Intern Fred is using Detailed washing method.
+Intern Fred washed Corvette Dirty to Clean
+Intern Fred washed Mercedes-2 Dirty to Dirty
+Intern Ethel is using Detailed washing method.
+Intern Ethel got a bonus of $100.00!
+Intern Ethel washed Mercedes-2 Dirty to Sparkling
+Intern Ethel got a bonus of $100.00!
+Intern Ethel washed Cayman Clean to Sparkling
+Intern Lucy is using Detailed washing method.
+Intern Lucy washed Corvette Clean to Clean
+Intern Lucy got a bonus of $100.00!
+Intern Lucy washed Mustang Clean to Sparkling
+The FNCD mechanics are repairing...
+The FNCD salespeople are selling...
+The FNCD has 3 buyers today...
+Buyer Luke-8 wants a Car (JustLooking)
+Buyer Luke-8 decided not to buy.
+Buyer Leia-8 wants a PerfCar (NeedsOne)
+Buyer Leia-8 is buying! Salesperson Rachel gets a bonus of $1,000.00!
+Buyer Leia-8 bought Clean LikeNew Corvette for $113,141.25
+Buyer Han-8 wants a MonsterTruck (WantsOne)
+Buyer Han-8 decided not to buy.
+Intern Fred received $60.00, Total-salary: $600.00 Total-bonus: $200.00
+Intern Ethel received $60.00, Total-salary: $600.00 Total-bonus: $470.00
+Intern Lucy received $60.00, Total-salary: $600.00 Total-bonus: $390.00
+Mechanic James received $120.00, Total-salary: $1,200.00 Total-bonus: $2,600.00
+Mechanic Scotty received $120.00, Total-salary: $1,200.00 Total-bonus: $2,200.00
+Mechanic Spock received $120.00, Total-salary: $1,200.00 Total-bonus: $3,000.00
+Salesperson Rachel received $90.00, Total-salary: $900.00 Total-bonus: $3,750.00
+Salesperson Monica received $90.00, Total-salary: $900.00 Total-bonus: $3,500.00
+Salesperson Phoebe received $90.00, Total-salary: $900.00 Total-bonus: $2,250.00
+Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+No-one on the staff is leaving!
+Vehicles in inventory 23
+Vehicles sold count 12
+Money in the budget $689,205.72
+That's it for the day.
+>>> End Simulation Day 14 Tue
+
+Tracker: Day 14
+Total money earned by all Staff: $26,460.00
+Total money earned by the FNCD: -$410,544.27
+

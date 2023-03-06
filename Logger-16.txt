@@ -1,0 +1,46 @@
+>>> Start Simulation Day 16 Thur
+The FNCD is opening...
+Money in the budget $689,205.72
+Bought Cayman-2, a Dirty Broken PerfCar for $15,099.00
+The FNCD interns are washing...
+Intern Fred is using Detailed washing method.
+Intern Fred got a bonus of $100.00!
+Intern Fred washed Cayman-2 Dirty to Sparkling
+Intern Fred washed Ranger Clean to Clean
+Intern Ethel is using Detailed washing method.
+Intern Ethel washed Ranger Clean to Clean
+Intern Ethel washed F-250 Clean to Clean
+Intern Lucy is using Detailed washing method.
+Intern Lucy washed Ranger Clean to Clean
+Intern Lucy got a bonus of $75.00!
+Intern Lucy washed F-250 Clean to Sparkling
+The FNCD mechanics are repairing...
+Mechanic James got a bonus of $300.00!
+Mechanic James fixed Cayman-2 Broken to Used
+Mechanic Scotty got a bonus of $300.00!
+Mechanic Scotty fixed Cayman-2 Used to LikeNew
+The FNCD salespeople are selling...
+The FNCD has 0 buyers today...
+Intern Fred received $60.00, Total-salary: $660.00 Total-bonus: $300.00
+Intern Ethel received $60.00, Total-salary: $660.00 Total-bonus: $470.00
+Intern Lucy received $60.00, Total-salary: $660.00 Total-bonus: $465.00
+Mechanic James received $120.00, Total-salary: $1,320.00 Total-bonus: $2,900.00
+Mechanic Scotty received $120.00, Total-salary: $1,320.00 Total-bonus: $2,500.00
+Mechanic Spock received $120.00, Total-salary: $1,320.00 Total-bonus: $3,000.00
+Salesperson Rachel received $90.00, Total-salary: $990.00 Total-bonus: $3,750.00
+Salesperson Monica received $90.00, Total-salary: $990.00 Total-bonus: $3,500.00
+Salesperson Phoebe received $90.00, Total-salary: $990.00 Total-bonus: $2,250.00
+Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
+No-one on the staff is leaving!
+Vehicles in inventory 24
+Vehicles sold count 12
+Money in the budget $672,521.72
+That's it for the day.
+>>> End Simulation Day 16 Thur
+
+Tracker: Day 16
+Total money earned by all Staff: $28,045.00
+Total money earned by the FNCD: -$427,228.27
+

@@ -1,0 +1,14 @@
+>>> Start Simulation Day 8 Wed
+The FNCD might run a Race Event today for Wed
+Driver: Harry will be racing in the Honda
+Driver: Harry Poistion: 9 on the Honda
+Driver: Salah will be racing in the Honda-2
+Driver: Salah Poistion: 2 Won the race on the Honda-2
+Driver: Salah will be racing in the Honda-2
+Driver: Salah Poistion: 2 on the Honda-2
+>>> End Simulation Day 8 Wed
+
+Tracker: Day 8
+Total money earned by all Staff: $13,250.00
+Total money earned by the FNCD: -$728,269.90
+

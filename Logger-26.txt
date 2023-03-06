@@ -1,0 +1,16 @@
+>>> Start Simulation Day 26 Sun
+The FNCD might run a Race Event today for Sun
+Driver: Salah will be racing in the Yamaha
+Driver: Salah Poistion: 1 Won the race on the Yamaha
+Driver: Salah will be racing in the Yamaha
+Driver: Salah Poistion: 1 on the Yamaha
+Driver: Mark will be racing in the Honda-2
+Driver: Mark Poistion: 16 Lost the race on the Honda-2
+Driver: Harry will be racing in the Harley-3
+Driver: Harry Poistion: 20 Lost the race on the Harley-3
+>>> End Simulation Day 26 Sun
+
+Tracker: Day 26
+Total money earned by all Staff: $47,580.00
+Total money earned by the FNCD: $46,402.98
+

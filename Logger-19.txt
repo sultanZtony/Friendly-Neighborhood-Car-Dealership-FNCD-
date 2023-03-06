@@ -1,0 +1,14 @@
+>>> Start Simulation Day 19 Sun
+The FNCD might run a Race Event today for Sun
+Driver: Harry will be racing in the Ranger
+Driver: Harry Poistion: 6 on the Ranger
+Driver: Salah will be racing in the F-250
+Driver: Salah Poistion: 10 on the F-250
+Driver: Mark will be racing in the Ranger-2
+Driver: Mark Poistion: 9 on the Ranger-2
+>>> End Simulation Day 19 Sun
+
+Tracker: Day 19
+Total money earned by all Staff: $34,215.00
+Total money earned by the FNCD: -$263,836.47
+
