@@ -314,7 +314,8 @@ public class FNCD implements SysOut {
 
     // see if we need any vehicles
     void updateInventory() {
-        final int numberInInventory = 4;
+        // The Inventory count of all Vehicle type instances at an FNCD changes from 4 to 6.
+        final int numberInInventory = 6;    
         for (Enums.VehicleType t : Enums.VehicleType.values()) {
             int typeInList = Vehicle.howManyVehiclesByType(inventory, t);
             int need = numberInInventory - typeInList;

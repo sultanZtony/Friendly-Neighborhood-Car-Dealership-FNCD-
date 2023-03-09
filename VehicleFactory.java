@@ -45,6 +45,27 @@ class MotorcycleFactory extends VehicleFactory {
     }
 }
 
+class ScooterFactory extends VehicleFactory {
+    @Override
+    public Vehicle createVehicle() {
+        return new Scooter();
+    }
+}
+
+class SemiFactory extends VehicleFactory {
+    @Override
+    public Vehicle createVehicle() {
+        return new Semi();
+    }
+}
+
+class TractorFactory extends VehicleFactory {
+    @Override
+    public Vehicle createVehicle() {
+        return new Tractor();
+    }
+}
+
 class VehicleCreator {
     public static Vehicle createVehicle(Enums.VehicleType type) {
         VehicleFactory factory;
@@ -66,6 +87,15 @@ class VehicleCreator {
                 break;
             case Motorcycle:
                 factory = new MotorcycleFactory();
+                break;
+            case Scooter:
+                factory = new ScooterFactory();
+                break;
+            case Semi:
+                factory = new SemiFactory();
+                break;
+            case Tractor:
+                factory = new TractorFactory();
                 break;
             default:
                 throw new IllegalArgumentException("Invalid vehicle type: " + type);

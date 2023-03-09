@@ -264,3 +264,73 @@ class Motorcycle extends Vehicle {
         return price;
     }
 }
+
+class Scooter extends Vehicle {
+    static List<String> names = Arrays.asList("Lexmoto","Vespa","Kymco","Piaggio");
+    static Namer namer = new Namer(names);
+    private int engineSize;
+    Scooter() {
+        super();
+        type = Enums.VehicleType.Scooter;
+        name = namer.getNext();
+        cost = getCost(1000,2000);
+        price = cost * 2;
+        repair_bonus = 200;
+        wash_bonus = 75;
+        sale_bonus = 75;
+        engineSize = 50;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}
+
+class Semi extends Vehicle {
+    static List<String> names = Arrays.asList("Mack","Volvo","Frieghtliner","Peterbilt");
+    static Namer namer = new Namer(names);
+    private boolean roofCap;
+    Semi() {
+        super();
+        type = Enums.VehicleType.Semi;
+        name = namer.getNext();
+        cost = getCost(40000, 120000);
+        price = cost * 2;
+        repair_bonus = 200;
+        wash_bonus = 75;
+        sale_bonus = 75;
+
+        roofCap = randRoofCap();
+    }
+
+    public boolean randRoofCap() {
+        Random random = new Random();
+        return random.nextBoolean();
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}
+
+class Tractor extends Vehicle {
+    static List<String> names = Arrays.asList("John Deere","Case IH","Kubota","Fendt");
+    static Namer namer = new Namer(names);
+    Tractor() {
+        super();
+        type = Enums.VehicleType.Tractor;
+        name = namer.getNext();
+        cost = getCost(10000, 50000);
+        price = cost * 2;
+        repair_bonus = 200;
+        wash_bonus = 75;
+        sale_bonus = 75;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+}
