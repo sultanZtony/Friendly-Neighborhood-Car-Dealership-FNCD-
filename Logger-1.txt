@@ -13,66 +13,65 @@ Hired a new Salesperson named Phoebe
 Hired a new Driver named Jon
 Hired a new Driver named Harry
 Hired a new Driver named Salah
-Bought Probe, a Clean LikeNew Car for $18,345.00
-Bought Escort, a Clean Used Car for $12,744.00
-Bought Taurus, a Dirty Broken Car for $7,244.50
-Bought Fiesta, a Dirty Broken Car for $9,598.50
-Bought Probe-2, a Dirty Broken Car for $7,273.00
-Bought Escort-2, a Clean Used Car for $10,628.80
-Bought Europa, a Dirty LikeNew PerfCar for $30,494.00
-***Budget overrun*** Added $250K, budget now: $225,299.40
-Bought Cayman, a Dirty Used PerfCar for $28,372.80
-Bought Corvette, a Clean LikeNew PerfCar for $28,303.00
-Bought Mustang, a Dirty LikeNew PerfCar for $31,453.00
-Bought Europa-2, a Dirty Broken PerfCar for $12,596.50
-Bought Cayman-2, a Dirty Used PerfCar for $25,129.60
-Bought Ranger, a Dirty LikeNew Pickup for $17,831.00
-Bought F-250, a Dirty Used Pickup for $24,265.60
-Bought Colorado, a Dirty LikeNew Pickup for $30,870.00
-Bought Tundra, a Dirty Used Pickup for $24,051.20
-Bought Ranger-2, a Dirty LikeNew Pickup for $17,709.00
-***Budget overrun*** Added $250K, budget now: $247,068.50
-Bought F-250-2, a Dirty Broken Pickup for $16,022.00
-Bought Avenger, a Dirty LikeNew MonsterTruck for $14,667.00
-Bought Bigfoot, a Dirty Broken MonsterTruck for $15,444.00
-Bought Madusa, a Clean Broken MonsterTruck for $6,003.00
-Bought Zombie, a Dirty Used MonsterTruck for $31,352.00
-Bought Avenger-2, a Clean Used MonsterTruck for $31,292.00
-Bought Bigfoot-2, a Dirty Broken MonsterTruck for $10,623.00
-Bought Tesla, a Dirty LikeNew ElectricCar for $23,243.00
-Bought Mercedes, a Dirty Used ElectricCar for $23,016.00
-Bought BMW, a Clean LikeNew ElectricCar for $25,858.00
-Bought Leaf, a Dirty Broken ElectricCar for $11,005.00
-Bought Tesla-2, a Clean Used ElectricCar for $21,914.40
-Bought Mercedes-2, a Dirty LikeNew ElectricCar for $30,884.00
-***Budget overrun*** Added $250K, budget now: $221,620.70
-Bought Harley, a Dirty Used Motorcycle for $30,146.40
-Bought Honda, a Dirty Used Motorcycle for $21,076.80
-Bought Yamaha, a Dirty Used Motorcycle for $28,402.40
-Bought Ducati, a Clean Used Motorcycle for $31,420.00
-Bought Harley-2, a Clean Used Motorcycle for $29,253.60
-Bought Honda-2, a Dirty LikeNew Motorcycle for $16,581.00
-Bought Lexmoto, a Dirty LikeNew Scooter for $1,958.00
-Bought Vespa, a Dirty Used Scooter for $1,295.20
-Bought Kymco, a Dirty Broken Scooter for $805.50
-Bought Piaggio, a Dirty Used Scooter for $1,088.00
-Bought Lexmoto-2, a Dirty Used Scooter for $1,200.00
-Bought Vespa-2, a Dirty Used Scooter for $1,187.20
-***Budget overrun*** Added $250K, budget now: $228,499.00
-Bought Mack, a Dirty LikeNew Semi for $108,854.00
-Bought Volvo, a Sparkling Broken Semi for $24,455.00
-Bought Frieghtliner, a Dirty Broken Semi for $43,299.50
-Bought Peterbilt, a Dirty Used Semi for $92,296.80
-***Budget overrun*** Added $250K, budget now: $243,696.50
-Bought Mack-2, a Dirty Used Semi for $74,751.20
-Bought Volvo-2, a Dirty LikeNew Semi for $115,972.00
-Bought John Deere, a Clean Broken Tractor for $19,694.00
-Bought Case IH, a Dirty Broken Tractor for $12,599.00
-Bought Kubota, a Dirty LikeNew Tractor for $47,113.00
-Bought Fendt, a Dirty LikeNew Tractor for $34,661.00
-Bought John Deere-2, a Dirty LikeNew Tractor for $12,895.00
-***Budget overrun*** Added $250K, budget now: $236,170.50
-Bought Case IH-2, a Clean Used Tractor for $14,592.00
+Bought Probe, a Dirty Broken Car for $5,321.50
+Bought Escort, a Dirty Broken Car for $9,868.50
+Bought Taurus, a Dirty Used Car for $14,972.80
+Bought Fiesta, a Dirty LikeNew Car for $10,821.00
+Bought Probe-2, a Dirty Used Car for $8,852.80
+Bought Escort-2, a Clean Used Car for $15,406.40
+Bought Europa, a Dirty Broken PerfCar for $16,700.00
+Bought Cayman, a Sparkling Broken PerfCar for $16,144.00
+***Budget overrun*** Added $250K, budget now: $234,221.80
+Bought Corvette, a Dirty Used PerfCar for $17,691.20
+Bought Mustang, a Clean Used PerfCar for $27,112.80
+Bought Europa-2, a Dirty Broken PerfCar for $10,704.50
+Bought Cayman-2, a Clean Broken PerfCar for $17,595.00
+Bought Ranger, a Sparkling Broken Pickup for $10,323.00
+Bought F-250, a Dirty Used Pickup for $31,737.60
+Bought Colorado, a Dirty Broken Pickup for $19,958.00
+Bought Tundra, a Dirty Broken Pickup for $8,510.00
+Bought Ranger-2, a Clean Broken Pickup for $8,748.50
+Bought F-250-2, a Clean Used Pickup for $25,890.40
+Bought Avenger, a Clean Used MonsterTruck for $11,824.00
+Bought Bigfoot, a Dirty Used MonsterTruck for $17,988.00
+Bought Madusa, a Dirty LikeNew MonsterTruck for $19,075.00
+Bought Zombie, a Sparkling Used MonsterTruck for $18,778.40
+***Budget overrun*** Added $250K, budget now: $222,362.60
+Bought Avenger-2, a Clean LikeNew MonsterTruck for $33,614.00
+Bought Bigfoot-2, a Dirty LikeNew MonsterTruck for $30,884.00
+Bought Tesla, a Dirty LikeNew ElectricCar for $39,338.00
+Bought Mercedes, a Dirty Broken ElectricCar for $11,859.00
+Bought BMW, a Clean Used ElectricCar for $31,036.80
+Bought Leaf, a Dirty Broken ElectricCar for $14,471.00
+Bought Tesla-2, a Dirty Used ElectricCar for $26,731.20
+Bought Mercedes-2, a Clean LikeNew ElectricCar for $37,334.00
+Bought Harley, a Dirty Broken Motorcycle for $11,777.50
+***Budget overrun*** Added $250K, budget now: $248,862.10
+Bought Honda, a Dirty LikeNew Motorcycle for $20,069.00
+Bought Yamaha, a Dirty Broken Motorcycle for $9,029.50
+Bought Ducati, a Dirty Used Motorcycle for $13,140.00
+Bought Harley-2, a Sparkling Used Motorcycle for $12,212.00
+Bought Honda-2, a Clean Used Motorcycle for $9,870.40
+Bought Lexmoto, a Dirty LikeNew Scooter for $1,679.00
+Bought Vespa, a Clean Used Scooter for $1,129.60
+Bought Kymco, a Dirty Used Scooter for $1,032.00
+Bought Piaggio, a Dirty Broken Scooter for $576.00
+Bought Lexmoto-2, a Dirty Used Scooter for $1,188.80
+Bought Vespa-2, a Dirty Used Scooter for $1,452.00
+Bought Mack, a Dirty Broken Semi for $27,079.50
+Bought Volvo, a Dirty Used Semi for $63,633.60
+Bought Frieghtliner, a Dirty Broken Semi for $52,843.50
+Bought Peterbilt, a Sparkling Broken Semi for $30,228.50
+***Budget overrun*** Added $250K, budget now: $222,707.70
+Bought Mack-2, a Clean Used Semi for $51,060.00
+Bought Volvo-2, a Dirty LikeNew Semi for $116,258.00
+Bought John Deere, a Dirty LikeNew Tractor for $46,816.00
+Bought Case IH, a Clean LikeNew Tractor for $41,099.00
+Bought Kubota, a Clean Broken Tractor for $15,433.00
+***Budget overrun*** Added $250K, budget now: $206,785.70
+Bought Fendt, a Clean LikeNew Tractor for $46,316.00
+Bought John Deere-2, a Clean LikeNew Tractor for $24,833.00
+Bought Case IH-2, a Dirty Broken Tractor for $14,708.50
 End opening activity for North FNCD...
 
 The South FNCD is opening...
@@ -89,178 +88,195 @@ Hired a new Salesperson named Joey
 Hired a new Driver named Mark
 Hired a new Driver named Tylor
 Hired a new Driver named Sara
-Bought Taurus-2, a Clean Broken Car for $7,795.00
-Bought Fiesta-2, a Clean Broken Car for $6,211.00
-Bought Probe-3, a Dirty LikeNew Car for $19,285.00
-Bought Escort-3, a Dirty Used Car for $15,531.20
-Bought Taurus-3, a Clean Used Car for $12,973.60
-Bought Fiesta-3, a Clean Broken Car for $5,012.50
-Bought Corvette-2, a Clean LikeNew PerfCar for $26,153.00
-***Budget overrun*** Added $250K, budget now: $227,144.70
-Bought Mustang-2, a Clean LikeNew PerfCar for $29,894.00
-Bought Europa-3, a Dirty Used PerfCar for $27,138.40
-Bought Cayman-3, a Dirty Broken PerfCar for $12,768.50
-Bought Corvette-3, a Dirty Broken PerfCar for $19,804.00
-Bought Mustang-3, a Dirty LikeNew PerfCar for $21,277.00
-Bought Colorado-2, a Clean LikeNew Pickup for $28,298.00
-Bought Tundra-2, a Clean Used Pickup for $11,964.80
-Bought Ranger-3, a Dirty Used Pickup for $13,116.80
-Bought F-250-3, a Dirty LikeNew Pickup for $27,501.00
-Bought Colorado-3, a Clean Used Pickup for $31,604.80
-Bought Tundra-3, a Clean Broken Pickup for $9,424.00
-Bought Madusa-2, a Clean Broken MonsterTruck for $17,998.50
-***Budget overrun*** Added $250K, budget now: $225,233.90
-Bought Zombie-2, a Dirty LikeNew MonsterTruck for $31,015.00
-Bought Avenger-3, a Clean LikeNew MonsterTruck for $23,293.00
-Bought Bigfoot-3, a Clean Broken MonsterTruck for $11,398.00
-Bought Madusa-3, a Dirty LikeNew MonsterTruck for $24,608.00
-Bought Zombie-3, a Clean LikeNew MonsterTruck for $36,711.00
-Bought BMW-2, a Sparkling Used ElectricCar for $28,755.20
-Bought Leaf-2, a Clean Broken ElectricCar for $13,333.50
-Bought Tesla-3, a Dirty Used ElectricCar for $16,469.60
-Bought Mercedes-3, a Clean Used ElectricCar for $28,528.00
-Bought BMW-3, a Dirty LikeNew ElectricCar for $28,785.00
-Bought Leaf-3, a Dirty Broken ElectricCar for $10,725.50
-***Budget overrun*** Added $250K, budget now: $246,142.10
-Bought Yamaha-2, a Clean Broken Motorcycle for $6,485.00
-Bought Ducati-2, a Clean Used Motorcycle for $30,057.60
-Bought Harley-3, a Clean Broken Motorcycle for $13,986.50
-Bought Honda-3, a Clean Used Motorcycle for $28,857.60
-Bought Yamaha-3, a Dirty Broken Motorcycle for $7,113.00
-Bought Ducati-3, a Clean Broken Motorcycle for $8,971.50
-Bought Kymco-2, a Clean Used Scooter for $1,359.20
-Bought Piaggio-2, a Clean Used Scooter for $1,392.00
-Bought Lexmoto-3, a Clean LikeNew Scooter for $1,058.00
-Bought Vespa-3, a Dirty Used Scooter for $1,016.00
-Bought Kymco-3, a Dirty LikeNew Scooter for $1,003.00
-Bought Piaggio-3, a Sparkling Broken Scooter for $758.50
-Bought Frieghtliner-2, a Dirty LikeNew Semi for $98,296.00
-Bought Peterbilt-2, a Clean Broken Semi for $50,317.50
-***Budget overrun*** Added $250K, budget now: $206,092.70
-Bought Mack-3, a Clean LikeNew Semi for $45,863.00
-Bought Volvo-3, a Dirty Used Semi for $88,226.40
-Bought Frieghtliner-3, a Dirty Used Semi for $81,922.40
-Bought Peterbilt-3, a Clean Broken Semi for $35,341.00
-***Budget overrun*** Added $250K, budget now: $214,357.90
-Bought Kubota-2, a Clean LikeNew Tractor for $36,245.00
-Bought Fendt-2, a Clean Used Tractor for $23,204.80
-Bought John Deere-3, a Dirty Used Tractor for $14,816.00
-Bought Case IH-3, a Clean Broken Tractor for $21,283.00
-Bought Kubota-3, a Dirty Used Tractor for $10,714.40
-Bought Fendt-3, a Dirty Broken Tractor for $19,077.50
+Bought Taurus-2, a Dirty Broken Car for $6,854.00
+Bought Fiesta-2, a Dirty LikeNew Car for $16,573.00
+Bought Probe-3, a Dirty Used Car for $12,004.00
+Bought Escort-3, a Clean LikeNew Car for $18,949.00
+Bought Taurus-3, a Dirty LikeNew Car for $15,964.00
+Bought Fiesta-3, a Dirty Used Car for $13,369.60
+***Budget overrun*** Added $250K, budget now: $246,659.90
+Bought Corvette-2, a Dirty Broken PerfCar for $19,626.50
+Bought Mustang-2, a Dirty LikeNew PerfCar for $21,994.00
+Bought Europa-3, a Dirty LikeNew PerfCar for $28,850.00
+Bought Cayman-3, a Dirty Used PerfCar for $20,277.60
+Bought Corvette-3, a Dirty LikeNew PerfCar for $33,198.00
+Bought Mustang-3, a Clean LikeNew PerfCar for $20,618.00
+Bought Colorado-2, a Clean Used Pickup for $9,740.80
+Bought Tundra-2, a Dirty Used Pickup for $28,988.00
+Bought Ranger-3, a Sparkling LikeNew Pickup for $10,842.00
+Bought F-250-3, a Dirty LikeNew Pickup for $38,210.00
+Bought Colorado-3, a Dirty LikeNew Pickup for $24,741.00
+***Budget overrun*** Added $250K, budget now: $246,038.10
+Bought Tundra-3, a Dirty Used Pickup for $13,162.40
+Bought Madusa-2, a Clean Broken MonsterTruck for $14,305.50
+Bought Zombie-2, a Clean Broken MonsterTruck for $8,786.50
+Bought Avenger-3, a Clean LikeNew MonsterTruck for $37,236.00
+Bought Bigfoot-3, a Dirty Broken MonsterTruck for $16,143.50
+Bought Madusa-3, a Dirty LikeNew MonsterTruck for $15,327.00
+Bought Zombie-3, a Dirty LikeNew MonsterTruck for $31,163.00
+Bought BMW-2, a Dirty Broken ElectricCar for $13,260.00
+Bought Leaf-2, a Clean Used ElectricCar for $22,236.00
+Bought Tesla-3, a Dirty LikeNew ElectricCar for $38,365.00
+Bought Mercedes-3, a Dirty Broken ElectricCar for $17,240.50
+Bought BMW-3, a Clean Broken ElectricCar for $14,667.00
+***Budget overrun*** Added $250K, budget now: $237,209.10
+Bought Leaf-3, a Dirty LikeNew ElectricCar for $30,099.00
+Bought Yamaha-2, a Clean Broken Motorcycle for $13,154.00
+Bought Ducati-2, a Dirty LikeNew Motorcycle for $22,924.00
+Bought Harley-3, a Dirty LikeNew Motorcycle for $30,162.00
+Bought Honda-3, a Clean Used Motorcycle for $13,772.80
+Bought Yamaha-3, a Clean Broken Motorcycle for $18,484.50
+Bought Ducati-3, a Dirty Used Motorcycle for $12,888.00
+Bought Kymco-2, a Clean Used Scooter for $805.60
+Bought Piaggio-2, a Dirty Broken Scooter for $944.00
+Bought Lexmoto-3, a Dirty Broken Scooter for $886.50
+Bought Vespa-3, a Dirty Used Scooter for $1,338.40
+Bought Kymco-3, a Dirty Broken Scooter for $686.00
+Bought Piaggio-3, a Clean Broken Scooter for $935.50
+Bought Frieghtliner-2, a Clean Broken Semi for $33,819.50
+Bought Peterbilt-2, a Clean Used Semi for $37,304.80
+***Budget overrun*** Added $250K, budget now: $244,412.00
+Bought Mack-3, a Dirty Broken Semi for $54,691.50
+Bought Volvo-3, a Clean Broken Semi for $35,496.50
+Bought Frieghtliner-3, a Dirty LikeNew Semi for $75,309.00
+Bought Peterbilt-3, a Dirty Used Semi for $89,075.20
+Bought Kubota-2, a Dirty Used Tractor for $9,670.40
+Bought Fendt-2, a Dirty LikeNew Tractor for $21,313.00
+***Budget overrun*** Added $250K, budget now: $244,893.90
+Bought John Deere-3, a Dirty LikeNew Tractor for $18,654.00
+Bought Case IH-3, a Dirty LikeNew Tractor for $11,626.00
+Bought Kubota-3, a Clean LikeNew Tractor for $24,059.00
+Bought Fendt-3, a Dirty Broken Tractor for $7,049.50
 End opening activity for South FNCD...
 
 The North FNCD interns are washing...
-Intern Fred is using Chemical washing method.
-Intern Fred washed Taurus Dirty to Clean
-Intern Fred washed Fiesta Dirty to Clean
-Intern Ethel is using Detailed washing method.
-Intern Ethel got a bonus of $20.00!
-Intern Ethel washed Probe-2 Dirty to Sparkling
-Intern Ethel washed Europa Dirty to Clean
+Intern Fred is using Detailed washing method.
+Intern Fred washed Probe Dirty to Clean
+Intern Fred washed Escort Dirty to Clean
+Intern Ethel is using ElbowGrease washing method.
+Intern Ethel washed Taurus Dirty to Clean
+Intern Ethel washed Fiesta Dirty to Dirty
 Intern Lucy is using ElbowGrease washing method.
-Intern Lucy washed Cayman Dirty to Dirty
-Intern Lucy washed Mustang Dirty to Clean
+Intern Lucy washed Fiesta Dirty to Dirty
+Intern Lucy washed Probe-2 Dirty to Clean
 End washing activity for North FNCD...
 
 The South FNCD interns are washing...
-Intern Desi is using ElbowGrease washing method.
-Intern Desi washed Probe-3 Dirty to Clean
-Intern Desi washed Escort-3 Dirty to Dirty
-Intern Fred-2 is using Chemical washing method.
-Intern Fred-2 washed Escort-3 Dirty to Clean
-Intern Fred-2 washed Europa-3 Dirty to Clean
-Intern Ethel-2 is using Detailed washing method.
-Intern Ethel-2 washed Cayman-3 Dirty to Dirty
-Intern Ethel-2 washed Corvette-3 Dirty to Clean
+Intern Desi is using Chemical washing method.
+Intern Desi washed Taurus-2 Dirty to Clean
+Intern Desi washed Fiesta-2 Dirty to Clean
+Intern Fred-2 is using ElbowGrease washing method.
+Intern Fred-2 washed Probe-3 Dirty to Dirty
+Intern Fred-2 washed Taurus-3 Dirty to Clean
+Intern Ethel-2 is using Chemical washing method.
+Intern Ethel-2 washed Probe-3 Dirty to Clean
+Intern Ethel-2 washed Fiesta-3 Dirty to Clean
 End washing activity for South FNCD...
 
 The North FNCD mechanics are repairing...
 Mechanic James got a bonus of $100.00!
-Mechanic James fixed Escort Used to LikeNew
+Mechanic James fixed Probe Broken to Used
 Mechanic James got a bonus of $100.00!
-Mechanic James fixed Taurus Broken to Used
+Mechanic James fixed Escort Broken to Used
 Mechanic Scotty got a bonus of $100.00!
-Mechanic Scotty fixed Taurus Used to LikeNew
+Mechanic Scotty fixed Probe Used to LikeNew
 Mechanic Scotty got a bonus of $100.00!
-Mechanic Scotty fixed Fiesta Broken to Used
-Mechanic Spock did not fix the Used Fiesta
+Mechanic Scotty fixed Escort Used to LikeNew
 Mechanic Spock got a bonus of $100.00!
-Mechanic Spock fixed Probe-2 Broken to Used
+Mechanic Spock fixed Taurus Used to LikeNew
+Mechanic Spock did not fix the Used Probe-2
 End repairing activity for North FNCD...
 
 The South FNCD mechanics are repairing...
-Mechanic Uhura got a bonus of $100.00!
-Mechanic Uhura fixed Taurus-2 Broken to Used
-Mechanic Uhura got a bonus of $100.00!
-Mechanic Uhura fixed Fiesta-2 Broken to Used
+Mechanic Uhura did not fix the Broken Taurus-2
+Mechanic Uhura did not fix the Used Fiesta-3
 Mechanic James-2 got a bonus of $100.00!
-Mechanic James-2 fixed Taurus-2 Used to LikeNew
+Mechanic James-2 fixed Taurus-2 Broken to Used
 Mechanic James-2 got a bonus of $100.00!
-Mechanic James-2 fixed Fiesta-2 Used to LikeNew
+Mechanic James-2 fixed Fiesta-3 Used to LikeNew
 Mechanic Scotty-2 got a bonus of $100.00!
-Mechanic Scotty-2 fixed Taurus-3 Used to LikeNew
-Mechanic Scotty-2 got a bonus of $100.00!
-Mechanic Scotty-2 fixed Fiesta-3 Broken to Used
+Mechanic Scotty-2 fixed Taurus-2 Used to LikeNew
+Mechanic Scotty-2 got a bonus of $300.00!
+Mechanic Scotty-2 fixed Corvette-2 Broken to Used
 End repairing activity for South FNCD...
 
 The North FNCD salespeople are selling...
-The FNCD has 0 buyers today...
+The FNCD has 3 buyers today...
+Buyer Luke wants a Motorcycle (WantsOne)
+Buyer Luke is buying! Salesperson Rachel gets a bonus of $750.00!
+Buyer Luke bought Dirty LikeNew Honda for $40,138.00
+Satellite Radio added to Honda, price increased to: $42,144.90
+Buyer Leia wants a Motorcycle (JustLooking)
+Buyer Leia decided not to buy.
+Buyer Han wants a Motorcycle (WantsOne)
+Buyer Han is buying! Salesperson Phoebe gets a bonus of $750.00!
+Buyer Han bought Dirty Used Ducati for $26,280.00
+Extended Warranty added to Ducati, price increased to: $31,536.00
+Satellite Radio added to Ducati, price increased to: $32,850.00
 End selling activity for North FNCD...
 
 The South FNCD salespeople are selling...
-The FNCD has 2 buyers today...
-Buyer Luke wants a Tractor (WantsOne)
-Buyer Luke is buying! Salesperson Chandler gets a bonus of $75.00!
-Buyer Luke bought Clean LikeNew Kubota-2 for $72,490.00
-Satellite Radio added to Kubota-2, price increased to: $76,114.50
-Buyer Leia wants a Pickup (JustLooking)
-Buyer Leia decided not to buy.
+The FNCD has 4 buyers today...
+Buyer Chewy wants a Semi (NeedsOne)
+Buyer Chewy decided not to buy.
+Buyer Luke-2 wants a Tractor (JustLooking)
+Buyer Luke-2 is buying! Salesperson Chandler gets a bonus of $75.00!
+Buyer Luke-2 bought Clean LikeNew Kubota-3 for $48,118.00
+Satellite Radio added to Kubota-3, price increased to: $50,523.90
+Buyer Leia-2 wants a Pickup (JustLooking)
+Buyer Leia-2 decided not to buy.
+Buyer Han-2 wants a MonsterTruck (JustLooking)
+Buyer Han-2 decided not to buy.
 End selling activity for South FNCD...
 
 The North FNCD might run a Race Event today for Sun
-Driver: Harry will be racing in the Europa
-Driver: Harry Poistion: 6 on the Europa
-Driver: Jon will be racing in the Cayman
-Driver: Jon Poistion: 17 Lost the race on the Cayman
-Driver: Salah will be racing in the Corvette
-Driver: Salah Poistion: 18 Lost the race on the Corvette
-Driver: Salah Injured
+Driver: Jon will be racing in the Harley-2
+Driver: Jon Poistion: 2 Won the race on the Harley-2
+Driver: Jon will be racing in the Harley-2
+Driver: Jon Poistion: 2 on the Harley-2
+Driver: Harry will be racing in the Honda-2
+Driver: Harry Poistion: 12 on the Honda-2
 End race activity for North FNCD
 
 The South FNCD might run a Race Event today for Sun
-Driver: Tylor will be racing in the Ducati-2
-Driver: Tylor Poistion: 10 on the Ducati-2
-Driver: Mark will be racing in the Honda-3
-Driver: Mark Poistion: 12 on the Honda-3
+Driver: Mark will be racing in the Avenger-3
+Driver: Mark Poistion: 3 Won the race on the Avenger-3
+Driver: Mark will be racing in the Avenger-3
+Driver: Mark Poistion: 3 on the Avenger-3
+Driver: Tylor will be racing in the Madusa-3
+Driver: Tylor Poistion: 1 Won the race on the Madusa-3
+Driver: Tylor will be racing in the Madusa-3
+Driver: Tylor Poistion: 1 on the Madusa-3
+Driver: Sara will be racing in the Zombie-3
+Driver: Sara Poistion: 15 on the Zombie-3
 End race activity for South FNCD
 
 End of day activity for North FNCD...
 Intern Fred received $60.00, Total-salary: $60.00 Total-bonus: $0.00
-Intern Ethel received $60.00, Total-salary: $60.00 Total-bonus: $20.00
+Intern Ethel received $60.00, Total-salary: $60.00 Total-bonus: $0.00
 Intern Lucy received $60.00, Total-salary: $60.00 Total-bonus: $0.00
 Mechanic James received $120.00, Total-salary: $120.00 Total-bonus: $200.00
 Mechanic Scotty received $120.00, Total-salary: $120.00 Total-bonus: $200.00
 Mechanic Spock received $120.00, Total-salary: $120.00 Total-bonus: $100.00
-Salesperson Rachel received $90.00, Total-salary: $90.00 Total-bonus: $0.00
+Salesperson Rachel received $90.00, Total-salary: $90.00 Total-bonus: $750.00
 Salesperson Monica received $90.00, Total-salary: $90.00 Total-bonus: $0.00
-Salesperson Phoebe received $90.00, Total-salary: $90.00 Total-bonus: $0.00
+Salesperson Phoebe received $90.00, Total-salary: $90.00 Total-bonus: $750.00
 Driver Jon received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
-Vehicles in inventory 54
-Vehicles sold count 0
-Money in the budget $234,840.50
+Vehicles in inventory 52
+Vehicles sold count 2
+Money in the budget $239,179.10
 That's it for the day.
 
 End of day activity for South FNCD...
 Intern Desi received $60.00, Total-salary: $60.00 Total-bonus: $0.00
 Intern Fred-2 received $60.00, Total-salary: $60.00 Total-bonus: $0.00
 Intern Ethel-2 received $60.00, Total-salary: $60.00 Total-bonus: $0.00
-Mechanic Uhura received $120.00, Total-salary: $120.00 Total-bonus: $200.00
+Mechanic Uhura received $120.00, Total-salary: $120.00 Total-bonus: $0.00
 Mechanic James-2 received $120.00, Total-salary: $120.00 Total-bonus: $200.00
-Mechanic Scotty-2 received $120.00, Total-salary: $120.00 Total-bonus: $200.00
+Mechanic Scotty-2 received $120.00, Total-salary: $120.00 Total-bonus: $400.00
 Salesperson Chandler received $90.00, Total-salary: $90.00 Total-bonus: $75.00
 Salesperson Ross received $90.00, Total-salary: $90.00 Total-bonus: $0.00
 Salesperson Joey received $90.00, Total-salary: $90.00 Total-bonus: $0.00
@@ -270,12 +286,12 @@ Driver Sara received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
 Vehicles in inventory 53
 Vehicles sold count 1
-Money in the budget $199,891.70
+Money in the budget $250,698.30
 That's it for the day.
 
 >>> End Simulation Day 1 Sun
 
 Tracker: Day 1
-Total money earned by all Staff between North and South FNCD: $2,815.00
-Total money earned by the North and South FNCD combined: -$5,265,267.80
+Total money earned by all Staff between North and South FNCD: $4,295.00
+Total money earned by the North and South FNCD combined: -$4,709,372.60
 

@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 // Simulator to cycle for select number of days
 public class Simulator implements SysOut {
@@ -8,7 +9,7 @@ public class Simulator implements SysOut {
     Enums.DayOfWeek dayOfWeek;
 
     Simulator() {
-        numDays = 30;  // magic number for days to run here
+        numDays = 31;  // magic number for days to run here
         dayOfWeek = Utility.randomEnum(Enums.DayOfWeek.class);  // we'll start on a random day (for fun)
     }
 
@@ -39,6 +40,7 @@ public class Simulator implements SysOut {
         FNCD northFNCD = new FNCD("North");
         FNCD southFNCD = new FNCD("South");
 
+
         Publisher publisher = Publisher.getInstance();
         Tracker tracker = Tracker.getInstance();
         Logger logger = Logger.getInstance();
@@ -51,6 +53,37 @@ public class Simulator implements SysOut {
             // if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) northFNCD.raceDay(dayOfWeek); 
             // else northFNCD.normalDay(dayOfWeek);  // normal stuff on other days
 
+            if (day == 31) {
+                Scanner scanner = new Scanner(System.in); // to get inputs
+                out("Select location");
+                out("1- North FNCD");
+                out("2- South FNCD");
+                out("Enter command number: ");
+                int command = scanner.nextInt();
+                scanner.nextLine(); // Consume the remaining newline character
+                while (true) {
+
+                if (command == 1) {
+                    northFNCD.command(dayOfWeek);
+                    out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
+
+                }
+                else if(command == 2){
+                    southFNCD.command(dayOfWeek);
+                    out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
+
+                    dayOfWeek = getNextDay(dayOfWeek);  // increment to the next day
+                    
+                    tracker.printSummary(day);
+                    logger.close();
+                }
+                else {
+                    out("Invalid command number.");
+                }
+            }
+            }
+            else
+            {
             if (dayOfWeek == Enums.DayOfWeek.Sun || dayOfWeek == Enums.DayOfWeek.Wed) { // race day
                 northFNCD.open();
                 southFNCD.open();
@@ -85,6 +118,7 @@ public class Simulator implements SysOut {
                 northFNCD.end();
                 southFNCD.end();
             } 
+        }
 
             out(">>> End Simulation Day "+day+" "+dayOfWeek+"\n");
 

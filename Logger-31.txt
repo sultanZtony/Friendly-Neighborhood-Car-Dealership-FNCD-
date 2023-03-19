@@ -1,0 +1,180 @@
+>>> Start Simulation Day 31 Tue
+Select location
+1- North FNCD
+2- South FNCD
+Enter command number: 
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+ My name is Phoebe
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+ Don't worry I'll get you Monica
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+ID = 0 Probe
+ID = 1 Fiesta
+ID = 2 Probe-2
+ID = 3 Europa-2
+ID = 4 Cayman-2
+ID = 5 Ranger
+ID = 6 Tundra
+ID = 7 Ranger-2
+ID = 8 F-250-2
+ID = 9 Avenger
+ID = 10 Zombie
+ID = 11 Bigfoot-2
+ID = 12 Mercedes
+ID = 13 Harley
+ID = 14 Vespa
+ID = 15 Kymco
+ID = 16 Piaggio
+ID = 17 Mack
+ID = 18 Peterbilt
+ID = 19 Mack-2
+ID = 20 Kubota
+ID = 21 John Deere-2
+ID = 22 Case IH-2
+ID = 23 Honda-4
+ID = 24 Case IH-4
+ID = 25 Taurus-4
+ID = 26 Leaf-4
+ID = 27 Vespa-4
+ID = 28 Mack-5
+ID = 29 Leaf-5
+ID = 30 Europa-5
+ID = 31 Bigfoot-4
+ID = 32 Peterbilt-5
+ID = 33 Cayman-5
+ID = 34 Mack-6
+ID = 35 Fiesta-5
+ID = 36 Mercedes-6
+ID = 37 Zombie-4
+ID = 38 Harley-6
+ID = 39 Leaf-6
+ID = 40 Tesla-7
+ID = 41 Honda-6
+ID = 42 F-250-5
+ID = 43 John Deere-6
+ID = 44 Vespa-6
+ID = 45 Europa-6
+ID = 46 Yamaha-6
+ID = 47 Kymco-6
+ID = 48 Cayman-6
+ID = 49 Colorado-5
+ID = 50 Ducati-6
+ID = 51 Escort-6
+ID = 52 Kubota-6
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+Type the car ID
+ Car name: Kubota-6 Cleanliness: Dirty condition: LikeNew Price 85992.0
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Enter command number: 
+Please follow me to the office to discuss your purchase
+Type the car ID
+Would you want buy the car? 
+1- Yes
+2- No
+Enter command number: 
+Would you want to buy add-ons the car? 
+1- Yes
+2- No
+Enter command number: 
+Choose what add-ons you want to buy?
+1- Extended Warranty
+2- Undercoating
+3- Road Rescue Coverage
+4- Satellite Radio
+5- Continue without adding more add-ons
+Extended Warranty added to Kubota-6, price increased to: $103,190.40
+Choose what add-ons you want to buy?
+1- Extended Warranty
+2- Undercoating
+3- Road Rescue Coverage
+4- Satellite Radio
+5- Continue without adding more add-ons
+Undercoating added to Kubota-6, price increased to: $107,490.00
+Choose what add-ons you want to buy?
+1- Extended Warranty
+2- Undercoating
+3- Road Rescue Coverage
+4- Satellite Radio
+5- Continue without adding more add-ons
+Road Rescue Coverage added to Kubota-6, price increased to: $109,209.84
+Choose what add-ons you want to buy?
+1- Extended Warranty
+2- Undercoating
+3- Road Rescue Coverage
+4- Satellite Radio
+5- Continue without adding more add-ons
+Satellite Radio added to Kubota-6, price increased to: $113,509.44
+Choose what add-ons you want to buy?
+1- Extended Warranty
+2- Undercoating
+3- Road Rescue Coverage
+4- Satellite Radio
+5- Continue without adding more add-ons
+Welcome to North FNCD
+1. Change location
+2. Get salesperson name
+3. Get time
+4. Select different salesperson
+5. Get store inventory
+6. Get details on inventory item
+7. Buy item
+8. End interactions
+Vehicles in inventory 52
+Vehicles sold count 52
+Money in the budget $2,884,793.37
+That's it for the day.
+

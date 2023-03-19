@@ -1,131 +1,142 @@
 >>> Start Simulation Day 5 Thur
 The North FNCD is opening...
-Money in the budget $426,641.70
-Bought Lexmoto-4, a Clean Used Scooter for $1,489.60
+Money in the budget $676,516.50
+Bought Probe-4, a Dirty Used Car for $15,305.60
+Bought Tesla-4, a Dirty Broken ElectricCar for $16,230.50
+Bought Mack-4, a Clean Broken Semi for $58,624.00
 End opening activity for North FNCD...
 
 The South FNCD is opening...
-Money in the budget $540,204.30
-Bought Corvette-4, a Clean Broken PerfCar for $16,045.50
-Bought Vespa-4, a Clean Broken Scooter for $863.00
-Bought Mack-4, a Clean Broken Semi for $20,690.00
+Money in the budget $526,350.45
+Bought Escort-4, a Clean Used Car for $10,792.00
+Bought F-250-4, a Clean Broken Pickup for $6,519.00
 End opening activity for South FNCD...
 
 The North FNCD interns are washing...
-Intern Fred is using Chemical washing method.
-Intern Fred washed Europa-2 Dirty to Clean
-Intern Fred washed F-250 Dirty to Clean
-Intern Ethel is using Detailed washing method.
-Intern Ethel washed Tundra Dirty to Clean
-Intern Ethel washed Ranger-2 Dirty to Dirty
+Intern Fred is using Detailed washing method.
+Intern Fred washed Cayman-2 Dirty to Dirty
+Intern Fred washed Ranger Dirty to Dirty
+Intern Ethel is using ElbowGrease washing method.
+Intern Ethel washed Cayman-2 Dirty to Clean
+Intern Ethel washed Ranger Dirty to Clean
 Intern Lucy is using ElbowGrease washing method.
-Intern Lucy washed Ranger-2 Dirty to Clean
-Intern Lucy washed F-250-2 Dirty to Clean
+Intern Lucy washed F-250 Dirty to Clean
+Intern Lucy washed Colorado Dirty to Clean
 End washing activity for North FNCD...
 
 The South FNCD interns are washing...
-Intern Desi is using ElbowGrease washing method.
-Intern Desi washed Tundra-2 Dirty to Dirty
-Intern Desi washed Colorado-3 Dirty to Clean
-Intern Fred-2 is using Chemical washing method.
-Intern Fred-2 washed Tundra-2 Dirty to Clean
-Intern Fred-2 washed Tundra-3 Dirty to Clean
-Intern Ethel-2 is using Detailed washing method.
-Intern Ethel-2 washed Tesla-3 Dirty to Dirty
-Intern Ethel-2 got a bonus of $100.00!
-Intern Ethel-2 washed BMW-3 Dirty to Sparkling
+Intern Desi is using Chemical washing method.
+Intern Desi washed Tundra-3 Dirty to Clean
+Intern Desi washed Madusa-2 Dirty to Clean
+Intern Fred-2 is using ElbowGrease washing method.
+Intern Fred-2 washed Zombie-2 Dirty to Dirty
+Intern Fred-2 washed Bigfoot-3 Dirty to Dirty
+Intern Ethel-2 is using Chemical washing method.
+Intern Ethel-2 washed Zombie-2 Dirty to Clean
+Intern Ethel-2 washed Bigfoot-3 Dirty to Clean
 End washing activity for South FNCD...
 
 The North FNCD mechanics are repairing...
 Mechanic James got a bonus of $200.00!
-Mechanic James fixed F-250-2 Broken to Used
-Mechanic James did not fix the Broken Bigfoot
+Mechanic James fixed Colorado Used to LikeNew
+Mechanic James did not fix the Used Tundra
 Mechanic Scotty got a bonus of $200.00!
-Mechanic Scotty fixed F-250-2 Used to LikeNew
+Mechanic Scotty fixed Tundra Used to LikeNew
 Mechanic Scotty got a bonus of $200.00!
-Mechanic Scotty fixed Bigfoot Broken to Used
+Mechanic Scotty fixed Ranger-2 Broken to Used
 Mechanic Spock got a bonus of $200.00!
-Mechanic Spock fixed Bigfoot Used to LikeNew
-Mechanic Spock got a bonus of $200.00!
-Mechanic Spock fixed Madusa Broken to Used
+Mechanic Spock fixed Ranger-2 Used to LikeNew
+Mechanic Spock did not fix the Used F-250-2
 End repairing activity for North FNCD...
 
 The South FNCD mechanics are repairing...
-Mechanic Uhura did not fix the Used Tundra-2
-Mechanic Uhura got a bonus of $200.00!
-Mechanic Uhura fixed Tundra-3 Used to LikeNew
-Mechanic James-2 got a bonus of $200.00!
-Mechanic James-2 fixed Tundra-2 Used to LikeNew
-Mechanic James-2 got a bonus of $200.00!
-Mechanic James-2 fixed Madusa-2 Broken to Used
-Mechanic Scotty-2 got a bonus of $200.00!
-Mechanic Scotty-2 fixed Madusa-2 Used to LikeNew
-Mechanic Scotty-2 got a bonus of $200.00!
-Mechanic Scotty-2 fixed Bigfoot-3 Broken to Used
+Mechanic Uhura got a bonus of $300.00!
+Mechanic Uhura fixed Corvette-2 Broken to Used
+Mechanic Uhura got a bonus of $300.00!
+Mechanic Uhura fixed Europa-3 Broken to Used
+Mechanic James-2 got a bonus of $300.00!
+Mechanic James-2 fixed Corvette-2 Used to LikeNew
+Mechanic James-2 got a bonus of $300.00!
+Mechanic James-2 fixed Europa-3 Used to LikeNew
+Mechanic Scotty-2 got a bonus of $300.00!
+Mechanic Scotty-2 fixed BMW-2 Broken to Used
+Mechanic Scotty-2 got a bonus of $300.00!
+Mechanic Scotty-2 fixed Leaf-2 Used to LikeNew
 End repairing activity for South FNCD...
 
 The North FNCD salespeople are selling...
 The FNCD has 2 buyers today...
-Buyer Chewy-5 wants a ElectricCar (NeedsOne)
-Buyer Chewy-5 is buying! Salesperson Monica gets a bonus of $1,000.00!
-Buyer Chewy-5 bought Dirty LikeNew Mercedes-2 for $61,768.00
-Buyer Luke-6 wants a Semi (WantsOne)
-Buyer Luke-6 decided not to buy.
+Buyer Chewy-7 wants a ElectricCar (NeedsOne)
+Buyer Chewy-7 is buying! Salesperson Phoebe gets a bonus of $1,000.00!
+Buyer Chewy-7 bought Clean LikeNew Mercedes-2 for $74,668.00
+Buyer Luke-8 wants a Scooter (NeedsOne)
+Buyer Luke-8 is buying! Salesperson Rachel gets a bonus of $75.00!
+Buyer Luke-8 bought Dirty LikeNew Lexmoto for $3,358.00
 End selling activity for North FNCD...
 
 The South FNCD salespeople are selling...
-The FNCD has 3 buyers today...
-Buyer Leia-6 wants a Pickup (WantsOne)
-Buyer Leia-6 decided not to buy.
-Buyer Han-6 wants a PerfCar (NeedsOne)
-Buyer Han-6 is buying! Salesperson Joey gets a bonus of $1,000.00!
-Buyer Han-6 bought Clean LikeNew Mustang-2 for $59,788.00
-Satellite Radio added to Mustang-2, price increased to: $62,777.40
-Buyer Chewy-6 wants a Scooter (JustLooking)
-Buyer Chewy-6 decided not to buy.
+The FNCD has 4 buyers today...
+Buyer Leia-8 wants a PerfCar (NeedsOne)
+Buyer Leia-8 is buying! Salesperson Ross gets a bonus of $1,000.00!
+Buyer Leia-8 bought Dirty LikeNew Corvette-2 for $258,747.80
+Satellite Radio added to Corvette-2, price increased to: $271,685.19
+Buyer Han-8 wants a PerfCar (NeedsOne)
+Buyer Han-8 is buying! Salesperson Joey gets a bonus of $1,000.00!
+Buyer Han-8 bought Dirty LikeNew Europa-3 for $108,187.50
+Satellite Radio added to Europa-3, price increased to: $113,596.88
+Buyer Chewy-8 wants a ElectricCar (WantsOne)
+Buyer Chewy-8 is buying! Salesperson Ross gets a bonus of $1,000.00!
+Buyer Chewy-8 bought Dirty LikeNew Tesla-3 for $76,730.00
+Extended Warranty added to Tesla-3, price increased to: $92,076.00
+Undercoating added to Tesla-3, price increased to: $95,912.50
+Road Rescue Coverage added to Tesla-3, price increased to: $97,447.10
+Satellite Radio added to Tesla-3, price increased to: $101,283.60
+Buyer Luke-9 wants a Semi (NeedsOne)
+Buyer Luke-9 is buying! Salesperson Ross gets a bonus of $75.00!
+Buyer Luke-9 bought Dirty Used Peterbilt-3 for $178,150.40
 End selling activity for South FNCD...
 
 End of day activity for North FNCD...
 Intern Fred received $60.00, Total-salary: $300.00 Total-bonus: $20.00
-Intern Ethel received $60.00, Total-salary: $300.00 Total-bonus: $40.00
+Intern Ethel received $60.00, Total-salary: $300.00 Total-bonus: $0.00
 Intern Lucy received $60.00, Total-salary: $300.00 Total-bonus: $0.00
-Mechanic James received $120.00, Total-salary: $600.00 Total-bonus: $1,100.00
-Mechanic Scotty received $120.00, Total-salary: $600.00 Total-bonus: $1,800.00
-Mechanic Spock received $120.00, Total-salary: $600.00 Total-bonus: $1,400.00
-Salesperson Rachel received $90.00, Total-salary: $450.00 Total-bonus: $825.00
-Salesperson Monica received $90.00, Total-salary: $450.00 Total-bonus: $2,000.00
-Salesperson Phoebe received $90.00, Total-salary: $450.00 Total-bonus: $0.00
+Mechanic James received $120.00, Total-salary: $600.00 Total-bonus: $1,600.00
+Mechanic Scotty received $120.00, Total-salary: $600.00 Total-bonus: $2,000.00
+Mechanic Spock received $120.00, Total-salary: $600.00 Total-bonus: $1,900.00
+Salesperson Rachel received $90.00, Total-salary: $450.00 Total-bonus: $1,650.00
+Salesperson Monica received $90.00, Total-salary: $450.00 Total-bonus: $0.00
+Salesperson Phoebe received $90.00, Total-salary: $450.00 Total-bonus: $3,325.00
 Driver Jon received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
-Vehicles in inventory 53
-Vehicles sold count 4
-Money in the budget $484,110.10
+Vehicles in inventory 52
+Vehicles sold count 9
+Money in the budget $661,697.40
 That's it for the day.
 
 End of day activity for South FNCD...
 Intern Desi received $60.00, Total-salary: $300.00 Total-bonus: $0.00
 Intern Fred-2 received $60.00, Total-salary: $300.00 Total-bonus: $0.00
-Intern Ethel-2 received $60.00, Total-salary: $300.00 Total-bonus: $175.00
+Intern Ethel-2 received $60.00, Total-salary: $300.00 Total-bonus: $75.00
 Mechanic Uhura received $120.00, Total-salary: $600.00 Total-bonus: $1,300.00
-Mechanic James-2 received $120.00, Total-salary: $600.00 Total-bonus: $1,700.00
-Mechanic Scotty-2 received $120.00, Total-salary: $600.00 Total-bonus: $1,400.00
+Mechanic James-2 received $120.00, Total-salary: $600.00 Total-bonus: $2,000.00
+Mechanic Scotty-2 received $120.00, Total-salary: $600.00 Total-bonus: $2,100.00
 Salesperson Chandler received $90.00, Total-salary: $450.00 Total-bonus: $825.00
-Salesperson Ross received $90.00, Total-salary: $450.00 Total-bonus: $75.00
-Salesperson Joey received $90.00, Total-salary: $450.00 Total-bonus: $3,075.00
+Salesperson Ross received $90.00, Total-salary: $450.00 Total-bonus: $4,075.00
+Salesperson Joey received $90.00, Total-salary: $450.00 Total-bonus: $1,000.00
 Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Tylor received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Sara received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
-Vehicles in inventory 53
-Vehicles sold count 7
-Money in the budget $562,473.20
+Vehicles in inventory 50
+Vehicles sold count 9
+Money in the budget $1,168,070.52
 That's it for the day.
 
 >>> End Simulation Day 5 Thur
 
 Tracker: Day 5
-Total money earned by all Staff between North and South FNCD: $23,835.00
-Total money earned by the North and South FNCD combined: -$4,653,416.70
+Total money earned by all Staff between North and South FNCD: $29,970.00
+Total money earned by the North and South FNCD combined: -$3,369,482.08
 

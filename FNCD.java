@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 // This represents the FNCD business and things they would control
 public class FNCD implements SysOut {
@@ -67,6 +68,163 @@ public class FNCD implements SysOut {
         }
         out("End repairing activity for "+this.name+" FNCD...\n");
     }
+
+
+
+    // A Human-controlled Interface to allow a user to act as a Buyer
+    void command(Enums.DayOfWeek day) {
+        Scanner scanner = new Scanner(System.in); // to get inputs
+
+        ArrayList<Staff> salespeople = Staff.getStaffByType(staff, Enums.StaffType.Salesperson); // A list of all sales persons is needed
+
+        int randomSeller = Utility.rndFromRange(0,salespeople.size()-1); // Get a random salesperson 
+
+        Salesperson seller = (Salesperson) salespeople.get(randomSeller);
+
+        while (true) {
+            // Display the command menu
+            out("Welcome to " + this.name + " FNCD");
+            out("1. Change location");
+            out("2. Get salesperson name");
+            out("3. Get time");
+            out("4. Select different salesperson");
+            out("5. Get store inventory");
+            out("6. Get details on inventory item");
+            out("7. Buy item");
+            out("8. End interactions");
+            out("Enter command number: ");
+            
+            // Get the user's command choice
+            int command = scanner.nextInt();
+            scanner.nextLine(); // Consume the remaining newline character
+            
+            // Execute the user's chosen command
+            switch (command) {
+                case 1:
+                out("Please quit this interface and choose other location"); // change location
+                break;
+
+                case 2:
+                out(" My name is " + seller.name); // SalesPerson name
+                java.time.LocalDateTime.now();
+                break;
+
+                case 3:
+                System.out.println(java.time.LocalDateTime.now()); // print system time
+                break;
+
+                case 4:
+                int randomSeller2 = Utility.rndFromRange(0,salespeople.size()-1); // Get a random salesperson 
+                Salesperson seller2 = (Salesperson) salespeople.get(randomSeller2);
+                out(" Don't worry I'll get you " + seller2.name );
+                break;
+
+                case 5:
+                for (int i = 0; i < inventory.size(); i++) {        // Print inventory with ID's
+                    out("ID = " + i + " " + inventory.get(i).name);
+                }
+                break;
+
+                case 6: 
+                out("Type the car ID");                 // Print car details
+                int command1 = scanner.nextInt();
+                scanner.nextLine(); // Consume the remaining newline character
+
+                out(" Car name: " + inventory.get(command1).name +  " Cleanliness: " + inventory.get(command1).cleanliness + " condition: " +inventory.get(command1).condition + " Price " +  inventory.get(command1).price);
+
+                break;
+
+                case 7:                 // Buy car and add-ons
+                
+                out("Please follow me to the office to discuss your purchase");
+                out("Type the car ID");
+                int command2 = scanner.nextInt();
+                scanner.nextLine(); // Consume the remaining newline character
+
+                out("Would you want buy the car? ");
+                out("1- Yes");
+                out("2- No");
+                out("Enter command number: ");
+
+                int command3 = scanner.nextInt();
+                scanner.nextLine(); // Consume the remaining newline character
+
+                if (command3 == 1) {
+
+                    Vehicle vSold = seller.sellVehicleinterface(inventory.get(command2), this);
+
+                    out("Would you want to buy add-ons the car? ");
+                    out("1- Yes");
+                    out("2- No");
+                    out("Enter command number: ");
+    
+                    int command4 = scanner.nextInt();
+                    scanner.nextLine(); // Consume the remaining newline character
+
+                    if (command4 == 1) {
+                        Vehicle vSoldDecorated = vSold;
+                        boolean continueAddingAddOns = true;
+                        while (continueAddingAddOns) {
+                            out("Choose what add-ons you want to buy?"); // Options for add-ons
+                            out("1- Extended Warranty");
+                            out("2- Undercoating");
+                            out("3- Road Rescue Coverage");
+                            out("4- Satellite Radio");
+                            out("5- Continue without adding more add-ons");
+                    
+                            int command5 = scanner.nextInt();
+                            scanner.nextLine(); // Consume the remaining newline character
+                    
+                            switch(command5) {
+                                case 1:
+                                    vSoldDecorated = new ExtendedWarranty(vSoldDecorated, vSold.getPrice());
+                                    out("Extended Warranty added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice())); // Extended Warranty = 20% of Vehicle sale price
+ 
+                                    break;
+                                case 2:
+                                    vSoldDecorated = new Undercoating(vSoldDecorated, vSold.getPrice());
+                                    out("Undercoating added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice())); // Undercoating = 5% of price
+                                    break;
+                                case 3:
+                                    vSoldDecorated = new RoadRescue(vSoldDecorated, vSold.getPrice());
+                                    out("Road Rescue Coverage added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice()));  // Road Rescue Coverage = 2% of price
+                                    break;
+                                case 4:
+                                    vSoldDecorated = new SatRadio(vSoldDecorated, vSold.getPrice());
+                                    out("Satellite Radio added to " + vSold.name + ", price increased to: " + Utility.asDollar(vSoldDecorated.getPrice())); // Satellite Radio = 5% of price
+                                    break;
+                                case 5:
+                                    continueAddingAddOns = false;
+                                    break;
+                                default:
+                                    out("Invalid command");
+                                    break;
+                            }
+                        }
+                        soldVehicles.add(vSold);
+                        moneyIn(vSoldDecorated.getPrice());
+                        Publisher.getInstance().financialEvent(0, vSoldDecorated.getPrice());
+                        inventory.remove(vSold);
+                    }
+                }
+
+                break;
+
+                case 8:
+                // ending
+                // daily report
+                reportOut();
+                System.exit(0);
+
+                default:
+                out("Invalid command number.");
+                
+            }
+
+        }
+
+    }
+
 
     void sell(Enums.DayOfWeek day) {
         // selling

@@ -243,6 +243,18 @@ class Salesperson extends Staff {
 
     // Someone is asking this Salesperson to sell to this Buyer
     // We'll return any car we sell for the FNCD to keep track of (null if no sale)
+    Vehicle sellVehicleinterface(Vehicle desired, FNCD fncd) {
+        Publisher publisher = Publisher.getInstance();
+        double salesBonus = 0;
+
+        bonusEarned += desired.sale_bonus;
+        salesBonus += desired.sale_bonus;
+        // Bonus payed out by FNCD
+        fncd.moneyOut(salesBonus);
+        publisher.financialEvent(salesBonus, -salesBonus);
+        return desired;
+    }
+
     Vehicle sellVehicle(Buyer b, ArrayList<Vehicle> vList, FNCD fncd) {
         Publisher publisher = Publisher.getInstance();
         double salesBonus = 0;

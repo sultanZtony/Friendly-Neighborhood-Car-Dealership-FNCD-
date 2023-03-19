@@ -1,130 +1,141 @@
 >>> Start Simulation Day 25 Wed
 The North FNCD is opening...
-Money in the budget $2,042,996.60
+Money in the budget $2,107,961.43
+Bought Lexmoto-6, a Dirty Used Scooter for $1,264.80
 End opening activity for North FNCD...
 
 The South FNCD is opening...
-Money in the budget $1,960,218.29
+Money in the budget $2,635,353.71
+Bought Fendt-5, a Dirty Broken Tractor for $8,181.50
 End opening activity for South FNCD...
 
 The North FNCD interns are washing...
-Intern Fred is using Chemical washing method.
+Intern Fred is using Detailed washing method.
 Intern Fred washed Europa-2 Dirty to Clean
-Intern Fred got a bonus of $20.00!
-Intern Fred washed Taurus Clean to Sparkling
-Intern Ethel is using Detailed washing method.
-Intern Ethel got a bonus of $100.00!
-Intern Ethel washed Europa-2 Clean to Sparkling
-Intern Ethel got a bonus of $75.00!
-Intern Ethel washed Ranger Clean to Sparkling
+Intern Fred got a bonus of $75.00!
+Intern Fred washed Lexmoto-6 Dirty to Sparkling
+Intern Ethel is using ElbowGrease washing method.
+Intern Ethel washed Fiesta Clean to Dirty
+Intern Ethel washed Corvette Clean to Dirty
 Intern Lucy is using ElbowGrease washing method.
-Intern Lucy washed Ranger-2 Clean to Clean
-Intern Lucy got a bonus of $75.00!
-Intern Lucy washed F-250-2 Clean to Sparkling
+Intern Lucy washed Fiesta Dirty to Clean
+Intern Lucy washed Corvette Dirty to Clean
 End washing activity for North FNCD...
 
 The South FNCD interns are washing...
-Intern Desi is using ElbowGrease washing method.
-Intern Desi washed Mustang-3 Dirty to Dirty
-Intern Desi washed Tundra-2 Clean to Clean
-Intern Fred-2 is using Chemical washing method.
-Intern Fred-2 washed Mustang-3 Dirty to Clean
-Intern Fred-2 washed Mustang-3 Clean to Clean
-Intern Ethel-2 is using Detailed washing method.
-Intern Ethel-2 got a bonus of $100.00!
-Intern Ethel-2 washed Mustang-3 Clean to Sparkling
+Intern Desi is using Chemical washing method.
+Intern Desi washed Honda-3 Dirty to Dirty
+Intern Desi washed Peterbilt-4 Dirty to Clean
+Intern Fred-2 is using ElbowGrease washing method.
+Intern Fred-2 washed Honda-3 Dirty to Clean
+Intern Fred-2 washed Ranger-5 Dirty to Clean
+Intern Ethel-2 is using Chemical washing method.
 Intern Ethel-2 got a bonus of $75.00!
-Intern Ethel-2 washed Tundra-2 Clean to Sparkling
+Intern Ethel-2 washed Piaggio-5 Dirty to Sparkling
+Intern Ethel-2 washed Fendt-5 Dirty to Clean
 End washing activity for South FNCD...
 
 The North FNCD mechanics are repairing...
+Mechanic James got a bonus of $200.00!
+Mechanic James fixed Lexmoto-6 Used to LikeNew
 End repairing activity for North FNCD...
 
 The South FNCD mechanics are repairing...
+Mechanic Uhura got a bonus of $200.00!
+Mechanic Uhura fixed Honda-3 Broken to Used
+Mechanic Uhura got a bonus of $200.00!
+Mechanic Uhura fixed Case IH-5 Used to LikeNew
+Mechanic James-2 did not fix the Used Honda-3
+Mechanic James-2 got a bonus of $200.00!
+Mechanic James-2 fixed Volvo-6 Used to LikeNew
+Mechanic Scotty-2 did not fix the Used Honda-3
+Mechanic Scotty-2 got a bonus of $200.00!
+Mechanic Scotty-2 fixed Madusa-4 Broken to Used
 End repairing activity for South FNCD...
 
 The North FNCD salespeople are selling...
-The FNCD has 5 buyers today...
-Buyer Luke-38 wants a ElectricCar (NeedsOne)
-Buyer Luke-38 is buying! Salesperson Monica gets a bonus of $1,000.00!
-Buyer Luke-38 bought Clean LikeNew BMW-5 for $72,183.75
-Buyer Leia-38 wants a Tractor (JustLooking)
-Buyer Leia-38 is buying! Salesperson Monica gets a bonus of $75.00!
-Buyer Leia-38 bought Clean LikeNew John Deere-6 for $97,762.00
-Buyer Han-38 wants a MonsterTruck (NeedsOne)
-Buyer Han-38 is buying! Salesperson Phoebe gets a bonus of $750.00!
-Buyer Han-38 bought Clean LikeNew Bigfoot-4 for $66,380.62
-Buyer Chewy-38 wants a PerfCar (NeedsOne)
-Buyer Chewy-38 is buying! Salesperson Phoebe gets a bonus of $1,000.00!
-Buyer Chewy-38 bought Sparkling LikeNew Europa for $60,988.00
-Buyer Luke-39 wants a PerfCar (JustLooking)
-Buyer Luke-39 is buying! Salesperson Phoebe gets a bonus of $1,000.00!
-Buyer Luke-39 bought Sparkling LikeNew Cayman-5 for $58,477.50
+The FNCD has 4 buyers today...
+Buyer Chewy-42 wants a Tractor (JustLooking)
+Buyer Chewy-42 is buying! Salesperson Phoebe gets a bonus of $75.00!
+Buyer Chewy-42 bought Clean LikeNew Kubota-5 for $84,444.00
+Buyer Luke-43 wants a Scooter (JustLooking)
+Buyer Luke-43 decided not to buy.
+Buyer Leia-43 wants a PerfCar (WantsOne)
+Buyer Leia-43 is buying! Salesperson Phoebe gets a bonus of $1,000.00!
+Buyer Leia-43 bought Clean LikeNew Corvette for $82,927.50
+Extended Warranty added to Corvette, price increased to: $99,513.00
+Satellite Radio added to Corvette, price increased to: $103,659.38
+Buyer Han-43 wants a Pickup (JustLooking)
+Buyer Han-43 is buying! Salesperson Monica gets a bonus of $750.00!
+Buyer Han-43 bought Clean LikeNew F-250 for $79,344.00
 End selling activity for North FNCD...
 
 The South FNCD salespeople are selling...
-The FNCD has 0 buyers today...
+The FNCD has 1 buyers today...
+Buyer Chewy-43 wants a Scooter (JustLooking)
+Buyer Chewy-43 decided not to buy.
 End selling activity for South FNCD...
 
 The North FNCD might run a Race Event today for Wed
-Driver: Jon will be racing in the Europa-2
-Driver: Jon Poistion: 5 on the Europa-2
-Driver: Harry will be racing in the Europa-4
-Driver: Harry Poistion: 14 on the Europa-4
-Driver: Salah will be racing in the Mustang-5
-Driver: Salah Poistion: 6 on the Mustang-5
+Driver: Salah will be racing in the Harley
+Driver: Salah Poistion: 19 Lost the race on the Harley
+Driver: Jon will be racing in the Honda-2
+Driver: Jon Poistion: 18 Lost the race on the Honda-2
+Driver: Harry will be racing in the Harley-4
+Driver: Harry Poistion: 18 Lost the race on the Harley-4
+Driver: Harry Injured
 End race activity for North FNCD
 
 The South FNCD might run a Race Event today for Wed
-Driver: Tylor will be racing in the Cayman-3
-Driver: Tylor Poistion: 4 on the Cayman-3
-Driver: Mark will be racing in the Mustang-3
-Driver: Mark Poistion: 7 on the Mustang-3
-Driver: Sara will be racing in the Cayman-4
-Driver: Sara Poistion: 12 on the Cayman-4
+Driver: Tylor will be racing in the Yamaha-2
+Driver: Tylor Poistion: 7 on the Yamaha-2
+Driver: Sara will be racing in the Honda-3
+Driver: Sara Poistion: 11 on the Honda-3
+Driver: Mark will be racing in the Ducati-3
+Driver: Mark Poistion: 19 Lost the race on the Ducati-3
 End race activity for South FNCD
 
 End of day activity for North FNCD...
-Intern Fred received $60.00, Total-salary: $1,500.00 Total-bonus: $190.00
-Intern Ethel received $60.00, Total-salary: $1,500.00 Total-bonus: $710.00
-Intern Lucy received $60.00, Total-salary: $1,500.00 Total-bonus: $350.00
-Mechanic James received $120.00, Total-salary: $3,000.00 Total-bonus: $6,400.00
-Mechanic Scotty received $120.00, Total-salary: $3,000.00 Total-bonus: $7,200.00
-Mechanic Spock received $120.00, Total-salary: $3,000.00 Total-bonus: $6,400.00
-Salesperson Rachel received $90.00, Total-salary: $2,250.00 Total-bonus: $7,050.00
-Salesperson Monica received $90.00, Total-salary: $2,250.00 Total-bonus: $8,875.00
-Salesperson Phoebe received $90.00, Total-salary: $2,250.00 Total-bonus: $9,000.00
+Intern Fred received $60.00, Total-salary: $1,500.00 Total-bonus: $1,165.00
+Intern Ethel received $60.00, Total-salary: $1,500.00 Total-bonus: $95.00
+Intern Lucy received $60.00, Total-salary: $1,500.00 Total-bonus: $250.00
+Mechanic James received $120.00, Total-salary: $3,000.00 Total-bonus: $8,700.00
+Mechanic Scotty received $120.00, Total-salary: $3,000.00 Total-bonus: $7,300.00
+Mechanic Spock received $120.00, Total-salary: $3,000.00 Total-bonus: $8,000.00
+Salesperson Rachel received $90.00, Total-salary: $2,250.00 Total-bonus: $5,225.00
+Salesperson Monica received $90.00, Total-salary: $2,250.00 Total-bonus: $5,800.00
+Salesperson Phoebe received $90.00, Total-salary: $2,250.00 Total-bonus: $12,450.00
 Driver Jon received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Harry received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Salah received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
-Vehicles in inventory 49
-Vehicles sold count 39
-Money in the budget $2,393,883.47
+Vehicles in inventory 51
+Vehicles sold count 40
+Money in the budget $2,371,234.00
 That's it for the day.
 
 End of day activity for South FNCD...
-Intern Desi received $60.00, Total-salary: $1,500.00 Total-bonus: $95.00
-Intern Fred-2 received $60.00, Total-salary: $1,500.00 Total-bonus: $170.00
-Intern Ethel-2 received $60.00, Total-salary: $1,500.00 Total-bonus: $960.00
-Mechanic Uhura received $120.00, Total-salary: $3,000.00 Total-bonus: $8,100.00
-Mechanic James-2 received $120.00, Total-salary: $3,000.00 Total-bonus: $7,800.00
-Mechanic Scotty-2 received $120.00, Total-salary: $3,000.00 Total-bonus: $6,700.00
-Salesperson Chandler received $90.00, Total-salary: $2,250.00 Total-bonus: $7,025.00
-Salesperson Ross received $90.00, Total-salary: $2,250.00 Total-bonus: $2,800.00
-Salesperson Joey received $90.00, Total-salary: $2,250.00 Total-bonus: $6,350.00
+Intern Desi received $60.00, Total-salary: $1,500.00 Total-bonus: $225.00
+Intern Fred-2 received $60.00, Total-salary: $1,500.00 Total-bonus: $300.00
+Intern Ethel-2 received $60.00, Total-salary: $1,500.00 Total-bonus: $150.00
+Mechanic Uhura received $120.00, Total-salary: $3,000.00 Total-bonus: $7,800.00
+Mechanic James-2 received $120.00, Total-salary: $3,000.00 Total-bonus: $8,800.00
+Mechanic Scotty-2 received $120.00, Total-salary: $3,000.00 Total-bonus: $8,400.00
+Salesperson Chandler received $90.00, Total-salary: $2,250.00 Total-bonus: $5,450.00
+Salesperson Ross received $90.00, Total-salary: $2,250.00 Total-bonus: $7,875.00
+Salesperson Joey received $90.00, Total-salary: $2,250.00 Total-bonus: $9,050.00
 Driver Mark received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Tylor received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 Driver Sara received $0.00, Total-salary: $0.00 Total-bonus: $0.00
 No-one on the staff is leaving!
 Vehicles in inventory 54
-Vehicles sold count 38
-Money in the budget $1,959,233.29
+Vehicles sold count 42
+Money in the budget $2,625,487.21
 That's it for the day.
 
 >>> End Simulation Day 25 Wed
 
 Tracker: Day 25
-Total money earned by all Staff between North and South FNCD: $126,675.00
-Total money earned by the North and South FNCD combined: -$1,345,383.24
+Total money earned by all Staff between North and South FNCD: $137,535.00
+Total money earned by the North and South FNCD combined: -$201,278.79
 
